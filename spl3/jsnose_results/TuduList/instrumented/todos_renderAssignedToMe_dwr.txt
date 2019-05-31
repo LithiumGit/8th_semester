@@ -1,0 +1,5 @@
+todos_renderAssignedToMe_dwr_exec_counter[0]++;
+throw 'allowScriptTagRemoting is false.';
+todos_renderAssignedToMe_dwr_exec_counter[2]++;
+dwr.engine._remoteHandleCallback('2', '0', "\r\n\r\n\r\n\r\n\r\n<div style=\"font: 18px/1.3em Arial,Helvetica,sans-serif;\">\r\n \r\n \r\n  Todos assigned to me\r\n \r\n</div>\r\n\r\n\r\n <table class=\"list\">\r\n  <tr>\r\n   <th class=\"\">\r\n    List\r\n   </th>\r\n   <th class=\"\">\r\n    Description\r\n   </th>\r\n   <th class=\"\" style=\"width: 80px\">\r\n    Priority\r\n   </th>\r\n   <th class=\"\" style=\"width: 80px\">\r\n    Due date\r\n   </th>\r\n  </tr>\r\n  \r\n  \r\n   \r\n   \r\n   <tr class=\"odd\" id=\"003ddf903e66cac0013e7375876c0006\">\r\n    <td class=\"\">\r\n     <a href=\"javascript:renderTableListId('003ddf903e66cac0013e736ac1850002')\">sdsdsd</a>\r\n    </td>\r\n    <td class=\"\">\r\n     \r\n     vthytytr\r\n    </td>\r\n    <td class=\"\" style=\"text-align: center\">\r\n     0\r\n    </td>\r\n    <td class=\"\" style=\"text-align: center; font-size: 80%\">\r\n     \r\n    </td>\r\n   </tr>\r\n  \r\n </table>\r\n <br/><br/>\r\n\r\n ");
+todos_renderAssignedToMe_dwr_exec_counter[1]++;

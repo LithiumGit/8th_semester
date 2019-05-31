@@ -1,0 +1,2 @@
+CustomFunctions_js_exec_counter[0]++;
+CustomFunctions_js_exec_counter[1]++;

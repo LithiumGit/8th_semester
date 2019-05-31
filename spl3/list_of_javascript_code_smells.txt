@@ -1,0 +1,87 @@
+1.Closure smells
+2.Coupling of JS/HTML/CSS
+3.Empty catch
+4.Excessive global variables
+5.Large object
+6.Large object
+7.Long message chain
+8.Long method/function
+9.Long parameter list
+10.Nested callback
+11.Refused bequest
+12.Switch statement
+13.Unused code
+
+14.Convoluted Code Smell
+15.Copy Paste Code Smell
+16.Switch Statement Smell
+17.The This Abyss Smell
+18.Crisp Concatenation Smell
+19.jQuery Inquiry
+20.Temperamental Timer Smell
+21.Repeat Reassign Smell
+22.Inappropriate Intimacy Smell
+23.Incessant Interaction Smell
+24.Anonymous Algorithm Smell
+25.Unconfirmed Code Smell
+26.Two-Way Data Binding Smell
+
+-----------https://github.com/mohuk/js-code-smells-------
+27.Purposeless conditions
+28.Multiple return statements
+29.This or That
+30.Equality
+31.Broken Promises
+
+
+--------------https://sourcemaking.com/refactoring/smells--------------
+32.Comments
+33.Duplicate Code
+34.Lazy Class
+Long Parameter List
+Data Clumps
+Switch Statements
+Temporary Field
+Refused Bequest
+Alternative Classes with Different Interfaces
+Divergent Change
+Shotgun Surgery
+Parallel Inheritance Hierarchies
+Comments
+Duplicate Code
+Lazy Class
+Data Class
+Dead Code
+Speculative Generality
+Feature Envy
+Inappropriate Intimacy
+Message Chains
+Middle Man
+Incomplete Library Class
+
+----------https://elijahmanor.com/talks/js-smells/#/4----------
+The This Abyss Smell
+Crisp Concatenation Smell
+Temperamental Timer Smell
+Repeat Reassign Smell
+Inappropriate Intelligence Smell
+Incessant Interaction Smell
+Anonymous Algorithm Smell
+Unconfirmed Code Smell
+Two-Way Data Binding Smell
+----------http://wiki.c2.com/?CodeSmell---------------
+God class
+class of too many instance variable
+Strikingly similar subclasses
+ParallelInheritanceHierarchies 
+Too many private (or protected) methods
+VerbSubject construction
+ExcessiveOverloading
+SameNameDifferentMeaning
+ExpensiveSetUpSmell
+WithBlocks (WithBlockCodeSmell) - ExtractMethod
+InstanceofInConditionals
+Classes with too few instance variables 
+Classes with too little code 
+Methods with no messages to self 
+EmptyCatchClauses 

@@ -1,0 +1,75 @@
+***************************************
+********** CODE SMELL REPORT **********
+***************************************
+********** CLOSURE SMELL **********
+Number of occurance: 9
+Item: this in closure in JS file: script1 at line number: 307
+Item: this in closure in JS file: script1 at line number: 234
+Item: this in closure in JS file: script1 at line number: 168
+Item: this in closure in JS file: script1 at line number: 167
+Item: this in closure in JS file: script1 at line number: 114
+Item: this in closure in JS file: script1 at line number: 113
+Item: this in closure in JS file: script1 at line number: 58
+Item: this in closure in JS file: script1 at line number: 40
+Item: this in closure in JS file: script1 at line number: 22
+********** COUPLING JS/HTML **********
+Total number of JavaScript in HTML tags: 0
+Occurance of CSS in JavaScript
+Number of occurance: 0
+********** EMPTY CATCH **********
+Number of occurance: 0
+********** EXCESSIVE GLOBAL VARIABLES **********
+Number of global variables: 15
+List of  global variables: [rail_left, right_wall, rail_right, $events, c_r, c_s, t_state, c_w, i, ship_x, console, bg_val, tunnelGame, pos_x, left_wall, y, constructor]
+********** LARGE OBJECT **********
+Number of occurance: 0
+********** LAZY OBJECT **********
+Number of occurance: 28
+Item: mousemove in JS file: script1 at line number: 372
+Item: get in JS file: script1 at line number: 354
+Item: ready in JS file: script1 at line number: 351
+Item: incScore in JS file: script1 at line number: 40
+Item: getScore in JS file: script1 at line number: 36
+Item: scoreInc in JS file: script1 at line number: 32
+Item: scoreGet in JS file: script1 at line number: 28
+Item: checkLife in JS file: script1 at line number: 22
+Item: killPlayer in JS file: script1 at line number: 18
+Item: lifeCheck in JS file: script1 at line number: 14
+Item: playerKill in JS file: script1 at line number: 10
+Item: alive in JS file: script1 at line number: 8
+Item: that in JS file: script1 at line number: 6
+Item: script1_exec_counter in JS file: script1 at line number: 1
+Item: secureGame in JS file: script1 at line number: 4
+Item: tunnelShrink in JS file: script1 at line number: 46
+Item: tunnelWidth in JS file: script1 at line number: 50
+Item: shrinkTunnel in JS file: script1 at line number: 54
+Item: widthTunnel in JS file: script1 at line number: 58
+Item: initTunnel in JS file: script1 at line number: 93
+Item: tunnelGame in JS file: script1 at line number: 95
+Item: each in JS file: script1 at line number: 111
+Item: click in JS file: script1 at line number: 123
+Item: success in JS file: script1 at line number: 287
+Item: scoreUpdate in JS file: script1 at line number: 297
+Item: submit in JS file: script1 at line number: 299
+Item: showHighScores in JS file: script1 at line number: 338
+********** LONG MESSAGE **********
+Number of occurance: 0
+********** LONG METHOD/FUNCTION **********
+Number of occurance: 2
+Item: updateTunnel in JS file: script1 at line number: 180
+Item: secureGame in JS file: script1 at line number: 4
+********** LONG PARAMETER LIST **********
+Number of occurance: 0
+********** NESTED CALLBACK **********
+Number of occurance: 0
+********** REFUSED BEQUEST **********
+Number of occurance: 0
+********** SWITCH STATEMENT **********
+Number of occurance: 0
+********** UNREACHABLE CODE **********
+Number of occurance: 0
+
+
+- [Thread 1 Crawler 1 (initial)] List of script1 is: [2, 2, 1, 1, 1, 0, 1, 0, 1, 1, 1, 27, 27, 1, 1, 1, 1, 1, 27, 27, 1, 0, 2, 2, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 1, 0, 0, 0, 0, 54, 54, 1, 0, 0, 0, 1, 54, 54, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 2, 1, 1, 1, 1, 1, 1, 1, 20, 20, 1, 20, 20, 20, 20, 20, 1, 20, 20, 20, 20, 20, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 27, 27, 2, 27, 27, 0, 0, 0, 27, 27, 0, 0, 1, 0, 27, 540, 540, 24, 3, 27, 27, 540, 540, 540, 27, 540, 540, 540, 27, 0, 0, 0, 27, 1, 1, 1, 1, 26, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 0, 0, 0, 2, 2, 1, 1, 1, 1, 1, 2, 4, 4, 4]
+- [Thread 1 Crawler 1 (initial)] List of script1 # lines ececuted: 120 # tolal lines: 214 - code coverage: 56.074766355140184%
+- [Thread 1 Crawler 1 (initial)]Time: 0 min, 14 sec - code coverage: 56.074766355140184%

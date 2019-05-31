@@ -1,0 +1,12 @@
+showTodos_actionscript16_exec_counter[0]++;
+function reloadingTable() {
+  showTodos_actionscript16_exec_counter[2]++;
+  showTodos_actionscript16_exec_counter[4]++;
+  renderTable();
+  showTodos_actionscript16_exec_counter[5]++;
+  setTimeout('reloadingTable();', 2 * 60 * 1000);
+  showTodos_actionscript16_exec_counter[3]++;
+}
+showTodos_actionscript16_exec_counter[6]++;
+reloadingTable();
+showTodos_actionscript16_exec_counter[1]++;

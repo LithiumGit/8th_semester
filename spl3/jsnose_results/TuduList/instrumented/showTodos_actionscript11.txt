@@ -1,0 +1,458 @@
+showTodos_actionscript11_exec_counter[0]++;
+showTodos_actionscript11_exec_counter[2]++;
+dwr.util.setEscapeHtml(false);
+function errorHandler(msg) {
+  showTodos_actionscript11_exec_counter[3]++;
+  showTodos_actionscript11_exec_counter[4]++;
+}
+showTodos_actionscript11_exec_counter[5]++;
+dwr.engine.setErrorHandler(errorHandler);
+showTodos_actionscript11_exec_counter[6]++;
+var keyboardListener = "on";
+showTodos_actionscript11_exec_counter[8]++;
+document.onkeydown = function(e) {
+  showTodos_actionscript11_exec_counter[9]++;
+  if (!e) {
+    showTodos_actionscript11_exec_counter[11]++;
+    e = window.event;
+  }
+  if (e.keyCode == 13 && keyboardListener == "on") 
+  {
+    if ($("addNewTodoDiv").style.display == "inline") 
+    {
+      showTodos_actionscript11_exec_counter[12]++;
+      addTodo();
+    } else if ($("editTodoDiv").style.display == "inline") 
+    {
+      showTodos_actionscript11_exec_counter[13]++;
+      editTodo();
+    }
+  }
+  showTodos_actionscript11_exec_counter[10]++;
+};
+function hideTodosLayers() {
+  showTodos_actionscript11_exec_counter[14]++;
+  showTodos_actionscript11_exec_counter[16]++;
+  $("addNewTodoDiv").style.display = 'none';
+  showTodos_actionscript11_exec_counter[17]++;
+  document.forms.addNewTodoForm.description.value = '';
+  showTodos_actionscript11_exec_counter[18]++;
+  document.forms.addNewTodoForm.priority.value = '';
+  showTodos_actionscript11_exec_counter[19]++;
+  document.forms.addNewTodoForm.dueDate.value = '';
+  showTodos_actionscript11_exec_counter[20]++;
+  document.forms.addNewTodoForm.notes.value = '';
+  showTodos_actionscript11_exec_counter[21]++;
+  $("editTodoDiv").style.display = 'none';
+  showTodos_actionscript11_exec_counter[22]++;
+  document.forms.editTodoForm.description.value = '';
+  showTodos_actionscript11_exec_counter[23]++;
+  document.forms.editTodoForm.priority.value = '';
+  showTodos_actionscript11_exec_counter[24]++;
+  document.forms.editTodoForm.dueDate.value = '';
+  showTodos_actionscript11_exec_counter[25]++;
+  document.forms.editTodoForm.notes.value = '';
+  showTodos_actionscript11_exec_counter[26]++;
+  $("addNewListDiv").style.display = 'none';
+  showTodos_actionscript11_exec_counter[27]++;
+  document.forms.addNewListForm.name.value = '';
+  showTodos_actionscript11_exec_counter[28]++;
+  document.forms.addNewListForm.rssAllowed.checked = false;
+  showTodos_actionscript11_exec_counter[29]++;
+  $("editListDiv").style.display = 'none';
+  showTodos_actionscript11_exec_counter[30]++;
+  document.forms.editListForm.name.value = '';
+  showTodos_actionscript11_exec_counter[31]++;
+  document.forms.editListForm.rssAllowed.checked = false;
+  showTodos_actionscript11_exec_counter[32]++;
+  $("shareListDiv").style.display = 'none';
+  showTodos_actionscript11_exec_counter[33]++;
+  document.forms.shareListForm.login.value = '';
+  showTodos_actionscript11_exec_counter[15]++;
+}
+function showAddTodo() {
+  showTodos_actionscript11_exec_counter[34]++;
+  showTodos_actionscript11_exec_counter[36]++;
+  hideTodosLayers();
+  showTodos_actionscript11_exec_counter[37]++;
+  var listId = document.forms.todoForm.listId.value;
+  showTodos_actionscript11_exec_counter[39]++;
+  createAssignedUserList('addNewTodoAssignedUser', listId);
+  showTodos_actionscript11_exec_counter[40]++;
+  $("addNewTodoDiv").style.display = "inline";
+  showTodos_actionscript11_exec_counter[41]++;
+  document.forms.addNewTodoForm.description.focus();
+  showTodos_actionscript11_exec_counter[42]++;
+  tracker('/ajax/showAddTodo');
+  showTodos_actionscript11_exec_counter[35]++;
+}
+function showEditTodo(todoId) {
+  showTodos_actionscript11_exec_counter[43]++;
+  showTodos_actionscript11_exec_counter[45]++;
+  hideTodosLayers();
+  showTodos_actionscript11_exec_counter[46]++;
+  document.forms.editTodoForm.todoId.value = todoId;
+  showTodos_actionscript11_exec_counter[47]++;
+  var listId = document.forms.todoForm.listId.value;
+  showTodos_actionscript11_exec_counter[49]++;
+  dwr.engine.beginBatch();
+  showTodos_actionscript11_exec_counter[50]++;
+  createAssignedUserList('editTodoAssignedUser', listId);
+  showTodos_actionscript11_exec_counter[51]++;
+  todos.getTodoById(todoId, replyGetTodoById);
+  showTodos_actionscript11_exec_counter[52]++;
+  dwr.engine.endBatch();
+  showTodos_actionscript11_exec_counter[53]++;
+  $("editTodoDiv").style.display = "inline";
+  showTodos_actionscript11_exec_counter[54]++;
+  document.forms.editTodoForm.description.focus();
+  showTodos_actionscript11_exec_counter[55]++;
+  tracker('/ajax/showEditTodo');
+  showTodos_actionscript11_exec_counter[44]++;
+}
+showTodos_actionscript11_exec_counter[56]++;
+var replyGetTodoById = function(todo) {
+  showTodos_actionscript11_exec_counter[58]++;
+  showTodos_actionscript11_exec_counter[60]++;
+  document.forms.editTodoForm.description.value = todo.description;
+  showTodos_actionscript11_exec_counter[61]++;
+  document.forms.editTodoForm.priority.value = todo.priority;
+  showTodos_actionscript11_exec_counter[62]++;
+  document.forms.editTodoForm.dueDate.value = todo.dueDate;
+  if (todo.notes == null) 
+  {
+    showTodos_actionscript11_exec_counter[63]++;
+    document.forms.editTodoForm.notes.value = '';
+  } else {
+    showTodos_actionscript11_exec_counter[64]++;
+    document.forms.editTodoForm.notes.value = todo.notes;
+  }
+  showTodos_actionscript11_exec_counter[65]++;
+  dwr.util.setValue('editTodoAssignedUser', todo.assignedUserLogin);
+  showTodos_actionscript11_exec_counter[59]++;
+};
+function createAssignedUserList(id, listId) {
+  showTodos_actionscript11_exec_counter[66]++;
+  showTodos_actionscript11_exec_counter[68]++;
+  dwr.util.removeAllOptions(id);
+  showTodos_actionscript11_exec_counter[69]++;
+  dwr.util.addOptions(id, ['amin']);
+  showTodos_actionscript11_exec_counter[70]++;
+  dwr.util.addOptions(id, [{desc: '-- Not assigned --', id: ''}], 'id', 'desc');
+  showTodos_actionscript11_exec_counter[71]++;
+  var reply = function(data) {
+  showTodos_actionscript11_exec_counter[73]++;
+  showTodos_actionscript11_exec_counter[75]++;
+  dwr.util.addOptions(id, data);
+  showTodos_actionscript11_exec_counter[74]++;
+};
+  showTodos_actionscript11_exec_counter[76]++;
+  todo_lists.getTodoListUsers(listId, reply);
+  showTodos_actionscript11_exec_counter[67]++;
+}
+function renderTableListId(listId) {
+  showTodos_actionscript11_exec_counter[77]++;
+  showTodos_actionscript11_exec_counter[79]++;
+  hideTodosLayers();
+  showTodos_actionscript11_exec_counter[80]++;
+  document.forms.todoForm.listId.value = listId;
+  showTodos_actionscript11_exec_counter[81]++;
+  todos.forceRenderTodos(listId, replyRenderTable);
+  showTodos_actionscript11_exec_counter[82]++;
+  tracker('/ajax/renderTableListId');
+  showTodos_actionscript11_exec_counter[78]++;
+}
+showTodos_actionscript11_exec_counter[83]++;
+var tableDate;
+function renderTable() {
+  showTodos_actionscript11_exec_counter[85]++;
+  showTodos_actionscript11_exec_counter[87]++;
+  var listId = document.forms.todoForm.listId.value;
+  if (tableDate == null) 
+  {
+    showTodos_actionscript11_exec_counter[89]++;
+    todos.forceRenderTodos(listId, replyRenderTable);
+  } else {
+    showTodos_actionscript11_exec_counter[90]++;
+    todos.renderTodos(listId, tableDate, replyRenderTable);
+  }
+  showTodos_actionscript11_exec_counter[91]++;
+  tracker('/ajax/renderTable');
+  showTodos_actionscript11_exec_counter[86]++;
+}
+function renderNextDays() {
+  showTodos_actionscript11_exec_counter[92]++;
+  showTodos_actionscript11_exec_counter[94]++;
+  document.forms.todoForm.listId.value = null;
+  showTodos_actionscript11_exec_counter[95]++;
+  todos.renderNextDays(replyRenderTable);
+  showTodos_actionscript11_exec_counter[96]++;
+  tracker('/ajax/renderNextDays');
+  showTodos_actionscript11_exec_counter[93]++;
+}
+function renderAssignedToMe() {
+  showTodos_actionscript11_exec_counter[97]++;
+  showTodos_actionscript11_exec_counter[99]++;
+  document.forms.todoForm.listId.value = null;
+  showTodos_actionscript11_exec_counter[100]++;
+  todos.renderAssignedToMe(replyRenderTable);
+  showTodos_actionscript11_exec_counter[101]++;
+  tracker('/ajax/renderAssignedToMe');
+  showTodos_actionscript11_exec_counter[98]++;
+}
+showTodos_actionscript11_exec_counter[102]++;
+var replyRenderTable = function(data) {
+  showTodos_actionscript11_exec_counter[104]++;
+  if (data.length > 0) 
+  {
+    showTodos_actionscript11_exec_counter[106]++;
+    dwr.util.setValue('todosTable', data);
+  }
+  showTodos_actionscript11_exec_counter[107]++;
+  tableDate = new Date();
+  showTodos_actionscript11_exec_counter[108]++;
+  document.forms.quickAddNewTodoForm.description.focus();
+  showTodos_actionscript11_exec_counter[105]++;
+};
+function sortTable(sorter) {
+  showTodos_actionscript11_exec_counter[109]++;
+  showTodos_actionscript11_exec_counter[111]++;
+  hideTodosLayers();
+  showTodos_actionscript11_exec_counter[112]++;
+  var listId = document.forms.todoForm.listId.value;
+  showTodos_actionscript11_exec_counter[114]++;
+  todos.sortAndRenderTodos(listId, sorter, replyRenderTable);
+  showTodos_actionscript11_exec_counter[115]++;
+  tracker('/ajax/sortTable');
+  showTodos_actionscript11_exec_counter[110]++;
+}
+function addTodo() {
+  showTodos_actionscript11_exec_counter[116]++;
+  showTodos_actionscript11_exec_counter[118]++;
+  var listId = document.forms.todoForm.listId.value;
+  showTodos_actionscript11_exec_counter[120]++;
+  var description = document.forms.addNewTodoForm.description.value;
+  showTodos_actionscript11_exec_counter[122]++;
+  var priority = document.forms.addNewTodoForm.priority.value;
+  showTodos_actionscript11_exec_counter[124]++;
+  var dueDate = document.forms.addNewTodoForm.dueDate.value;
+  showTodos_actionscript11_exec_counter[126]++;
+  var notes = document.forms.addNewTodoForm.notes.value;
+  showTodos_actionscript11_exec_counter[128]++;
+  var assignedUser = document.forms.addNewTodoForm.assignedUser.value;
+  if (validateForm(priority, dueDate, notes) != "ok") 
+  {
+    showTodos_actionscript11_exec_counter[130]++;
+    return;
+  }
+  showTodos_actionscript11_exec_counter[131]++;
+  $("addNewTodoDiv").style.display = 'none';
+  showTodos_actionscript11_exec_counter[132]++;
+  commonAddTodo(listId, description, priority, dueDate, notes, assignedUser);
+  showTodos_actionscript11_exec_counter[133]++;
+  tracker('/ajax/addTodo');
+  showTodos_actionscript11_exec_counter[117]++;
+}
+function quickAddTodo() {
+  showTodos_actionscript11_exec_counter[134]++;
+  showTodos_actionscript11_exec_counter[136]++;
+  var listId = document.forms.todoForm.listId.value;
+  showTodos_actionscript11_exec_counter[138]++;
+  var description = document.forms.quickAddNewTodoForm.description.value;
+  if (description != "") 
+  {
+    showTodos_actionscript11_exec_counter[140]++;
+    commonAddTodo(listId, description, 0, "", null, "amin");
+    showTodos_actionscript11_exec_counter[141]++;
+    tracker('/ajax/quickAddTodo');
+  }
+  showTodos_actionscript11_exec_counter[135]++;
+}
+function commonAddTodo(listId, description, priority, dueDate, notes, assignedUser) {
+  showTodos_actionscript11_exec_counter[142]++;
+  showTodos_actionscript11_exec_counter[144]++;
+  dwr.engine.beginBatch();
+  showTodos_actionscript11_exec_counter[145]++;
+  todos.addTodo(listId, description, priority, dueDate, notes, assignedUser, replyRenderTable);
+  showTodos_actionscript11_exec_counter[146]++;
+  todos.forceGetCurrentTodoLists(replyCurrentTodoLists);
+  showTodos_actionscript11_exec_counter[147]++;
+  dwr.engine.endBatch();
+  showTodos_actionscript11_exec_counter[143]++;
+}
+function cancelAddTodo() {
+  showTodos_actionscript11_exec_counter[148]++;
+  showTodos_actionscript11_exec_counter[150]++;
+  $("addNewTodoDiv").style.display = 'none';
+  showTodos_actionscript11_exec_counter[149]++;
+}
+function reopenTodo(todoId) {
+  showTodos_actionscript11_exec_counter[151]++;
+  showTodos_actionscript11_exec_counter[153]++;
+  dwr.engine.beginBatch();
+  showTodos_actionscript11_exec_counter[154]++;
+  todos.reopenTodo(todoId, replyRenderTable);
+  showTodos_actionscript11_exec_counter[155]++;
+  todos.forceGetCurrentTodoLists(replyCurrentTodoLists);
+  showTodos_actionscript11_exec_counter[156]++;
+  dwr.engine.endBatch();
+  showTodos_actionscript11_exec_counter[157]++;
+  tracker('/ajax/reopenTodo');
+  showTodos_actionscript11_exec_counter[152]++;
+}
+function completeTodo(todoId) {
+  showTodos_actionscript11_exec_counter[158]++;
+  showTodos_actionscript11_exec_counter[160]++;
+  dwr.engine.beginBatch();
+  showTodos_actionscript11_exec_counter[161]++;
+  todos.completeTodo(todoId, replyRenderTable);
+  showTodos_actionscript11_exec_counter[162]++;
+  todos.forceGetCurrentTodoLists(replyCurrentTodoLists);
+  showTodos_actionscript11_exec_counter[163]++;
+  dwr.engine.endBatch();
+  showTodos_actionscript11_exec_counter[164]++;
+  tracker('/ajax/completeTodo');
+  showTodos_actionscript11_exec_counter[159]++;
+}
+function editTodo() {
+  showTodos_actionscript11_exec_counter[165]++;
+  showTodos_actionscript11_exec_counter[167]++;
+  var todoId = document.forms.editTodoForm.todoId.value;
+  showTodos_actionscript11_exec_counter[169]++;
+  var description = document.forms.editTodoForm.description.value;
+  showTodos_actionscript11_exec_counter[171]++;
+  var priority = document.forms.editTodoForm.priority.value;
+  showTodos_actionscript11_exec_counter[173]++;
+  var dueDate = document.forms.editTodoForm.dueDate.value;
+  showTodos_actionscript11_exec_counter[175]++;
+  var notes = document.forms.editTodoForm.notes.value;
+  showTodos_actionscript11_exec_counter[177]++;
+  var assignedUser = document.forms.editTodoForm.assignedUser.value;
+  if (validateForm(priority, dueDate, notes) != "ok") 
+  {
+    showTodos_actionscript11_exec_counter[179]++;
+    return;
+  }
+  showTodos_actionscript11_exec_counter[180]++;
+  $("editTodoDiv").style.display = 'none';
+  showTodos_actionscript11_exec_counter[181]++;
+  todos.editTodo(todoId, description, priority, dueDate, notes, assignedUser, replyRenderTable);
+  showTodos_actionscript11_exec_counter[182]++;
+  tracker('/ajax/editTodo');
+  showTodos_actionscript11_exec_counter[166]++;
+}
+function showQuickEditTodo(todoId) {
+  showTodos_actionscript11_exec_counter[183]++;
+  showTodos_actionscript11_exec_counter[185]++;
+  $("show-" + todoId).style.display = 'none';
+  showTodos_actionscript11_exec_counter[186]++;
+  $("edit-" + todoId).style.display = 'inline';
+  showTodos_actionscript11_exec_counter[187]++;
+  $("edit-in-" + todoId).focus();
+  showTodos_actionscript11_exec_counter[184]++;
+}
+function quickEditTodo(todoId, description) {
+  showTodos_actionscript11_exec_counter[188]++;
+  showTodos_actionscript11_exec_counter[190]++;
+  todos.quickEditTodo(todoId, description, replyRenderTable);
+  showTodos_actionscript11_exec_counter[191]++;
+  tracker('/ajax/quickEditTodo');
+  showTodos_actionscript11_exec_counter[189]++;
+}
+function cancelEditTodo() {
+  showTodos_actionscript11_exec_counter[192]++;
+  showTodos_actionscript11_exec_counter[194]++;
+  $("editTodoDiv").style.display = 'none';
+  showTodos_actionscript11_exec_counter[193]++;
+}
+function deleteTodo(todoId) {
+  showTodos_actionscript11_exec_counter[195]++;
+  showTodos_actionscript11_exec_counter[197]++;
+  var sure = confirm("Are you sure you want to delete this Todo?");
+  if (sure) 
+  {
+    showTodos_actionscript11_exec_counter[199]++;
+    hideTodosLayers();
+    showTodos_actionscript11_exec_counter[200]++;
+    dwr.engine.beginBatch();
+    showTodos_actionscript11_exec_counter[201]++;
+    todos.deleteTodo(todoId, replyRenderTable);
+    showTodos_actionscript11_exec_counter[202]++;
+    todos.forceGetCurrentTodoLists(replyCurrentTodoLists);
+    showTodos_actionscript11_exec_counter[203]++;
+    dwr.engine.endBatch();
+    showTodos_actionscript11_exec_counter[204]++;
+    tracker('/ajax/deleteTodo');
+  }
+  showTodos_actionscript11_exec_counter[196]++;
+}
+function deleteAllCompletedTodos(todoId) {
+  showTodos_actionscript11_exec_counter[205]++;
+  showTodos_actionscript11_exec_counter[207]++;
+  var sure = confirm("Are you sure you want to delete all the completed Todos?");
+  if (sure) 
+  {
+    showTodos_actionscript11_exec_counter[209]++;
+    var listId = document.forms.todoForm.listId.value;
+    showTodos_actionscript11_exec_counter[211]++;
+    hideTodosLayers();
+    showTodos_actionscript11_exec_counter[212]++;
+    dwr.engine.beginBatch();
+    showTodos_actionscript11_exec_counter[213]++;
+    todos.deleteAllCompletedTodos(listId, replyRenderTable);
+    showTodos_actionscript11_exec_counter[214]++;
+    todos.forceGetCurrentTodoLists(replyCurrentTodoLists);
+    showTodos_actionscript11_exec_counter[215]++;
+    dwr.engine.endBatch();
+    showTodos_actionscript11_exec_counter[216]++;
+    tracker('/ajax/deleteAllCompletedTodos');
+  }
+  showTodos_actionscript11_exec_counter[206]++;
+}
+function showOlderTodos() {
+  showTodos_actionscript11_exec_counter[217]++;
+  showTodos_actionscript11_exec_counter[219]++;
+  var listId = document.forms.todoForm.listId.value;
+  showTodos_actionscript11_exec_counter[221]++;
+  todos.showOlderTodos(listId, replyRenderTable);
+  showTodos_actionscript11_exec_counter[222]++;
+  tracker('/ajax/showOlderTodos');
+  showTodos_actionscript11_exec_counter[218]++;
+}
+function hideOlderTodos() {
+  showTodos_actionscript11_exec_counter[223]++;
+  showTodos_actionscript11_exec_counter[225]++;
+  var listId = document.forms.todoForm.listId.value;
+  showTodos_actionscript11_exec_counter[227]++;
+  todos.hideOlderTodos(listId, replyRenderTable);
+  showTodos_actionscript11_exec_counter[228]++;
+  tracker('/ajax/hideOlderTodos');
+  showTodos_actionscript11_exec_counter[224]++;
+}
+function validateForm(priority, dueDate, notes) {
+  showTodos_actionscript11_exec_counter[229]++;
+  if (priority != "" && !priority.match(/^\d+$/)) 
+  {
+    showTodos_actionscript11_exec_counter[230]++;
+    alert("Validation error : the priority is not a number.");
+    showTodos_actionscript11_exec_counter[231]++;
+    return "nok";
+  }
+  if (dueDate != "" && !dueDate.match(/^\d{1,2}\/\d{1,2}\/\d{1,4}$/)) 
+  {
+    showTodos_actionscript11_exec_counter[232]++;
+    alert("Validation error : the due date is not a date.");
+    showTodos_actionscript11_exec_counter[233]++;
+    return "nok";
+  }
+  if (notes.length > 10000) 
+  {
+    showTodos_actionscript11_exec_counter[234]++;
+    alert("Validation error : the notes cannot be more than 10,000 characters long.");
+    showTodos_actionscript11_exec_counter[235]++;
+    return "nok";
+  }
+  showTodos_actionscript11_exec_counter[236]++;
+  return "ok";
+}
+showTodos_actionscript11_exec_counter[1]++;

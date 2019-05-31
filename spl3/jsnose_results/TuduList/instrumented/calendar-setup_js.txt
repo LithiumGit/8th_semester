@@ -1,0 +1,260 @@
+calendar - setup_js_exec_counter[0]++;
+calendar - setup_js_exec_counter[2]++;
+Calendar.setup = function(params) {
+  calendar - setup_js_exec_counter[3]++;
+  function param_default(pname, def) {
+    calendar - setup_js_exec_counter[4]++;
+    if (typeof params[pname] == "undefined") 
+    {
+      calendar - setup_js_exec_counter[6]++;
+      params[pname] = def;
+    }
+    calendar - setup_js_exec_counter[5]++;
+  }
+    calendar - setup_js_exec_counter[7]++;
+  param_default("inputField", null);
+  calendar - setup_js_exec_counter[8]++;
+  param_default("displayArea", null);
+  calendar - setup_js_exec_counter[9]++;
+  param_default("button", null);
+  calendar - setup_js_exec_counter[10]++;
+  param_default("eventName", "click");
+  calendar - setup_js_exec_counter[11]++;
+  param_default("ifFormat", "%Y/%m/%d");
+  calendar - setup_js_exec_counter[12]++;
+  param_default("daFormat", "%Y/%m/%d");
+  calendar - setup_js_exec_counter[13]++;
+  param_default("singleClick", true);
+  calendar - setup_js_exec_counter[14]++;
+  param_default("disableFunc", null);
+  calendar - setup_js_exec_counter[15]++;
+  param_default("dateStatusFunc", params["disableFunc"]);
+  calendar - setup_js_exec_counter[16]++;
+  param_default("dateText", null);
+  calendar - setup_js_exec_counter[17]++;
+  param_default("firstDay", null);
+  calendar - setup_js_exec_counter[18]++;
+  param_default("align", "Br");
+  calendar - setup_js_exec_counter[19]++;
+  param_default("range", [1900, 2999]);
+  calendar - setup_js_exec_counter[20]++;
+  param_default("weekNumbers", true);
+  calendar - setup_js_exec_counter[21]++;
+  param_default("flat", null);
+  calendar - setup_js_exec_counter[22]++;
+  param_default("flatCallback", null);
+  calendar - setup_js_exec_counter[23]++;
+  param_default("onSelect", null);
+  calendar - setup_js_exec_counter[24]++;
+  param_default("onClose", null);
+  calendar - setup_js_exec_counter[25]++;
+  param_default("onUpdate", null);
+  calendar - setup_js_exec_counter[26]++;
+  param_default("date", null);
+  calendar - setup_js_exec_counter[27]++;
+  param_default("showsTime", false);
+  calendar - setup_js_exec_counter[28]++;
+  param_default("timeFormat", "24");
+  calendar - setup_js_exec_counter[29]++;
+  param_default("electric", true);
+  calendar - setup_js_exec_counter[30]++;
+  param_default("step", 2);
+  calendar - setup_js_exec_counter[31]++;
+  param_default("position", null);
+  calendar - setup_js_exec_counter[32]++;
+  param_default("cache", false);
+  calendar - setup_js_exec_counter[33]++;
+  param_default("showOthers", false);
+  calendar - setup_js_exec_counter[34]++;
+  param_default("multiple", null);
+  calendar - setup_js_exec_counter[35]++;
+  var tmp = ["inputField", "displayArea", "button"];
+  for (var i in tmp) 
+    {
+      if (typeof params[tmp[i]] == "string") 
+      {
+        calendar - setup_js_exec_counter[38]++;
+        params[tmp[i]] = document.getElementById(params[tmp[i]]);
+      }
+    }
+  if (!(params.flat || params.multiple || params.inputField || params.displayArea || params.button)) 
+  {
+    calendar - setup_js_exec_counter[39]++;
+    alert("Calendar.setup:\n  Nothing to setup (no fields found).  Please check your code");
+    calendar - setup_js_exec_counter[40]++;
+    return false;
+  }
+  function onSelect(cal) {
+    calendar - setup_js_exec_counter[41]++;
+    calendar - setup_js_exec_counter[43]++;
+    var p = cal.params;
+    calendar - setup_js_exec_counter[45]++;
+    var update = (cal.dateClicked || p.electric);
+    if (update && p.inputField) 
+    {
+      calendar - setup_js_exec_counter[47]++;
+      p.inputField.value = cal.date.print(p.ifFormat);
+      if (typeof p.inputField.onchange == "function") {
+        calendar - setup_js_exec_counter[48]++;
+        p.inputField.onchange();
+      }
+    }
+    if (update && p.displayArea) {
+      calendar - setup_js_exec_counter[49]++;
+      p.displayArea.innerHTML = cal.date.print(p.daFormat);
+    }
+    if (update && typeof p.onUpdate == "function") {
+      calendar - setup_js_exec_counter[50]++;
+      p.onUpdate(cal);
+    }
+    if (update && p.flat) 
+    {
+      if (typeof p.flatCallback == "function") {
+        calendar - setup_js_exec_counter[51]++;
+        p.flatCallback(cal);
+      }
+    }
+    if (update && p.singleClick && cal.dateClicked) {
+      calendar - setup_js_exec_counter[52]++;
+      cal.callCloseHandler();
+    }
+    calendar - setup_js_exec_counter[42]++;
+  }
+    if (params.flat != null) 
+  {
+    if (typeof params.flat == "string") {
+      calendar - setup_js_exec_counter[53]++;
+      params.flat = document.getElementById(params.flat);
+    }
+    if (!params.flat) 
+    {
+      calendar - setup_js_exec_counter[54]++;
+      alert("Calendar.setup:\n  Flat specified but can't find parent.");
+      calendar - setup_js_exec_counter[55]++;
+      return false;
+    }
+    calendar - setup_js_exec_counter[56]++;
+    var cal = new Calendar(params.firstDay, params.date, params.onSelect || onSelect);
+    calendar - setup_js_exec_counter[58]++;
+    cal.showsOtherMonths = params.showOthers;
+    calendar - setup_js_exec_counter[59]++;
+    cal.showsTime = params.showsTime;
+    calendar - setup_js_exec_counter[60]++;
+    cal.time24 = (params.timeFormat == "24");
+    calendar - setup_js_exec_counter[61]++;
+    cal.params = params;
+    calendar - setup_js_exec_counter[62]++;
+    cal.weekNumbers = params.weekNumbers;
+    calendar - setup_js_exec_counter[63]++;
+    cal.setRange(params.range[0], params.range[1]);
+    calendar - setup_js_exec_counter[64]++;
+    cal.setDateStatusHandler(params.dateStatusFunc);
+    calendar - setup_js_exec_counter[65]++;
+    cal.getDateText = params.dateText;
+    if (params.ifFormat) 
+    {
+      calendar - setup_js_exec_counter[66]++;
+      cal.setDateFormat(params.ifFormat);
+    }
+    if (params.inputField && typeof params.inputField.value == "string") 
+    {
+      calendar - setup_js_exec_counter[67]++;
+      cal.parseDate(params.inputField.value);
+    }
+    calendar - setup_js_exec_counter[68]++;
+    cal.create(params.flat);
+    calendar - setup_js_exec_counter[69]++;
+    cal.show();
+    calendar - setup_js_exec_counter[70]++;
+    return false;
+  }
+  calendar - setup_js_exec_counter[71]++;
+  var triggerEl = params.button || params.displayArea || params.inputField;
+  calendar - setup_js_exec_counter[73]++;
+  triggerEl["on" + params.eventName] = function() {
+  calendar - setup_js_exec_counter[74]++;
+  calendar - setup_js_exec_counter[75]++;
+  var dateEl = params.inputField || params.displayArea;
+  calendar - setup_js_exec_counter[77]++;
+  var dateFmt = params.inputField ? params.ifFormat : params.daFormat;
+  calendar - setup_js_exec_counter[79]++;
+  var mustCreate = false;
+  calendar - setup_js_exec_counter[81]++;
+  var cal = window.calendar;
+  if (dateEl) {
+    calendar - setup_js_exec_counter[83]++;
+    params.date = Date.parseDate(dateEl.value || dateEl.innerHTML, dateFmt);
+  }
+  if (!(cal && params.cache)) 
+  {
+    calendar - setup_js_exec_counter[84]++;
+    window.calendar = cal = new Calendar(params.firstDay, params.date, params.onSelect || onSelect, params.onClose || function(cal) {
+  calendar - setup_js_exec_counter[85]++;
+  calendar - setup_js_exec_counter[87]++;
+  cal.hide();
+  calendar - setup_js_exec_counter[86]++;
+});
+    calendar - setup_js_exec_counter[88]++;
+    cal.showsTime = params.showsTime;
+    calendar - setup_js_exec_counter[89]++;
+    cal.time24 = (params.timeFormat == "24");
+    calendar - setup_js_exec_counter[90]++;
+    cal.weekNumbers = params.weekNumbers;
+    calendar - setup_js_exec_counter[91]++;
+    mustCreate = true;
+  } else {
+    if (params.date) {
+      calendar - setup_js_exec_counter[92]++;
+      cal.setDate(params.date);
+    }
+    calendar - setup_js_exec_counter[93]++;
+    cal.hide();
+  }
+  if (params.multiple) 
+  {
+    calendar - setup_js_exec_counter[94]++;
+    cal.multiple = {};
+    for (var i = params.multiple.length; --i >= 0; ) 
+      {
+        calendar - setup_js_exec_counter[95]++;
+        var d = params.multiple[i];
+        calendar - setup_js_exec_counter[97]++;
+        var ds = d.print("%Y%m%d");
+        calendar - setup_js_exec_counter[99]++;
+        cal.multiple[ds] = d;
+      }
+  }
+  calendar - setup_js_exec_counter[100]++;
+  cal.showsOtherMonths = params.showOthers;
+  calendar - setup_js_exec_counter[101]++;
+  cal.yearStep = params.step;
+  calendar - setup_js_exec_counter[102]++;
+  cal.setRange(params.range[0], params.range[1]);
+  calendar - setup_js_exec_counter[103]++;
+  cal.params = params;
+  calendar - setup_js_exec_counter[104]++;
+  cal.setDateStatusHandler(params.dateStatusFunc);
+  calendar - setup_js_exec_counter[105]++;
+  cal.getDateText = params.dateText;
+  calendar - setup_js_exec_counter[106]++;
+  cal.setDateFormat(dateFmt);
+  if (mustCreate) {
+    calendar - setup_js_exec_counter[107]++;
+    cal.create();
+  }
+  calendar - setup_js_exec_counter[108]++;
+  cal.refresh();
+  if (!params.position) {
+    calendar - setup_js_exec_counter[109]++;
+    cal.showAtElement(params.button || params.displayArea || params.inputField, params.align);
+  } else {
+    calendar - setup_js_exec_counter[110]++;
+    cal.showAt(params.position[0], params.position[1]);
+  }
+  calendar - setup_js_exec_counter[111]++;
+  return false;
+};
+  calendar - setup_js_exec_counter[112]++;
+  return cal;
+};
+calendar - setup_js_exec_counter[1]++;

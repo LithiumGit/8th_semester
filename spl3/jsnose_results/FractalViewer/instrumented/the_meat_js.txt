@@ -1,0 +1,333 @@
+the_meat_js_exec_counter[0]++;
+var canvas, container, g, mouse = new Vec2(0, 0), viewBounds, cullBounds, viewBoundsMax = new Vec2(1000, 500), root, branches = [], mouseBranch, maxLength, minLengthToSpawn = 50, maxBranches = 100, origin, zoomVel = 0, panVel = 0, bgColor = [0, 0, 0], playing = false, mutate = false, flower = false, aboutOn = false, NONE = "none", PAINT = "paint", ERASE = "erase", SPIKE = "spike", STROKE = "stroke", FLOWER = "flower", paintTool, paintStyle, paintRadius = 20, flowerMoment = false, flowerMomentId;
+function justInit() {
+  the_meat_js_exec_counter[2]++;
+  the_meat_js_exec_counter[4]++;
+  $("#my_container").fadeIn(500);
+  the_meat_js_exec_counter[5]++;
+  canvas = document.getElementById("my_canvas");
+  the_meat_js_exec_counter[6]++;
+  container = document.getElementById("my_container");
+  the_meat_js_exec_counter[7]++;
+  canvas.onmousedown = onMouseDown;
+  the_meat_js_exec_counter[8]++;
+  document.onmouseup = onMouseUp;
+  the_meat_js_exec_counter[9]++;
+  document.onmousemove = onMouseMove;
+  the_meat_js_exec_counter[10]++;
+  document.onkeydown = onKeyDown;
+  the_meat_js_exec_counter[11]++;
+  g = new Brush(canvas);
+  the_meat_js_exec_counter[12]++;
+  g.setFrameRate(30);
+  the_meat_js_exec_counter[13]++;
+  g.loopOn(justDraw);
+  the_meat_js_exec_counter[14]++;
+  sizeToWindow();
+  the_meat_js_exec_counter[15]++;
+  origin = new Vec2(viewBounds.center.x, viewBounds.center.y);
+  the_meat_js_exec_counter[16]++;
+  window.onresize = sizeToWindow;
+  the_meat_js_exec_counter[17]++;
+  set_tool(NONE);
+  the_meat_js_exec_counter[18]++;
+  set_paint_style(SPIKE);
+  the_meat_js_exec_counter[19]++;
+  toggle("mutate", false);
+  the_meat_js_exec_counter[20]++;
+  toggle("flower", false);
+  the_meat_js_exec_counter[21]++;
+  initRoot();
+  the_meat_js_exec_counter[22]++;
+  var hash = window.location.hash.substring(1);
+  if (hash == "play") {
+    the_meat_js_exec_counter[24]++;
+    toggle("play", true);
+  } else {
+    the_meat_js_exec_counter[25]++;
+    toggle("about", true);
+  }
+  the_meat_js_exec_counter[3]++;
+}
+the_meat_js_exec_counter[26]++;
+window.onload = justInit;
+function initRoot() {
+  the_meat_js_exec_counter[27]++;
+  the_meat_js_exec_counter[29]++;
+  clearBranches();
+  the_meat_js_exec_counter[30]++;
+  root = new Branch({style: paintStyle, twigRule: {nbr: [8], ncv: [16, 16, 16, 16], angle: [rand2(-Math.PI, Math.PI) * 0.33], crook: [0.1], side: [0, 1], style: [SPIKE], len: [1, 1, 1, 1], flower: false}});
+  the_meat_js_exec_counter[31]++;
+  root.gen({pos: new Vec2(g.width * rand2(0.25, 0.75), g.height), angle: -Math.PI / 2, crook: 0.05, len: g.height, weight: 0.04, ncv: 16});
+  the_meat_js_exec_counter[32]++;
+  addBranch(root);
+  the_meat_js_exec_counter[28]++;
+}
+function sizeToWindow() {
+  the_meat_js_exec_counter[33]++;
+  the_meat_js_exec_counter[35]++;
+  var winw = window.innerWidth;
+  the_meat_js_exec_counter[37]++;
+  var winh = window.innerHeight;
+  the_meat_js_exec_counter[39]++;
+  viewBounds = new Rect2(new Vec2(0, 0), new Vec2(Math.min(winw, viewBoundsMax.x), Math.min(winh, viewBoundsMax.y)));
+  the_meat_js_exec_counter[40]++;
+  cullBounds = new Rect2(new Vec2(viewBounds.min.x - 50, viewBounds.min.y - 50), new Vec2(viewBounds.max.x + 50, viewBounds.max.y + 50));
+  the_meat_js_exec_counter[41]++;
+  maxLength = viewBounds.hyp * 10;
+  the_meat_js_exec_counter[42]++;
+  g.size(viewBounds.extent.x, viewBounds.extent.y);
+  the_meat_js_exec_counter[43]++;
+  container.style.left = winw / 2 - viewBounds.extent.x / 2;
+  the_meat_js_exec_counter[44]++;
+  container.style.top = winh / 2 - viewBounds.extent.y / 2;
+  the_meat_js_exec_counter[34]++;
+}
+function justDraw() {
+  the_meat_js_exec_counter[45]++;
+  the_meat_js_exec_counter[47]++;
+  g.erase();
+  the_meat_js_exec_counter[48]++;
+  g.noFill();
+  the_meat_js_exec_counter[49]++;
+  g.stroke(0);
+  for (var i = 0, brl = branches.length; i < brl; i++) 
+    {
+      the_meat_js_exec_counter[50]++;
+      branches[i].update();
+      the_meat_js_exec_counter[51]++;
+      branches[i].draw();
+    }
+  if (mouseBranch) 
+  {
+    the_meat_js_exec_counter[52]++;
+    mouseBranch.update();
+    the_meat_js_exec_counter[53]++;
+    mouseBranch.draw();
+  }
+  the_meat_js_exec_counter[54]++;
+  sortByClosestToMouse();
+  the_meat_js_exec_counter[55]++;
+  var closest = branches[0];
+  if (closest) 
+  {
+    the_meat_js_exec_counter[57]++;
+    var ccv = closest.cv[Math.floor(closest.cv.length / 2)];
+    the_meat_js_exec_counter[59]++;
+    origin.set(lerp(origin.x, ccv.x, 0.25), lerp(origin.y, ccv.y, 0.25));
+  }
+  if (playing && closest) 
+  {
+    the_meat_js_exec_counter[60]++;
+    var move = new Vec2((viewBounds.center.x - origin.x) * panVel, (viewBounds.center.y - origin.y) * panVel);
+    for (var i = branches.length; --i >= 0; ) 
+      {
+        the_meat_js_exec_counter[62]++;
+        branches[i].transform(origin, move, 1 + zoomVel);
+      }
+    the_meat_js_exec_counter[63]++;
+    var speedy = mouse.down && closest.style != FLOWER;
+    the_meat_js_exec_counter[65]++;
+    zoomVel *= 0.9;
+    the_meat_js_exec_counter[66]++;
+    zoomVel += lerp(0.001, speedy ? 0.01 : 0.002, branches.length / maxBranches);
+    the_meat_js_exec_counter[67]++;
+    panVel *= 0.9;
+    the_meat_js_exec_counter[68]++;
+    panVel += lerp(0.001, speedy ? 0.005 : 0.002, branches.length / maxBranches);
+  }
+  the_meat_js_exec_counter[69]++;
+  cullOffscreen();
+  the_meat_js_exec_counter[46]++;
+}
+function startFlowerMoment() {
+  the_meat_js_exec_counter[70]++;
+  if (flowerMoment) {
+    the_meat_js_exec_counter[72]++;
+    clearTimeout(flowerMomentId);
+  }
+  if (playing) 
+  {
+    the_meat_js_exec_counter[73]++;
+    flowerMoment = true;
+    the_meat_js_exec_counter[74]++;
+    flowerMomentId = setTimeout(endFlowerMoment, randInt2(5000, 20000));
+    the_meat_js_exec_counter[75]++;
+    fadeBg(randInt(130), randInt(130), randInt(130), 1000);
+  }
+  the_meat_js_exec_counter[71]++;
+}
+function endFlowerMoment() {
+  the_meat_js_exec_counter[76]++;
+  if (flowerMoment) 
+  {
+    the_meat_js_exec_counter[78]++;
+    flowerMoment = false;
+    the_meat_js_exec_counter[79]++;
+    clearTimeout(flowerMomentId);
+  }
+  if (flower) {
+    the_meat_js_exec_counter[80]++;
+    flowerMomentId = setTimeout(startFlowerMoment, randInt2(8000, 12000));
+  }
+  the_meat_js_exec_counter[77]++;
+}
+function onMouseDown(e) {
+  the_meat_js_exec_counter[81]++;
+  the_meat_js_exec_counter[83]++;
+  mouse.down = true;
+  the_meat_js_exec_counter[82]++;
+}
+function onMouseMove(e) {
+  the_meat_js_exec_counter[84]++;
+  the_meat_js_exec_counter[86]++;
+  mouse.set(e.pageX - container.offsetLeft, e.pageY - container.offsetTop);
+  the_meat_js_exec_counter[85]++;
+}
+function onMouseUp(e) {
+  the_meat_js_exec_counter[87]++;
+  the_meat_js_exec_counter[89]++;
+  mouse.down = false;
+  the_meat_js_exec_counter[88]++;
+}
+function onKeyDown(e) {
+  the_meat_js_exec_counter[90]++;
+  the_meat_js_exec_counter[92]++;
+  var c = e.charCode;
+  the_meat_js_exec_counter[94]++;
+  alert(">>>275 " + c);
+  switch (c) {
+    case ' ':
+      {
+        the_meat_js_exec_counter[95]++;
+        toggle('play');
+        the_meat_js_exec_counter[96]++;
+        break;
+      }
+    case 'p':
+      {
+        the_meat_js_exec_counter[97]++;
+        toggle('play');
+        the_meat_js_exec_counter[98]++;
+        break;
+      }
+    case 'n':
+      {
+        the_meat_js_exec_counter[99]++;
+        reset();
+        the_meat_js_exec_counter[100]++;
+        break;
+      }
+    case 'm':
+      {
+        the_meat_js_exec_counter[101]++;
+        toggle('mutate');
+        the_meat_js_exec_counter[102]++;
+        break;
+      }
+    case 'b':
+      {
+        the_meat_js_exec_counter[103]++;
+        toggle('flower');
+        the_meat_js_exec_counter[104]++;
+        break;
+      }
+    case 'a':
+      {
+        the_meat_js_exec_counter[105]++;
+        toggle('about');
+        the_meat_js_exec_counter[106]++;
+        break;
+      }
+  }
+  the_meat_js_exec_counter[91]++;
+}
+function addBranch(br) {
+  the_meat_js_exec_counter[107]++;
+  the_meat_js_exec_counter[109]++;
+  branches.push(br);
+  the_meat_js_exec_counter[108]++;
+}
+function removeBranch(br) {
+  the_meat_js_exec_counter[110]++;
+  the_meat_js_exec_counter[112]++;
+  removeBranchByIndex(branches.indexOf(br));
+  the_meat_js_exec_counter[111]++;
+}
+function removeBranchByIndex(i) {
+  the_meat_js_exec_counter[113]++;
+  the_meat_js_exec_counter[115]++;
+  branches[i].prune();
+  if (i >= 0) {
+    the_meat_js_exec_counter[116]++;
+    branches.splice(i, 1);
+  }
+  the_meat_js_exec_counter[114]++;
+}
+function clearBranches() {
+  the_meat_js_exec_counter[117]++;
+  for (var i = branches.length; --i >= 0; ) {
+    the_meat_js_exec_counter[119]++;
+    branches[i].prune();
+  }
+  the_meat_js_exec_counter[120]++;
+  branches = [];
+  the_meat_js_exec_counter[118]++;
+}
+function cullOffscreen() {
+  the_meat_js_exec_counter[121]++;
+  for (var i = branches.length; --i >= 0; ) 
+    {
+      the_meat_js_exec_counter[123]++;
+      var br = branches[i];
+      if (!Rect2.intersects(cullBounds, br.bounds) || br.bounds.hyp > maxLength) 
+      {
+        the_meat_js_exec_counter[125]++;
+        removeBranchByIndex(i);
+      }
+    }
+  the_meat_js_exec_counter[122]++;
+}
+function findIntersection(p1, p2) {
+  the_meat_js_exec_counter[126]++;
+  the_meat_js_exec_counter[127]++;
+  var bounds = new Rect2(new Vec2(Math.min(p1.x, p2.x), Math.min(p1.y, p2.y)), new Vec2(Math.max(p1.x, p2.x), Math.max(p1.y, p2.y)));
+  for (var i = branches.length; --i >= 0; ) 
+    {
+      the_meat_js_exec_counter[129]++;
+      var br = branches[i];
+      if (Rect2.intersects(bounds, br.bounds)) 
+      {
+        for (var j = br.cv.length - 1; --j >= 0; ) 
+          {
+            the_meat_js_exec_counter[131]++;
+            var is = segIntersection(p1, p2, br.cv[j], br.cv[j + 1]);
+            if (is !== null) {
+              the_meat_js_exec_counter[133]++;
+              return is;
+            }
+          }
+      }
+    }
+  the_meat_js_exec_counter[134]++;
+  return null;
+}
+function sortByClosestToMouse() {
+  the_meat_js_exec_counter[135]++;
+  for (var i = branches.length; --i >= 0; ) 
+    {
+      the_meat_js_exec_counter[137]++;
+      var ctr_cv = branches[i].cv[Math.floor(branches[i].cv.length / 2)];
+      the_meat_js_exec_counter[139]++;
+      branches[i].distToMouse = Vec2.distSq(mouse, ctr_cv);
+    }
+  the_meat_js_exec_counter[140]++;
+  branches.sort(sortMouseDist);
+  the_meat_js_exec_counter[136]++;
+}
+function sortMouseDist(a, b) {
+  the_meat_js_exec_counter[141]++;
+  the_meat_js_exec_counter[142]++;
+  return b.distToMouse < a.distToMouse && b.bounds.hyp < viewBounds.hyp ? 1 : -1;
+}
+the_meat_js_exec_counter[1]++;

@@ -1,0 +1,12 @@
+showTodos_actionscript13_exec_counter[0]++;
+function reloadingMenu() {
+  showTodos_actionscript13_exec_counter[2]++;
+  showTodos_actionscript13_exec_counter[4]++;
+  renderMenu();
+  showTodos_actionscript13_exec_counter[5]++;
+  setTimeout('reloadingMenu();', 2.4 * 60 * 1000);
+  showTodos_actionscript13_exec_counter[3]++;
+}
+showTodos_actionscript13_exec_counter[6]++;
+reloadingMenu();
+showTodos_actionscript13_exec_counter[1]++;

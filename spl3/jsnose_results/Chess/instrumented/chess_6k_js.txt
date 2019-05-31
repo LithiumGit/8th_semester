@@ -1,0 +1,696 @@
+chess_6k_js_exec_counter[0]++;
+M = I = P = N = q = K = J = Btime = 0;
+chess_6k_js_exec_counter[2]++;
+Bt = 1999;
+chess_6k_js_exec_counter[3]++;
+Al = -Bt;
+chess_6k_js_exec_counter[4]++;
+Ds = [10, -10];
+chess_6k_js_exec_counter[5]++;
+BE = 120;
+chess_6k_js_exec_counter[6]++;
+Rh = [];
+chess_6k_js_exec_counter[7]++;
+G = [];
+chess_6k_js_exec_counter[8]++;
+R = [];
+chess_6k_js_exec_counter[9]++;
+KL = [3, 3];
+chess_6k_js_exec_counter[10]++;
+j = [0, 1, 5, 3, 3, 9, 63, 0];
+chess_6k_js_exec_counter[11]++;
+MV = [0, 0, [1, 10], [21, 19, 12, 8], [11, 9], [1, 10, 11, 9], [1, 10, 11, 9], 0];
+for (z = 0; z < 8; ) 
+  {
+    chess_6k_js_exec_counter[12]++;
+    j[z + 8] = j[z] <<= 4;
+    chess_6k_js_exec_counter[13]++;
+    m = MV[z++];
+    if (m) 
+    {
+      chess_6k_js_exec_counter[14]++;
+      s = m.length;
+      for (x = 0; x < s; ) 
+        {
+          chess_6k_js_exec_counter[15]++;
+          m[s + x] = -m[x++];
+        }
+    }
+  }
+chess_6k_js_exec_counter[16]++;
+x = 'g00000000g';
+chess_6k_js_exec_counter[17]++;
+y = 'gggggggggg';
+chess_6k_js_exec_counter[18]++;
+b = y + y + "g23456432gg11111111g" + x + x + x + x + "g99999999ggABCDECBAg" + y + y;
+chess_6k_js_exec_counter[19]++;
+w = x + x + x + "000111100000123321000123553210";
+chess_6k_js_exec_counter[20]++;
+a = '000012346900';
+chess_6k_js_exec_counter[21]++;
+Y = [];
+chess_6k_js_exec_counter[22]++;
+PY = [];
+chess_6k_js_exec_counter[23]++;
+bY = [];
+for (y = 0; y < 12; y++) 
+  {
+    for (x = 0; x < 10; x++) 
+      {
+        chess_6k_js_exec_counter[24]++;
+        z = (y * 10) + x;
+        chess_6k_js_exec_counter[25]++;
+        PY[z] = parseInt(a.charAt(y));
+        chess_6k_js_exec_counter[26]++;
+        bY[z] = parseInt(w.charAt((z < 60) ? z : 119 - z), 35) & 7;
+        chess_6k_js_exec_counter[27]++;
+        R[z] = parseInt(b.charAt(z), 35);
+      }
+  }
+chess_6k_js_exec_counter[28]++;
+R[BE] = 0;
+chess_6k_js_exec_counter[29]++;
+d = document;
+chess_6k_js_exec_counter[30]++;
+A = E = d.all;
+if (!E) {
+  chess_6k_js_exec_counter[31]++;
+  event = 0;
+}
+chess_6k_js_exec_counter[32]++;
+DM = d.getElementsByTagName || null;
+if (DM || E) 
+{
+  chess_6k_js_exec_counter[33]++;
+  d.write('<img src="0.gif" id="PI" name="PI" width="32" height="30">');
+  chess_6k_js_exec_counter[34]++;
+  A = (E || d.getElementsByTagName('img'));
+  chess_6k_js_exec_counter[35]++;
+  Ic = A["PI"].style;
+}
+chess_6k_js_exec_counter[36]++;
+cp = new Function('a', 'b', 'return b[0]-a[0]');
+function Z(c, U, C, s, e, A, B, K) {
+  chess_6k_js_exec_counter[37]++;
+  chess_6k_js_exec_counter[38]++;
+  var z = -1, C = -C, V = 8 - U, b = Al, r = R, S, E = r[e], g, d;
+  if (C < -400) {
+    chess_6k_js_exec_counter[40]++;
+    return [C, s, e];
+  }
+  chess_6k_js_exec_counter[41]++;
+  r[e] = S = r[s];
+  chess_6k_js_exec_counter[42]++;
+  r[s] = 0;
+  if (S) {
+    chess_6k_js_exec_counter[43]++;
+    G[V][G[V].length] = [S, e];
+  }
+  if (S - U == 1 && r[e + Ds[U >> 3]] > 15) 
+  {
+    chess_6k_js_exec_counter[44]++;
+    r[e] += 4;
+  }
+  if (S - U == 6 && (s - e == 2 || e - s == 2)) 
+  {
+    chess_6k_js_exec_counter[45]++;
+    g = s - 4 + (s < e) * 7;
+    chess_6k_js_exec_counter[46]++;
+    d = (s + e) >> 1;
+    chess_6k_js_exec_counter[47]++;
+    r[g] = 0;
+    chess_6k_js_exec_counter[48]++;
+    r[d] = U + 2;
+  }
+  chess_6k_js_exec_counter[49]++;
+  var L = Pz(U, K, C), N = L.length, n;
+  if (N) 
+  {
+    if (c) 
+    {
+      chess_6k_js_exec_counter[51]++;
+      L.sort(cp);
+      chess_6k_js_exec_counter[52]++;
+      c--;
+      chess_6k_js_exec_counter[53]++;
+      var i = L[0], j = i[1], k = i[2], t;
+      chess_6k_js_exec_counter[55]++;
+      b = -Z(c, V, i[0], j, k, -B, -A, i[3])[0];
+      for (z = 1; z < N; z++) 
+        {
+          if (b > A) {
+            chess_6k_js_exec_counter[56]++;
+            A = b;
+          }
+          chess_6k_js_exec_counter[57]++;
+          n = L[z];
+          chess_6k_js_exec_counter[58]++;
+          t = -Z(c, V, n[0], n[1], n[2], -A - 1, -A, n[3])[0];
+          if ((t > A) && (t < B)) {
+            chess_6k_js_exec_counter[59]++;
+            t = -Z(c, V, n[0], n[1], n[2], -B, -t, n[3])[0];
+          }
+          if (t > b) 
+          {
+            chess_6k_js_exec_counter[60]++;
+            b = t;
+            chess_6k_js_exec_counter[61]++;
+            j = n[1];
+            chess_6k_js_exec_counter[62]++;
+            k = n[2];
+            if (t > A) {
+              chess_6k_js_exec_counter[63]++;
+              A = t;
+            }
+            if (b > B) 
+            {
+              chess_6k_js_exec_counter[64]++;
+              break;
+            }
+          }
+        }
+    } else {
+      chess_6k_js_exec_counter[65]++;
+      b = Al;
+      while (--N && B > b) 
+        {
+          if (L[N][0] > b) 
+          {
+            chess_6k_js_exec_counter[66]++;
+            b = L[N][0];
+          }
+        }
+    }
+  } else {
+    chess_6k_js_exec_counter[67]++;
+    fy(0);
+  }
+  if (g) 
+  {
+    chess_6k_js_exec_counter[68]++;
+    r[g] = U + 2;
+    chess_6k_js_exec_counter[69]++;
+    r[d] = 0;
+  }
+  chess_6k_js_exec_counter[70]++;
+  r[s] = S;
+  chess_6k_js_exec_counter[71]++;
+  r[e] = E;
+  chess_6k_js_exec_counter[72]++;
+  G[V].length--;
+  chess_6k_js_exec_counter[73]++;
+  return [b, j, k];
+}
+function Sf(c, U, s, e, K) {
+  chess_6k_js_exec_counter[74]++;
+  chess_6k_js_exec_counter[75]++;
+  var E = R[e], S = R[e] = R[s];
+  chess_6k_js_exec_counter[77]++;
+  R[s] = 0;
+  chess_6k_js_exec_counter[78]++;
+  H();
+  chess_6k_js_exec_counter[79]++;
+  U = Z(c, U, 0, BE, BE, Al, Bt, K);
+  chess_6k_js_exec_counter[80]++;
+  R[s] = S;
+  chess_6k_js_exec_counter[81]++;
+  R[e] = E;
+  chess_6k_js_exec_counter[82]++;
+  return U[0];
+}
+function mv(s, e, b) {
+  chess_6k_js_exec_counter[83]++;
+  chess_6k_js_exec_counter[84]++;
+  var E = R[e], S = R[s], a = S & 7, u = M >> 3, c = 0, t = 0, z = 0, p;
+  if (M == P) 
+  {
+    chess_6k_js_exec_counter[86]++;
+    H();
+    chess_6k_js_exec_counter[87]++;
+    p = Pz(M, K, 0);
+    for (; z < p.length; z++) 
+      {
+        chess_6k_js_exec_counter[88]++;
+        t = t || (s == p[z][1] && e == p[z][2]);
+      }
+    if (!t) {
+      chess_6k_js_exec_counter[89]++;
+      return 0;
+    }
+    if (Sf(0, 8 - M, s, e, K) > 400) {
+      chess_6k_js_exec_counter[90]++;
+      return 0;
+    }
+  }
+  if (Sf(0, M, s, e, K) > 400) {
+    chess_6k_js_exec_counter[91]++;
+    c = 1;
+  }
+  chess_6k_js_exec_counter[92]++;
+  var x = s % 10, g = e - s, D = Ds[u], t = e % 10, n = 1 + (N >> 1), l = "abcdefgh";
+  chess_6k_js_exec_counter[94]++;
+  Df((M ? '     ' : (n < 10 ? " " : "") + n + ".  ") + l.charAt(x - 1) + ((s - x) / 10 - 1) + (E ? 'x' : '-') + l.charAt(t - 1) + ((e - t) / 10 - 1) + (c ? '+' : ' '));
+  if (Sf(1, 8 - M, s, e, K) < -400) {
+    chess_6k_js_exec_counter[95]++;
+    fy(c);
+  }
+  if ((E & 7) == 6) 
+  {
+    chess_6k_js_exec_counter[96]++;
+    fy(1);
+    chess_6k_js_exec_counter[97]++;
+    return 0;
+  }
+  chess_6k_js_exec_counter[98]++;
+  Rh[N] = [R.toString(), KL.toString(), K];
+  chess_6k_js_exec_counter[99]++;
+  K = 0;
+  if (a == 1) 
+  {
+    if (R[e + D] > 15) {
+      chess_6k_js_exec_counter[100]++;
+      R[s] += 4 - b;
+    }
+    if (g == 2 * D && (R[e - 1] & 1 || R[e + 1] & 1)) {
+      chess_6k_js_exec_counter[101]++;
+      K = s + D;
+    }
+    if (!E && g % 10) {
+      chess_6k_js_exec_counter[102]++;
+      Sh(e, e - D);
+    }
+  }
+  if (s == 21 + u * 70 || s == 28 + u * 70) {
+    chess_6k_js_exec_counter[103]++;
+    KL[u] &= (x < 5) + 1;
+  }
+  if (e == 21 + u * 70 || e == 28 + u * 70) {
+    chess_6k_js_exec_counter[104]++;
+    KL[!u] &= (x < 5) + 1;
+  }
+  if (a == 6) 
+  {
+    if (g * g == 4) {
+      chess_6k_js_exec_counter[105]++;
+      Sh(s - 4 + (s < e) * 7, s + g / 2);
+    }
+    chess_6k_js_exec_counter[106]++;
+    KL[u] = 0;
+  }
+  chess_6k_js_exec_counter[107]++;
+  Sh(s, e);
+  chess_6k_js_exec_counter[108]++;
+  H();
+  chess_6k_js_exec_counter[109]++;
+  N++;
+  chess_6k_js_exec_counter[110]++;
+  M = 8 - M;
+  chess_6k_js_exec_counter[111]++;
+  return 1;
+}
+function fy(c) {
+  chess_6k_js_exec_counter[112]++;
+  chess_6k_js_exec_counter[114]++;
+  Df(c ? 'checkmate!' : 'stalemate!');
+  chess_6k_js_exec_counter[115]++;
+  J = c++;
+  chess_6k_js_exec_counter[113]++;
+}
+function H() {
+  chess_6k_js_exec_counter[116]++;
+  chess_6k_js_exec_counter[118]++;
+  var z = 99, Q;
+  chess_6k_js_exec_counter[120]++;
+  s0 = (N < 32) ? 4 - (N >> 3) : (N > 64);
+  chess_6k_js_exec_counter[121]++;
+  G[0] = [];
+  chess_6k_js_exec_counter[122]++;
+  G[8] = [];
+  chess_6k_js_exec_counter[123]++;
+  kY = [];
+  chess_6k_js_exec_counter[124]++;
+  pY = [[], []];
+  for (; z > 20; z--) 
+    {
+      chess_6k_js_exec_counter[125]++;
+      a = R[z];
+      if (a & 7) {
+        chess_6k_js_exec_counter[126]++;
+        G[a & 8][G[a & 8].length] = [a, z];
+      }
+      chess_6k_js_exec_counter[127]++;
+      Y[z] = bY[z] * s0;
+      chess_6k_js_exec_counter[128]++;
+      kY[z] = (N > 40) || (10 - 2 * bY[z]) * s0;
+      chess_6k_js_exec_counter[129]++;
+      Q = pY[1][119 - z] = pY[0][z] = PY[z];
+      if (N < 7 && z > 40) 
+      {
+        chess_6k_js_exec_counter[130]++;
+        pY[0][z] = pY[1][119 - z] = Q + (Math.random() * Y[z]) | 1;
+        chess_6k_js_exec_counter[131]++;
+        Y[24] = Y[94] = 29;
+      }
+    }
+  chess_6k_js_exec_counter[117]++;
+}
+function Pz(U, K, b) {
+  chess_6k_js_exec_counter[132]++;
+  chess_6k_js_exec_counter[133]++;
+  var W, X, h, E, a, v, n, k = -1, u = U >> 3, V = U ^ 8, D = Ds[u], w = [], m, T, p = pY[u], H, d = KL[u], z, c, g, e = G[U], f = e.length, B = R, J = j;
+  for (z = 0; z < f; z++) 
+    {
+      chess_6k_js_exec_counter[135]++;
+      W = e[z][1];
+      chess_6k_js_exec_counter[136]++;
+      a = B[W];
+      if (e[z][0] == a) 
+      {
+        chess_6k_js_exec_counter[137]++;
+        a &= 7;
+        if (a > 1) 
+        {
+          chess_6k_js_exec_counter[138]++;
+          c = a == 6;
+          chess_6k_js_exec_counter[139]++;
+          H = c ? kY : Y;
+          chess_6k_js_exec_counter[140]++;
+          T = b - H[W];
+          chess_6k_js_exec_counter[141]++;
+          n = MV[a];
+          if (a == 3 || c) 
+          {
+            for (v = 0; v < 8; ) 
+              {
+                chess_6k_js_exec_counter[142]++;
+                X = W + n[v++];
+                chess_6k_js_exec_counter[143]++;
+                E = B[X];
+                if (!E || (E & 24) == V) 
+                {
+                  chess_6k_js_exec_counter[144]++;
+                  w[++k] = [T + J[E] + H[X], W, X];
+                }
+              }
+            if (c && d) 
+            {
+              if (d & 1 && !(B[W - 1] + B[W - 2] + B[W - 3]) && CH(W - 2, V, D, -1)) {
+                chess_6k_js_exec_counter[145]++;
+                w[++k] = [T + 11, W, W - 2];
+              }
+              if (d & 2 && !(B[W + 1] + B[W + 2]) && CH(W, V, D, 1)) {
+                chess_6k_js_exec_counter[146]++;
+                w[++k] = [T + 12, W, W + 2];
+              }
+            }
+          } else {
+            chess_6k_js_exec_counter[147]++;
+            g = n.length;
+            for (v = 0; v < g; ) 
+              {
+                chess_6k_js_exec_counter[148]++;
+                E = 0;
+                chess_6k_js_exec_counter[149]++;
+                m = n[v++];
+                chess_6k_js_exec_counter[150]++;
+                X = W;
+                while (!E) 
+                  {
+                    chess_6k_js_exec_counter[151]++;
+                    X += m;
+                    chess_6k_js_exec_counter[152]++;
+                    E = B[X];
+                    if (!E || (E & 24) == V) 
+                    {
+                      chess_6k_js_exec_counter[153]++;
+                      w[++k] = [T + J[E] + H[X], W, X];
+                    }
+                  }
+              }
+          }
+        } else {
+          chess_6k_js_exec_counter[154]++;
+          T = b - p[W];
+          chess_6k_js_exec_counter[155]++;
+          X = W + D;
+          if (!B[X]) 
+          {
+            chess_6k_js_exec_counter[156]++;
+            w[++k] = [T + p[X], W, X];
+            if (!p[W] && (!B[X + D])) 
+            {
+              chess_6k_js_exec_counter[157]++;
+              w[++k] = [T + p[X + D], W, X + D, X];
+            }
+          }
+          if (K && (K == X + 1 || K == X - 1)) {
+            chess_6k_js_exec_counter[158]++;
+            w[++k] = [T + p[X], W, K];
+          }
+          for (h = X - 1; h < X + 2; h += 2) 
+            {
+              chess_6k_js_exec_counter[159]++;
+              E = B[h] + U;
+              if (E & 7 && E & 8) 
+              {
+                chess_6k_js_exec_counter[160]++;
+                w[++k] = [T + J[E] + p[h], W, h];
+              }
+            }
+        }
+      }
+    }
+  chess_6k_js_exec_counter[161]++;
+  return w;
+}
+function CH(W, V, D, T) {
+  chess_6k_js_exec_counter[162]++;
+  chess_6k_js_exec_counter[163]++;
+  var X, E, x, m, S = W + 3, a = D + 2, k = MV[3], B = R;
+  for (; W < S; W++) 
+    {
+      for (m = D - 2; ++m < a; ) 
+        {
+          chess_6k_js_exec_counter[165]++;
+          E = B[W + m];
+          if (E && (E & 8) == V && ((E & 8) == 1 || (E & 7) == 6)) {
+            chess_6k_js_exec_counter[166]++;
+            return 0;
+          }
+          chess_6k_js_exec_counter[167]++;
+          E = 0;
+          chess_6k_js_exec_counter[168]++;
+          X = W;
+          while (!E) 
+            {
+              chess_6k_js_exec_counter[169]++;
+              X += m;
+              chess_6k_js_exec_counter[170]++;
+              E = B[X];
+              if ((E == V + 2 + (m != D) * 2) || E == V + 5) {
+                chess_6k_js_exec_counter[171]++;
+                return 0;
+              }
+            }
+        }
+      for (z = 0; z < 8; ) 
+        if (B[W + k[z++]] - V == 3) {
+          chess_6k_js_exec_counter[172]++;
+          return 0;
+        }
+    }
+  chess_6k_js_exec_counter[173]++;
+  E = 0;
+  chess_6k_js_exec_counter[174]++;
+  W -= 3;
+  while (!E) 
+    {
+      chess_6k_js_exec_counter[175]++;
+      W -= T;
+      chess_6k_js_exec_counter[176]++;
+      E = B[W];
+      if (E == V + 2 || E == V + 5) {
+        chess_6k_js_exec_counter[177]++;
+        return 0;
+      }
+    }
+  chess_6k_js_exec_counter[178]++;
+  return 1;
+}
+function B(Q) {
+  chess_6k_js_exec_counter[179]++;
+  chess_6k_js_exec_counter[181]++;
+  var a = R[Q], p = 'PI';
+  if (J) {
+    chess_6k_js_exec_counter[183]++;
+    return;
+  }
+  if (q == Q && I) 
+  {
+    chess_6k_js_exec_counter[184]++;
+    O(p, 0);
+    chess_6k_js_exec_counter[185]++;
+    O(q, I, 1);
+    chess_6k_js_exec_counter[186]++;
+    I = 0;
+    chess_6k_js_exec_counter[187]++;
+    return;
+  }
+  if (a && M == (a & 8)) 
+  {
+    if (I) {
+      chess_6k_js_exec_counter[188]++;
+      O(q, I, 1);
+    }
+    chess_6k_js_exec_counter[189]++;
+    I = a;
+    chess_6k_js_exec_counter[190]++;
+    q = Q;
+    chess_6k_js_exec_counter[191]++;
+    O(q, 0, 1);
+    chess_6k_js_exec_counter[192]++;
+    O(p, a);
+    if (E) {
+      chess_6k_js_exec_counter[193]++;
+      dr();
+    }
+    chess_6k_js_exec_counter[194]++;
+    d.onmousemove = dr;
+    chess_6k_js_exec_counter[195]++;
+    return;
+  }
+  if (I) 
+  {
+    if (mv(q, Q, d.FF.h.selectedIndex, y)) 
+    {
+      chess_6k_js_exec_counter[196]++;
+      O(p, 0);
+      chess_6k_js_exec_counter[197]++;
+      d.onmousemove = null;
+      if (A) {
+        chess_6k_js_exec_counter[198]++;
+        Ic.top = Ic.left = '0px';
+      }
+      chess_6k_js_exec_counter[199]++;
+      I = 0;
+      if (!J) 
+      {
+        chess_6k_js_exec_counter[200]++;
+        var t = Z((d.FF.i.selectedIndex + 1), M, 0, BE, BE, Al, Bt, K);
+        chess_6k_js_exec_counter[202]++;
+        mv(t[1], t[2], 0);
+      }
+    }
+  }
+  chess_6k_js_exec_counter[180]++;
+}
+function Sh(s, e) {
+  chess_6k_js_exec_counter[203]++;
+  chess_6k_js_exec_counter[205]++;
+  var a = R[s];
+  chess_6k_js_exec_counter[207]++;
+  R[e] = a;
+  chess_6k_js_exec_counter[208]++;
+  R[s] = 0;
+  chess_6k_js_exec_counter[209]++;
+  O(s, 0, 1);
+  chess_6k_js_exec_counter[210]++;
+  O(e, a, 1);
+  chess_6k_js_exec_counter[204]++;
+}
+function Df(x) {
+  chess_6k_js_exec_counter[211]++;
+  chess_6k_js_exec_counter[213]++;
+  d.FF.b.value += '\n ' + x;
+  chess_6k_js_exec_counter[212]++;
+}
+function Rf(a) {
+  chess_6k_js_exec_counter[214]++;
+  chess_6k_js_exec_counter[216]++;
+  P = a;
+  for (var z = 0; z < BE; z++) 
+    if (R[z] < 16) {
+      chess_6k_js_exec_counter[217]++;
+      O(z, R[z], 1);
+    }
+  if (P != M) 
+  {
+    chess_6k_js_exec_counter[218]++;
+    Tt = Z((d.FF.i.selectedIndex + 1), M, 0, BE, BE, Al, Bt, K);
+    chess_6k_js_exec_counter[219]++;
+    mv(Tt[1], Tt[2], 0);
+  }
+  chess_6k_js_exec_counter[215]++;
+}
+function Gb() {
+  chess_6k_js_exec_counter[220]++;
+  if (!N) {
+    chess_6k_js_exec_counter[222]++;
+    return;
+  }
+  chess_6k_js_exec_counter[223]++;
+  N -= 2;
+  chess_6k_js_exec_counter[224]++;
+  var b = Rh[N];
+  chess_6k_js_exec_counter[226]++;
+  R = eval("[" + b[0] + "]");
+  chess_6k_js_exec_counter[227]++;
+  KL = eval("[" + b[1] + "]");
+  chess_6k_js_exec_counter[228]++;
+  Df(' --undo--');
+  chess_6k_js_exec_counter[229]++;
+  K = b[2];
+  chess_6k_js_exec_counter[230]++;
+  M = N % 2;
+  chess_6k_js_exec_counter[231]++;
+  Rf(M);
+  chess_6k_js_exec_counter[232]++;
+  H();
+  chess_6k_js_exec_counter[221]++;
+}
+function dr(e) {
+  chess_6k_js_exec_counter[233]++;
+  chess_6k_js_exec_counter[235]++;
+  e = e || event;
+  chess_6k_js_exec_counter[236]++;
+  Ic.left = (e.clientX + 1) + 'px';
+  chess_6k_js_exec_counter[237]++;
+  Ic.top = (e.clientY - 4) + 'px';
+  chess_6k_js_exec_counter[234]++;
+}
+function O(x, y, z) {
+  chess_6k_js_exec_counter[238]++;
+  if ((A || x != 'PI') && z) {
+    chess_6k_js_exec_counter[240]++;
+    x = "i" + (P ? 119 - x : x);
+  }
+  chess_6k_js_exec_counter[241]++;
+  d.images[x].src = y + '.gif';
+  chess_6k_js_exec_counter[239]++;
+}
+chess_6k_js_exec_counter[242]++;
+h = '<table border="0" cellpadding="2" class="t">';
+for (y = 90; y > 10; y -= 10) 
+  {
+    chess_6k_js_exec_counter[243]++;
+    h += "<tr>";
+    for (x = 0; x < 10; x++) 
+      {
+        chess_6k_js_exec_counter[244]++;
+        z = y + x;
+        if (x && x < 9) 
+        {
+          chess_6k_js_exec_counter[245]++;
+          h += ('<td class="' + (x + (y / 10) & 1 ? 'b' : 'w') + '"><a href="#" onclick="B(P?119-' + z + ':' + z + '); return false"><img src="0.gif" width="1" height="32" border="0"><img src="0.gif" width="32" height="30" name="i' + z + '" border="0"><img src="0.gif" width="1" height="32" border="0"></a></td>\n');
+        }
+      }
+    chess_6k_js_exec_counter[246]++;
+    h += '</tr>\n';
+  }
+chess_6k_js_exec_counter[247]++;
+h += '</table>';
+chess_6k_js_exec_counter[248]++;
+d.write(h);
+chess_6k_js_exec_counter[249]++;
+Rf(0);
+chess_6k_js_exec_counter[1]++;

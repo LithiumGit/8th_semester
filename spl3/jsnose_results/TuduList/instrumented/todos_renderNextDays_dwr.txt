@@ -1,0 +1,5 @@
+todos_renderNextDays_dwr_exec_counter[0]++;
+throw 'allowScriptTagRemoting is false.';
+todos_renderNextDays_dwr_exec_counter[2]++;
+dwr.engine._remoteHandleCallback('2', '0', "\r\n\r\n\r\n\r\n\r\n<div style=\"font: 18px/1.3em Arial,Helvetica,sans-serif;\">\r\n \r\n  Todos for the next 4 days\r\n \r\n \r\n</div>\r\n\r\n <div class=\"message\">Nothing to do!</div>\r\n\r\n\r\n ");
+todos_renderNextDays_dwr_exec_counter[1]++;

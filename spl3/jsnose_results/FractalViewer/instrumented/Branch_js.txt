@@ -1,0 +1,460 @@
+Branch_js_exec_counter[0]++;
+function Branch(ops) {
+  Branch_js_exec_counter[2]++;
+  Branch_js_exec_counter[4]++;
+  this.growDur = randInt2(250, 750);
+  Branch_js_exec_counter[5]++;
+  this.birthTime = g.millis();
+  Branch_js_exec_counter[6]++;
+  this.cv = [];
+  Branch_js_exec_counter[7]++;
+  this.nrm = [];
+  Branch_js_exec_counter[8]++;
+  this.bez = [];
+  Branch_js_exec_counter[9]++;
+  this.sub = [];
+  Branch_js_exec_counter[10]++;
+  this.leaves = [];
+  if (ops) 
+  {
+    for (var key in ops) 
+      {
+        Branch_js_exec_counter[12]++;
+        this[key] = ops[key];
+      }
+  }
+  Branch_js_exec_counter[3]++;
+}
+Branch_js_exec_counter[13]++;
+Branch.prototype = {color: [255, 255, 255, 255], style: SPIKE, ugrow: 0, uease: 0, finished: false, gen: function(ops) {
+  Branch_js_exec_counter[14]++;
+  Branch_js_exec_counter[16]++;
+  this.cv = [];
+  Branch_js_exec_counter[17]++;
+  this.weight = ops.weight;
+  Branch_js_exec_counter[18]++;
+  var ncv1 = ops.ncv - 1, ang = ops.angle, angv = 0, cv1 = clone(ops.pos), cv2;
+  Branch_js_exec_counter[20]++;
+  this.pushCv(cv1);
+  for (var i = 0; i < ncv1; i++) 
+    {
+      Branch_js_exec_counter[21]++;
+      cv2 = new Vec2(cv1.x + rotx(ops.len / ncv1, ang), cv1.y + roty(ops.len / ncv1, ang));
+      Branch_js_exec_counter[22]++;
+      angv += rand2(-ops.crook, ops.crook);
+      Branch_js_exec_counter[23]++;
+      ang += angv;
+      if (this.style == FLOWER) 
+      {
+        Branch_js_exec_counter[24]++;
+        ang += wrap(ang + Math.PI * 0.5, -Math.PI, Math.PI) * -0.2;
+      }
+      Branch_js_exec_counter[25]++;
+      var is = findIntersection(cv1, cv2);
+      if (is && i != 0) 
+      {
+        Branch_js_exec_counter[27]++;
+        this.pushCv(is);
+        Branch_js_exec_counter[28]++;
+        break;
+      } else {
+        Branch_js_exec_counter[29]++;
+        this.pushCv(cv2);
+      }
+      Branch_js_exec_counter[30]++;
+      cv1 = cv2;
+    }
+  Branch_js_exec_counter[31]++;
+  this.bake();
+  if (flower && flowerMoment && this.twigRule) 
+  {
+    Branch_js_exec_counter[32]++;
+    var tr = this.twigRule;
+    Branch_js_exec_counter[34]++;
+    var n = Math.floor(tr.nbr[0]);
+    for (var i = 0; i < n; i++) 
+      {
+        Branch_js_exec_counter[36]++;
+        var side = Math.round(1 - tr.side[i % tr.side.length]);
+        Branch_js_exec_counter[38]++;
+        this.leaf((i + 1) / (n + 1), side ? tr.angle[i % tr.angle.length] : Math.PI - tr.angle[i % tr.angle.length]);
+      }
+  }
+  Branch_js_exec_counter[15]++;
+}, update: function() {
+  Branch_js_exec_counter[39]++;
+  Branch_js_exec_counter[41]++;
+  var time = g.millis() - this.birthTime;
+  Branch_js_exec_counter[43]++;
+  this.ugrow = time > this.growDur ? 1 : linearNone(time, 0, 1, this.growDur);
+  Branch_js_exec_counter[44]++;
+  this.uease = time > this.growDur ? 1 : quadOut(time, 0, 1, this.growDur);
+  if (this.parent) {
+    Branch_js_exec_counter[45]++;
+    this.ugrow = Math.max(0, this.ugrow - (1 - Math.min(1, this.parent.ugrow / this.upos)));
+  }
+  if (this.twigRule && this.sub.length == 0 && this.ugrow >= 1 && this.bounds.hyp >= minLengthToSpawn && this.bounds.hyp < viewBounds.hyp) 
+  {
+    Branch_js_exec_counter[46]++;
+    this.multiTwig();
+  }
+  for (var i = this.leaves.length; --i >= 0; ) {
+    Branch_js_exec_counter[47]++;
+    this.leaves[i].update();
+  }
+  Branch_js_exec_counter[40]++;
+}, draw: function() {
+  Branch_js_exec_counter[48]++;
+  Branch_js_exec_counter[50]++;
+  this.color[3] = Math.min(255, map(this.bounds.hyp, maxLength * 0.8, maxLength, 255, 0));
+  Branch_js_exec_counter[51]++;
+  Branch.draw_spike(this);
+  for (var i = this.leaves.length; --i >= 0; ) {
+    Branch_js_exec_counter[52]++;
+    this.leaves[i].draw(this.uease);
+  }
+  Branch_js_exec_counter[49]++;
+}, pushCv: function(v) {
+  Branch_js_exec_counter[53]++;
+  Branch_js_exec_counter[55]++;
+  this.cv.push(v);
+  Branch_js_exec_counter[54]++;
+}, popCv: function() {
+  Branch_js_exec_counter[56]++;
+  Branch_js_exec_counter[57]++;
+  return this.cv.pop();
+}, addSub: function(br) {
+  Branch_js_exec_counter[58]++;
+  Branch_js_exec_counter[60]++;
+  br.parent = this;
+  Branch_js_exec_counter[61]++;
+  this.sub.push(br);
+  Branch_js_exec_counter[59]++;
+}, removeSub: function(br) {
+  Branch_js_exec_counter[62]++;
+  Branch_js_exec_counter[64]++;
+  br.parent = null;
+  Branch_js_exec_counter[65]++;
+  var i = this.sub.indexOf(br);
+  if (i >= 0) {
+    Branch_js_exec_counter[67]++;
+    this.sub.splice(i, 1);
+  }
+  Branch_js_exec_counter[63]++;
+}, addLeaf: function(leaf) {
+  Branch_js_exec_counter[68]++;
+  Branch_js_exec_counter[70]++;
+  leaf.parent = this;
+  Branch_js_exec_counter[71]++;
+  this.leaves.push(leaf);
+  Branch_js_exec_counter[69]++;
+}, removeLeaf: function(leaf) {
+  Branch_js_exec_counter[72]++;
+  Branch_js_exec_counter[74]++;
+  leaf.parent = null;
+  Branch_js_exec_counter[75]++;
+  var i = this.leaves.indexOf(leaf);
+  if (i >= 0) {
+    Branch_js_exec_counter[77]++;
+    this.leaves.splice(i, 1);
+  }
+  Branch_js_exec_counter[73]++;
+}, transform: function(origin, mv, sc) {
+  Branch_js_exec_counter[78]++;
+  for (var i = this.cv.length; --i >= 0; ) {
+    Branch_js_exec_counter[80]++;
+    this.cv[i].transform(origin, mv, sc);
+  }
+  for (var i = this.bez.length; --i >= 0; ) {
+    Branch_js_exec_counter[81]++;
+    this.bez[i].transform(origin, mv, sc);
+  }
+  Branch_js_exec_counter[82]++;
+  this.bounds.transform(origin, mv, sc);
+  for (var i = this.leaves.length; --i >= 0; ) {
+    Branch_js_exec_counter[83]++;
+    this.leaves[i].transform(origin, mv, sc);
+  }
+  Branch_js_exec_counter[79]++;
+}, bake: function() {
+  Branch_js_exec_counter[84]++;
+  Branch_js_exec_counter[86]++;
+  this.updateNormals();
+  Branch_js_exec_counter[87]++;
+  this.updateBezier();
+  Branch_js_exec_counter[88]++;
+  this.updateBounds();
+  Branch_js_exec_counter[85]++;
+}, updateBezier: function() {
+  Branch_js_exec_counter[89]++;
+  Branch_js_exec_counter[91]++;
+  var s = 1;
+  Branch_js_exec_counter[93]++;
+  var cvl1 = this.cv.length - 1;
+  Branch_js_exec_counter[95]++;
+  this.bez = [clone(this.cv[0])];
+  Branch_js_exec_counter[96]++;
+  this.bez.push.apply(this.bez, curveSegmentBez(this.cv[0], this.cv[0], this.cv[1], this.cv[2], s));
+  for (var i = 1; i < cvl1 - 1; i++) 
+    {
+      Branch_js_exec_counter[97]++;
+      this.bez.push.apply(this.bez, curveSegmentBez(this.cv[i - 1], this.cv[i], this.cv[i + 1], this.cv[i + 2], s));
+    }
+  Branch_js_exec_counter[98]++;
+  this.bez.push.apply(this.bez, curveSegmentBez(this.cv[cvl1 - 2], this.cv[cvl1 - 1], this.cv[cvl1], this.cv[cvl1], s));
+  Branch_js_exec_counter[90]++;
+}, updateNormals: function() {
+  Branch_js_exec_counter[99]++;
+  Branch_js_exec_counter[101]++;
+  this.nrm = [];
+  for (var i = 0, cvl = this.cv.length; i < cvl; i++) 
+    {
+      Branch_js_exec_counter[102]++;
+      this.nrm[i] = new Vec2(0, 0);
+      if (i > 0) {
+        Branch_js_exec_counter[103]++;
+        this.nrm[i].add2(-(this.cv[i].y - this.cv[i - 1].y), this.cv[i].x - this.cv[i - 1].x);
+      }
+      if (i < cvl - 1) {
+        Branch_js_exec_counter[104]++;
+        this.nrm[i].add2(-(this.cv[i + 1].y - this.cv[i].y), this.cv[i + 1].x - this.cv[i].x);
+      }
+      Branch_js_exec_counter[105]++;
+      this.nrm[i].normalize();
+    }
+  Branch_js_exec_counter[100]++;
+}, updateBounds: function() {
+  Branch_js_exec_counter[106]++;
+  Branch_js_exec_counter[108]++;
+  this.bounds = new Rect2(this.cv[0]);
+  for (var i = this.cv.length; --i >= 0; ) 
+    {
+      Branch_js_exec_counter[109]++;
+      this.bounds.enclose(this.cv[i].x, this.cv[i].y);
+    }
+  Branch_js_exec_counter[110]++;
+  this.bounds.updateExtent();
+  Branch_js_exec_counter[107]++;
+}, twig: function(u, style, genops) {
+  Branch_js_exec_counter[111]++;
+  Branch_js_exec_counter[112]++;
+  var nu = new Branch({upos: u, style: style});
+  if (style == SPIKE) {
+    Branch_js_exec_counter[114]++;
+    nu.twigRule = this.getMutatedRule(mutate ? 0.15 : 0);
+  }
+  Branch_js_exec_counter[115]++;
+  genops.pos = this.uPnt(u);
+  Branch_js_exec_counter[116]++;
+  genops.angle += Vec2.angle(this.uNrm(u));
+  Branch_js_exec_counter[117]++;
+  genops.len *= this.bounds.hyp * (1 - u);
+  Branch_js_exec_counter[118]++;
+  nu.gen(genops);
+  Branch_js_exec_counter[119]++;
+  this.addSub(nu);
+  Branch_js_exec_counter[120]++;
+  addBranch(nu);
+  Branch_js_exec_counter[121]++;
+  return nu;
+}, leaf: function(u, angle) {
+  Branch_js_exec_counter[122]++;
+  Branch_js_exec_counter[124]++;
+  var nu = new Leaf(this.uPnt(u), Vec2.angle(this.uNrm(u)) + angle, this.bounds.hyp * (1 - u) * rand2(0.2, 0.3));
+  Branch_js_exec_counter[126]++;
+  this.addLeaf(nu);
+  Branch_js_exec_counter[123]++;
+}, multiTwig: function() {
+  Branch_js_exec_counter[127]++;
+  Branch_js_exec_counter[129]++;
+  var n = Math.floor(this.twigRule.nbr[0]);
+  if (branches.length + n < maxBranches) 
+  {
+    for (var i = this.leaves.length; --i >= 0; ) {
+      Branch_js_exec_counter[131]++;
+      this.leaves[i].detach();
+    }
+    Branch_js_exec_counter[132]++;
+    var tr = this.twigRule;
+    for (var i = 0; i < n; i++) 
+      {
+        Branch_js_exec_counter[134]++;
+        var side = Math.round(tr.side[i % tr.side.length]);
+        Branch_js_exec_counter[136]++;
+        var u = (i + 1) / (n + 1);
+        Branch_js_exec_counter[138]++;
+        var style = tr.style[i % tr.style.length];
+        Branch_js_exec_counter[140]++;
+        this.twig(u, style, {angle: side ? tr.angle[i % tr.angle.length] : Math.PI - tr.angle[i % tr.angle.length], crook: tr.crook[i % tr.crook.length], len: tr.len[i % tr.len.length], weight: this.weight, ncv: Math.floor(tr.ncv[i % tr.ncv.length])});
+      }
+    Branch_js_exec_counter[141]++;
+    this.twigRule = null;
+  }
+  Branch_js_exec_counter[128]++;
+}, getMutatedRule: function(mutation) {
+  Branch_js_exec_counter[142]++;
+  if (arguments.length == 0) {
+    Branch_js_exec_counter[143]++;
+    mutation = 0;
+  }
+  Branch_js_exec_counter[144]++;
+  var rule;
+  if (mutation == 0) 
+  {
+    Branch_js_exec_counter[146]++;
+    rule = clone(this.twigRule);
+  } else {
+    Branch_js_exec_counter[147]++;
+    rule = {};
+    for (var key in this.twigRule) 
+      {
+        if (key == "style" || key == "side" || key == "flower") 
+        {
+          Branch_js_exec_counter[149]++;
+          rule[key] = clone(this.twigRule[key]);
+        } else {
+          Branch_js_exec_counter[150]++;
+          var limits = Branch.ruleLimits[key];
+          Branch_js_exec_counter[152]++;
+          rule[key] = [];
+          for (var i = 0, rl = this.twigRule[key].length; i < rl; i++) 
+            {
+              Branch_js_exec_counter[153]++;
+              rule[key].push(clamp(this.twigRule[key][i] + rand2(-mutation, mutation) * (limits[1] - limits[0]), limits[0], limits[1]));
+            }
+        }
+      }
+  }
+  Branch_js_exec_counter[154]++;
+  rule.flower = false;
+  Branch_js_exec_counter[155]++;
+  return rule;
+}, pollenate: function() {
+  Branch_js_exec_counter[156]++;
+  if (this.twigRule) 
+  {
+    Branch_js_exec_counter[158]++;
+    this.twigRule.flower = true;
+  }
+  Branch_js_exec_counter[157]++;
+}, prune: function() {
+  Branch_js_exec_counter[159]++;
+  if (this.parent) {
+    Branch_js_exec_counter[161]++;
+    this.parent.removeSub(this);
+  }
+  for (var i = this.sub.length; --i >= 0; ) {
+    Branch_js_exec_counter[162]++;
+    this.sub[i].parent = null;
+  }
+  for (var i = this.leaves.length; --i >= 0; ) {
+    Branch_js_exec_counter[163]++;
+    this.leaves[i].parent = null;
+  }
+  Branch_js_exec_counter[164]++;
+  this.sub = null;
+  Branch_js_exec_counter[165]++;
+  this.leaves = null;
+  Branch_js_exec_counter[160]++;
+}, uPnt: function(u) {
+  Branch_js_exec_counter[166]++;
+  Branch_js_exec_counter[167]++;
+  u *= this.cv.length - 1;
+  Branch_js_exec_counter[168]++;
+  var iu = Math.floor(u);
+  Branch_js_exec_counter[170]++;
+  var fu = u - iu;
+  if (fu == 0) {
+    Branch_js_exec_counter[172]++;
+    return new Vec2(this.cv[iu].x, this.cv[iu].y);
+  }
+  Branch_js_exec_counter[173]++;
+  var b = iu * 3;
+  Branch_js_exec_counter[175]++;
+  return new Vec2(bezierPoint(this.bez[b].x, this.bez[b + 1].x, this.bez[b + 2].x, this.bez[b + 3].x, fu), bezierPoint(this.bez[b].y, this.bez[b + 1].y, this.bez[b + 2].y, this.bez[b + 3].y, fu));
+}, uNrm: function(u) {
+  Branch_js_exec_counter[176]++;
+  Branch_js_exec_counter[177]++;
+  u *= this.cv.length - 1;
+  Branch_js_exec_counter[178]++;
+  var iu = Math.floor(u);
+  Branch_js_exec_counter[180]++;
+  var fu = u - iu;
+  if (fu == 0) {
+    Branch_js_exec_counter[182]++;
+    return new Vec2(this.nrm[iu].x, this.nrm[iu].y);
+  }
+  Branch_js_exec_counter[183]++;
+  return new Vec2(lerp(this.nrm[iu].x, this.nrm[iu + 1].x, fu), lerp(this.nrm[iu].y, this.nrm[iu + 1].y, fu));
+}};
+Branch_js_exec_counter[184]++;
+Branch.draw_spike = function(br) {
+  Branch_js_exec_counter[185]++;
+  if (br.cv.length > 0 && br.uease > 0) 
+  {
+    Branch_js_exec_counter[187]++;
+    var u = br.uease * (br.cv.length - 1);
+    Branch_js_exec_counter[189]++;
+    var uint = Math.floor(u);
+    Branch_js_exec_counter[191]++;
+    var uf = u - uint;
+    Branch_js_exec_counter[193]++;
+    var w = br.weight * br.bounds.hyp;
+    Branch_js_exec_counter[195]++;
+    var nrmx = [];
+    Branch_js_exec_counter[197]++;
+    var nrmy = [];
+    for (var i = 0; i <= uint; i++) 
+      {
+        Branch_js_exec_counter[199]++;
+        var th = Math.max(0, 1 - i / (br.cv.length - 1) - (1 - br.uease)) * w;
+        Branch_js_exec_counter[201]++;
+        nrmx.push(br.nrm[i].x * th);
+        Branch_js_exec_counter[202]++;
+        nrmy.push(br.nrm[i].y * th);
+      }
+    Branch_js_exec_counter[203]++;
+    g.noStroke();
+    Branch_js_exec_counter[204]++;
+    g.fill.apply(g, br.color);
+    Branch_js_exec_counter[205]++;
+    g.beginPath();
+    Branch_js_exec_counter[206]++;
+    g.moveTo(br.cv[0].x + nrmx[0], br.cv[0].y + nrmy[0]);
+    for (var i = 0; i < uint; i++) 
+      {
+        Branch_js_exec_counter[207]++;
+        var b = i * 3 + 1;
+        Branch_js_exec_counter[209]++;
+        var th = w * (1 - br.uease);
+        Branch_js_exec_counter[211]++;
+        g.gfx.bezierCurveTo(br.bez[b].x + nrmx[i], br.bez[b].y + nrmy[i], br.bez[b + 1].x + nrmx[i + 1], br.bez[b + 1].y + nrmy[i + 1], br.bez[b + 2].x + nrmx[i + 1], br.bez[b + 2].y + nrmy[i + 1]);
+      }
+    if (uf > 0) 
+    {
+      Branch_js_exec_counter[212]++;
+      var b = uint * 3;
+      Branch_js_exec_counter[214]++;
+      var tip = semiBezier(uf, br.bez[b].x, br.bez[b].y, br.bez[b + 1].x, br.bez[b + 1].y, br.bez[b + 2].x, br.bez[b + 2].y, br.bez[b + 3].x, br.bez[b + 3].y);
+      Branch_js_exec_counter[216]++;
+      g.gfx.bezierCurveTo(tip[0] + nrmx[uint], tip[1] + nrmy[uint], tip[2], tip[3], tip[4], tip[5]);
+      Branch_js_exec_counter[217]++;
+      g.gfx.bezierCurveTo(tip[2], tip[3], tip[0] - nrmx[uint], tip[1] - nrmy[uint], br.bez[b].x - nrmx[uint], br.bez[b].y - nrmy[uint]);
+    }
+    for (var i = uint; --i >= 0; ) 
+      {
+        Branch_js_exec_counter[218]++;
+        var b = i * 3;
+        Branch_js_exec_counter[220]++;
+        g.gfx.bezierCurveTo(br.bez[b + 2].x - nrmx[i + 1], br.bez[b + 2].y - nrmy[i + 1], br.bez[b + 1].x - nrmx[i], br.bez[b + 1].y - nrmy[i], br.bez[b].x - nrmx[i], br.bez[b].y - nrmy[i]);
+      }
+    Branch_js_exec_counter[221]++;
+    g.gfx.bezierCurveTo(br.bez[0].x - nrmx[0] - nrmy[0], br.bez[0].y - nrmy[0] + nrmx[0], br.bez[0].x + nrmx[0] - nrmy[0], br.bez[0].y + nrmy[0] + nrmx[0], br.bez[0].x + nrmx[0], br.bez[0].y + nrmy[0]);
+    Branch_js_exec_counter[222]++;
+    g.endPath();
+  }
+  Branch_js_exec_counter[186]++;
+};
+Branch_js_exec_counter[223]++;
+Branch.ruleLimits = {nbr: [6, 20], ncv: [6, 32], angle: [-Math.PI * 0.35, Math.PI * 0.35], crook: [0, Math.PI / 9], side: [0, 1], len: [0.5, 1.0]};
+Branch_js_exec_counter[1]++;

@@ -1,0 +1,4 @@
+script0_exec_counter[0]++;
+script0_exec_counter[2]++;
+window.location.href = 'welcome.action';
+script0_exec_counter[1]++;

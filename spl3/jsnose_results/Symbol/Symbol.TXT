@@ -1,0 +1,54 @@
+***************************************
+********** CODE SMELL REPORT **********
+***************************************
+********** CLOSURE SMELL **********
+Number of occurance: 0
+********** COUPLING JS/HTML **********
+Total number of JavaScript in HTML tags: 0
+Occurance of CSS in JavaScript
+Number of occurance: 0
+********** EMPTY CATCH **********
+Number of occurance: 0
+********** EXCESSIVE GLOBAL VARIABLES **********
+Number of global variables: 4
+List of  global variables: [gaGlobal, _gaq, _gat, i]
+********** LARGE OBJECT **********
+Number of occurance: 0
+********** LAZY OBJECT **********
+Number of occurance: 17
+Item: localStorage in JS file: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js at line number: -1
+Item: addTime in JS file: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js at line number: 199
+Item: F in JS file: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js at line number: 198
+Item: _gaq in JS file: script3 at line number: 1
+Item: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js_exec_counter in JS file: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js at line number: 1
+Item: f in JS file: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js at line number: 9
+Item: d in JS file: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js at line number: 40
+Item: j in JS file: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js at line number: 80
+Item: w in JS file: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js at line number: 113
+Item: h in JS file: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js at line number: 118
+Item: D in JS file: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js at line number: 152
+Item: l in JS file: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js at line number: 164
+Item: userAgent in JS file: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js at line number: 168
+Item: K in JS file: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js at line number: 176
+Item: E in JS file: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js at line number: 195
+********** LONG MESSAGE **********
+Number of occurance: 0
+********** LONG METHOD/FUNCTION **********
+Number of occurance: 1
+Item:  in JS file: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js at line number: 1
+********** LONG PARAMETER LIST **********
+Number of occurance: 0
+********** NESTED CALLBACK **********
+Number of occurance: 0
+********** REFUSED BEQUEST **********
+Number of occurance: 1
+Item: h in JS file: f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js at line number: 118
+********** SWITCH STATEMENT **********
+Number of occurance: 0
+********** UNREACHABLE CODE **********
+Number of occurance: 0
+- [Thread 1 Crawler 1 (initial)] List of script3 is: [24, 24, 24, 0, 24, 24, 24, 24, 0, 24, 24, 24]
+- [Thread 1 Crawler 1 (initial)] List of script3 # lines ececuted: 10 # tolal lines: 12 - code coverage: 83.33333333333334%
+- [Thread 1 Crawler 1 (initial)] List of f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js is: [24, 24, 24, 24, 24, 24, 0, 263, 263, 0, 0, 54, 54, 54, 36, 36, 36, 96, 96, 0, 0, 0, 0, 0, 0, 96, 24, 0, 24, 24, 0, 15, 15, 15, 15, 15, 15, 15, 0, 31, 0, 30, 30, 30, 17, 0, 16, 15, 15, 46, 0, 46, 0, 46, 46, 46, 24, 28, 1, 28, 0, 8, 20, 14, 14, 6, 6, 19, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 14, 14, 14, 14, 14, 14, 14, 14, 24, 14, 14, 14, 14, 13, 13, 13, 0, 0, 1, 1, 13, 13, 13, 13, 12, 13, 13, 24, 0, 0, 0, 0, 0, 37, 37, 24, 13, 24, 24, 14, 14, 0, 14, 14, 0, 13466, 13466, 13466, 0, 13466, 1468, 13, 13, 13, 13, 13, 13, 0, 0, 13466, 13466, 14, 1, 1, 1, 1, 1, 1, 1, 1]
+- [Thread 1 Crawler 1 (initial)] List of f9bf0fc58c16a11619b32017ccbc652d3ab443b3_js # lines ececuted: 121 # tolal lines: 152 - code coverage: 79.60526315789474%
+- [Thread 1 Crawler 1 (initial)]Time: 7 min, 30 sec - code coverage: 79.8780487804878%

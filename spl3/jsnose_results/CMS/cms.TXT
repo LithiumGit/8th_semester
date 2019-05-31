@@ -1,0 +1,122 @@
+***************************************
+********** CODE SMELL REPORT **********
+***************************************
+********** CLOSURE SMELL **********
+Number of occurance: 2
+Item: Long scope chain at function:  in JS file: Tabstrip_js at line number: 23
+Item: Long scope chain at function:  in JS file: TinySite_XML_js at line number: 51
+********** COUPLING JS/HTML **********
+Total number of JavaScript in HTML tags: 1
+INPUT onclick="sendemail();"
+Occurance of CSS in JavaScript
+Number of occurance: 6
+Item: CSS in JavaScript in JS file: contactform_phpscript2 at line number: 85
+Item: CSS in JavaScript in JS file: contactform_phpscript2 at line number: 82
+Item: CSS in JavaScript in JS file: contactform_phpscript2 at line number: 81
+Item: CSS in JavaScript in JS file: contactform_phpscript2 at line number: 75
+Item: CSS in JavaScript in JS file: contactform_phpscript2 at line number: 72
+Item: CSS in JavaScript in JS file: contactform_phpscript2 at line number: 71
+********** EMPTY CATCH **********
+Number of occurance: 0
+********** EXCESSIVE GLOBAL VARIABLES **********
+Number of global variables: 82
+List of  global variables: [CancelButtonText, cannotSend, ajaxLoadingPanelEnabled, brjsSkin, TabstripXmlVersion, tinysitedata, loadingMessageRoundedCornerBottomRight, no, loadingMessageRoundedCornerTopRight, loadingMessageRoundedCornersRadius, PurchaseLink, radios, loadingPanelTrialMessage, messageBoxWidth, checkBoxXmlRootFoder, TabStripScriptsFolder, tdPlace, pageScriptsFolder, bookmarks, RadioButtonXmlUrl, trialMessage, component, BuyRadioButtonXmlUrl, tdCanceled, ajaxLoadingPanelRootFolder, applicationAuthor, mySiteNames, tinySiteSkin, brjsFolder, http_vote, displayLoadingMessage, tinysitelayout, ErrMessage, applicationWebsite, FullErrorMessage, srjsEnabled, http, tsErrorMessage, loadingIndicatorBackgroundPosition, loadingPanelOverlay, OkButtonText, RadioButtonXmlErrorMessage, renderingStopped, tagline, incorrectemailfield, tdDateHeader, viewerloader, SubscribeToRSS, galleryVersion, brjsEnabled, messageBoxSkin, loadingMessage, srjsItemScrolling, loadingMessageRoundedCornerTopLeft, rssobject, SocializeXmlRootFolder, radioButtonXmlScriptsFolder, loadingPanelMessage, title, tinySiteCmsGUID, roundedCornersPanelScriptsFolder, TabStripName, tsLoadingPanelSleep, tdVenue, tsVersion, RadioButtonXmlName, tinysiteconfig, announcement, loadingMessageRoundedCornerBottomLeft, srjsFolder, applicationName, TrueOrFalse, j, i, yes, applicationVersion, messageBoxEnabled, RadioButtonXmlVersion, skinnableBrowserDialogsRootFolder, incorrectnamefield, srjsOptionsListHeight, AddToText]
+********** LARGE OBJECT **********
+Number of occurance: 3
+Item: http in JS file: contactform_phpscript2 at line number: -1
+Item: radios in JS file: CustomFunctions_js at line number: -1
+Item: parent in JS file: contactform_phpscript2 at line number: 65
+********** LAZY OBJECT **********
+Number of occurance: 13
+Item: onload in JS file: contactform_phpscript2 at line number: 106
+Item: loadingPanelTrialMessage in JS file: contactform_phpscript2 at line number: 75
+Item: p in JS file: RadioButton_js at line number: 17
+Item: createRequestObject in JS file: contactform_phpscript2 at line number: 3
+Item: sendemail in JS file: contactform_phpscript2 at line number: 20
+Item: contactform in JS file: contactform_phpscript2 at line number: 32
+Item: name in JS file: contactform_phpscript2 at line number: 33
+Item: email in JS file: contactform_phpscript2 at line number: 34
+Item: subject in JS file: contactform_phpscript2 at line number: 35
+Item: handleResponse in JS file: contactform_phpscript2 at line number: 46
+Item: displayLoadingPanel in JS file: contactform_phpscript2 at line number: 69
+Item: loadingPanelOverlay in JS file: contactform_phpscript2 at line number: 71
+Item: loadingPanelMessage in JS file: contactform_phpscript2 at line number: 72
+********** LONG MESSAGE **********
+Number of occurance: 4
+Item: Long chain in JS file: contactform_phpscript2 at line number: 35
+Item: Long chain in JS file: contactform_phpscript2 at line number: 34
+Item: Long chain in JS file: contactform_phpscript2 at line number: 33
+Item: Long chain in JS file: contactform_phpscript2 at line number: 32
+********** LONG METHOD/FUNCTION **********
+Number of occurance: 3
+Item: createTabStrip in JS file: Tabstrip_js at line number: 21
+Item: renderAjaxLoadingPanel in JS file: Web20AJAXLoadingPanel_js at line number: 29
+Item: renderRadioButtonList in JS file: RadioButton_js at line number: 18
+********** LONG PARAMETER LIST **********
+Number of occurance: 58
+Item:  in JS file: SocializeXML_js at line number: 1
+Item:  in JS file: CheckBoxXml_js at line number: 17
+Item:  in JS file: PageAnnouncement_js at line number: 19
+Item:  in JS file: SelectBoxReplacementJS_js at line number: 17
+Item:  in JS file: Tabstrip_js at line number: 103
+Item:  in JS file: Tabstrip_js at line number: 99
+Item:  in JS file: Tabstrip_js at line number: 96
+Item:  in JS file: Tabstrip_js at line number: 92
+Item:  in JS file: Tabstrip_js at line number: 89
+Item:  in JS file: Tabstrip_js at line number: 84
+Item:  in JS file: Web20AJAXLoadingPanel_js at line number: 103
+Item:  in JS file: Web20AJAXLoadingPanel_js at line number: 31
+Item:  in JS file: Web20AJAXLoadingPanel_js at line number: 27
+Item:  in JS file: ButtonReplacementJS_js at line number: 17
+Item:  in JS file: RoundedCornersPanel_js at line number: 1
+Item:  in JS file: TinySite_XML_js at line number: 51
+Item:  in JS file: TinySite_XML_js at line number: 49
+Item:  in JS file: TinySite_XML_js at line number: 47
+Item:  in JS file: RadioButton_js at line number: 76
+Item:  in JS file: RadioButton_js at line number: 73
+Item:  in JS file: RadioButton_js at line number: 71
+Item:  in JS file: RadioButton_js at line number: 68
+Item:  in JS file: RadioButton_js at line number: 17
+Item:  in JS file: RadioButton_js at line number: 20
+Item:  in JS file: RadioButton_js at line number: 21
+Item:  in JS file: RadioButton_js at line number: 24
+Item:  in JS file: RadioButton_js at line number: 32
+Item:  in JS file: RadioButton_js at line number: 35
+Item:  in JS file: RadioButton_js at line number: 38
+Item:  in JS file: RadioButton_js at line number: 44
+Item:  in JS file: RadioButton_js at line number: 48
+Item:  in JS file: RadioButton_js at line number: 54
+Item:  in JS file: RadioButton_js at line number: 60
+Item:  in JS file: RadioButton_js at line number: 64
+Item:  in JS file: Web20AJAXLoadingPanel_js at line number: 105
+Item:  in JS file: Web20AJAXLoadingPanel_js at line number: 107
+Item:  in JS file: Web20AJAXLoadingPanel_js at line number: 110
+Item:  in JS file: Web20AJAXLoadingPanel_js at line number: 115
+Item:  in JS file: Web20AJAXLoadingPanel_js at line number: 120
+Item:  in JS file: Web20AJAXLoadingPanel_js at line number: 125
+Item:  in JS file: Web20AJAXLoadingPanel_js at line number: 128
+Item:  in JS file: Web20AJAXLoadingPanel_js at line number: 131
+Item:  in JS file: AjaxPhotoGallery_js at line number: 17
+Item:  in JS file: SkinnableBrowserDialogs_js at line number: 1
+Item:  in JS file: Tabstrip_js at line number: 17
+Item:  in JS file: Tabstrip_js at line number: 19
+Item:  in JS file: Tabstrip_js at line number: 23
+Item:  in JS file: Tabstrip_js at line number: 26
+Item:  in JS file: Tabstrip_js at line number: 29
+Item:  in JS file: Tabstrip_js at line number: 33
+Item:  in JS file: Tabstrip_js at line number: 36
+Item:  in JS file: Tabstrip_js at line number: 40
+Item:  in JS file: Tabstrip_js at line number: 42
+Item:  in JS file: Tabstrip_js at line number: 46
+Item:  in JS file: Tabstrip_js at line number: 57
+Item:  in JS file: Tabstrip_js at line number: 71
+Item:  in JS file: Tabstrip_js at line number: 74
+Item:  in JS file: Tabstrip_js at line number: 76
+********** NESTED CALLBACK **********
+Number of occurance: 0
+********** REFUSED BEQUEST **********
+Number of occurance: 0
+********** SWITCH STATEMENT **********
+Number of occurance: 0
+********** UNREACHABLE CODE **********
+Number of occurance: 0

@@ -1,0 +1,332 @@
+***************************************
+********** CODE SMELL REPORT **********
+***************************************
+********** CLOSURE SMELL **********
+Number of occurance: 6
+Item: this in closure in JS file: calendar_js at line number: 889
+Item: this in closure in JS file: calendar_js at line number: 888
+Item: Long scope chain at function:  in JS file: calendar_js at line number: 887
+Item: Long scope chain at function: makeTimePart in JS file: calendar_js at line number: 847
+Item: this in closure in JS file: tabs_js at line number: 22
+Item: this in closure in JS file: tabs_js at line number: 21
+********** COUPLING JS/HTML **********
+Total number of JavaScript in HTML tags: 1
+INPUT onclick="document.forms[0].elements['method'].value='update';"
+Occurance of CSS in JavaScript
+Number of occurance: 46
+Item: CSS in JavaScript in JS file: calendar_js at line number: 1563
+Item: CSS in JavaScript in JS file: calendar_js at line number: 1545
+Item: CSS in JavaScript in JS file: calendar_js at line number: 1544
+Item: CSS in JavaScript in JS file: calendar_js at line number: 1513
+Item: CSS in JavaScript in JS file: calendar_js at line number: 1508
+Item: CSS in JavaScript in JS file: calendar_js at line number: 1466
+Item: CSS in JavaScript in JS file: calendar_js at line number: 1432
+Item: CSS in JavaScript in JS file: calendar_js at line number: 1408
+Item: CSS in JavaScript in JS file: calendar_js at line number: 1404
+Item: CSS in JavaScript in JS file: calendar_js at line number: 1386
+Item: CSS in JavaScript in JS file: calendar_js at line number: 1366
+Item: CSS in JavaScript in JS file: calendar_js at line number: 1355
+Item: CSS in JavaScript in JS file: calendar_js at line number: 1334
+Item: CSS in JavaScript in JS file: calendar_js at line number: 1189
+Item: CSS in JavaScript in JS file: calendar_js at line number: 1086
+Item: CSS in JavaScript in JS file: calendar_js at line number: 934
+Item: CSS in JavaScript in JS file: calendar_js at line number: 777
+Item: CSS in JavaScript in JS file: calendar_js at line number: 745
+Item: CSS in JavaScript in JS file: calendar_js at line number: 744
+Item: CSS in JavaScript in JS file: calendar_js at line number: 482
+Item: CSS in JavaScript in JS file: calendar_js at line number: 314
+Item: CSS in JavaScript in JS file: calendar_js at line number: 308
+Item: CSS in JavaScript in JS file: showTodos_actionscript11 at line number: 210
+Item: CSS in JavaScript in JS file: showTodos_actionscript11 at line number: 178
+Item: CSS in JavaScript in JS file: showTodos_actionscript11 at line number: 153
+Item: CSS in JavaScript in JS file: showTodos_actionscript11 at line number: 65
+Item: CSS in JavaScript in JS file: showTodos_actionscript11 at line number: 51
+Item: CSS in JavaScript in JS file: showTodos_actionscript11 at line number: 42
+Item: CSS in JavaScript in JS file: showTodos_actionscript11 at line number: 39
+Item: CSS in JavaScript in JS file: showTodos_actionscript11 at line number: 36
+Item: CSS in JavaScript in JS file: showTodos_actionscript11 at line number: 31
+Item: CSS in JavaScript in JS file: showTodos_actionscript11 at line number: 26
+Item: CSS in JavaScript in JS file: showTodos_actionscript11 at line number: 18
+Item: CSS in JavaScript in JS file: showTodos_actionscript11 at line number: 16
+Item: CSS in JavaScript in JS file: showTodos_actionscript11 at line number: 217
+Item: CSS in JavaScript in JS file: showTodos_actionscript11 at line number: 218
+Item: CSS in JavaScript in JS file: showTodos_actionscript11 at line number: 230
+Item: CSS in JavaScript in JS file: showTodos_actionscript12 at line number: 26
+Item: CSS in JavaScript in JS file: showTodos_actionscript12 at line number: 32
+Item: CSS in JavaScript in JS file: showTodos_actionscript12 at line number: 42
+Item: CSS in JavaScript in JS file: showTodos_actionscript12 at line number: 55
+Item: CSS in JavaScript in JS file: showTodos_actionscript12 at line number: 80
+Item: CSS in JavaScript in JS file: showTodos_actionscript12 at line number: 91
+Item: CSS in JavaScript in JS file: showTodos_actionscript12 at line number: 99
+Item: CSS in JavaScript in JS file: calendar_js at line number: 269
+Item: CSS in JavaScript in JS file: calendar_js at line number: 305
+********** EMPTY CATCH **********
+Number of occurance: 0
+********** EXCESSIVE GLOBAL VARIABLES **********
+Number of global variables: 45
+List of  global variables: [Autocompleter, Field, Try, Ajax, dwr, Droppables, Draggables, Control, Prototype, Sortable, menuDate, Form, todo_lists, Enumerable, replyRenderTable, Builder, _nativeExtensions, replyAddTodoListUser, DWREngine, s3, s0, DWRUtil, s2, todos, s1, replyShareTodoListUsers, replyGetTodoById, focusControl, j, $continue, replyCurrentTodoLists, Effect, $break, i, Scriptaculous, keyboardListener, console, replyEditTodoList, Insertion, tableDate, Class, Position, Effect2, Toggle, Abstract]
+********** LARGE OBJECT **********
+Number of occurance: 6
+Item: parent in JS file: todos_forceRenderTodos_dwr at line number: -1
+Item: self in JS file: calendar_js at line number: 1406
+Item: Effect in JS file: showTodos_actionscript12 at line number: 7
+Item: todo_lists in JS file: showTodos_actionscript11 at line number: 89
+Item: Calendar in JS file: showTodos_actionscript15 at line number: 2
+Item: _TT in JS file: calendar-en_js at line number: 81
+********** LAZY OBJECT **********
+Number of occurance: 138
+Item: description in JS file: showTodos_actionscript11 at line number: 161
+Item: focusControl in JS file: myInfo_actionscript6 at line number: 5
+Item: onchange in JS file: todos_forceRenderTodos_dwr at line number: -1
+Item: name in JS file: showTodos_actionscript12 at line number: 37
+Item: data in JS file: showTodos_actionscript12 at line number: 20
+Item: notes in JS file: showTodos_actionscript11 at line number: 284
+Item: todoId in JS file: showTodos_actionscript11 at line number: 217
+Item: listId in JS file: showTodos_actionscript11 at line number: 160
+Item: engine in JS file: todos_getCurrentTodoLists_dwr at line number: 8
+Item: setFullYear in JS file: calendar_js at line number: 1794
+Item: re in JS file: calendar_js at line number: 1779
+Item: print in JS file: calendar_js at line number: 1727
+Item: equalsTo in JS file: calendar_js at line number: 1709
+Item: getDayOfYear in JS file: calendar_js at line number: 1690
+Item: getMonthDays in JS file: calendar_js at line number: 1677
+Item: _dragStart in JS file: calendar_js at line number: 1549
+Item: yearsCombo in JS file: calendar_js at line number: 1545
+Item: cc in JS file: calendar_js at line number: 1508
+Item: defaultView in JS file: calendar_js at line number: 1468
+Item: obj in JS file: calendar_js at line number: 1466
+Item: getVisib in JS file: calendar_js at line number: 1465
+Item: hideShowCovered in JS file: calendar_js at line number: 1462
+Item: setDateFormat in JS file: calendar_js at line number: 1443
+Item: monthsCombo in JS file: calendar_js at line number: 1432
+Item: opts in JS file: calendar_js at line number: 1409
+Item: continuation_for_the_fucking_khtml_browser in JS file: calendar_js at line number: 1405
+Item: showAtElement in JS file: calendar_js at line number: 1373
+Item: reparent in JS file: calendar_js at line number: 1298
+Item: element in JS file: calendar_js at line number: 1288
+Item: destroy in JS file: calendar_js at line number: 1287
+Item: callCloseHandler in JS file: calendar_js at line number: 1279
+Item: callHandler in JS file: calendar_js at line number: 1272
+Item: setRange in JS file: calendar_js at line number: 1266
+Item: setDisabledHandler in JS file: calendar_js at line number: 1261
+Item: setFirstDayOfWeek in JS file: calendar_js at line number: 1250
+Item: refresh in JS file: calendar_js at line number: 1245
+Item: setDateToolTipHandler in JS file: calendar_js at line number: 1225
+Item: calendar_js_exec_counter in JS file: calendar_js at line number: 1
+Item: _initMultipleDates in JS file: calendar_js at line number: 1190
+Item: innerHTML in JS file: calendar_js at line number: 1187
+Item: showsOtherMonths in JS file: calendar_js at line number: 1184
+Item: datesCells in JS file: calendar_js at line number: 1115
+Item: maxYear in JS file: calendar_js at line number: 1091
+Item: minYear in JS file: calendar_js at line number: 1088
+Item: visibility in JS file: calendar_js at line number: 1086
+Item: showShareTodoList in JS file: showTodos_actionscript12 at line number: 95
+Item: cancelEditTodoList in JS file: showTodos_actionscript12 at line number: 90
+Item: showEditTodoList in JS file: showTodos_actionscript12 at line number: 51
+Item: cancelAddTodoList in JS file: showTodos_actionscript12 at line number: 31
+Item: showAddTodoList in JS file: showTodos_actionscript12 at line number: 24
+Item: selectTodoListLink in JS file: showTodos_actionscript12 at line number: 18
+Item: replyCurrentTodoLists in JS file: showTodos_actionscript12 at line number: 11
+Item: renderMenu in JS file: showTodos_actionscript12 at line number: 4
+Item: hideOlderTodos in JS file: showTodos_actionscript11 at line number: 268
+Item: showOlderTodos in JS file: showTodos_actionscript11 at line number: 261
+Item: deleteAllCompletedTodos in JS file: showTodos_actionscript11 at line number: 247
+Item: deleteTodo in JS file: showTodos_actionscript11 at line number: 234
+Item: cancelEditTodo in JS file: showTodos_actionscript11 at line number: 229
+Item: quickEditTodo in JS file: showTodos_actionscript11 at line number: 223
+Item: editTodo in JS file: showTodos_actionscript11 at line number: 200
+Item: completeTodo in JS file: showTodos_actionscript11 at line number: 191
+Item: reopenTodo in JS file: showTodos_actionscript11 at line number: 182
+Item: cancelAddTodo in JS file: showTodos_actionscript11 at line number: 177
+Item: quickAddTodo in JS file: showTodos_actionscript11 at line number: 159
+Item: addTodo in JS file: showTodos_actionscript11 at line number: 143
+Item: sortTable in JS file: showTodos_actionscript11 at line number: 135
+Item: quickAddNewTodoForm in JS file: showTodos_actionscript11 at line number: 131
+Item: replyRenderTable in JS file: showTodos_actionscript11 at line number: 126
+Item: forms in JS file: showTodos_actionscript11 at line number: 27
+Item: display in JS file: showTodos_actionscript11 at line number: 18
+Item: onkeydown in JS file: showTodos_actionscript11 at line number: 13
+Item: dwr in JS file: showTodos_actionscript11 at line number: 3
+Item: getCookie in JS file: tabs_js at line number: 85
+Item: parentNode in JS file: tabs_js at line number: 49
+Item: menuSelected in JS file: tabs_js at line number: 47
+Item: activateMenu in JS file: tabs_js at line number: 33
+Item: decorateMenu in JS file: tabs_js at line number: 14
+Item: initMenu in JS file: tabs_js at line number: 5
+Item: getElementById in JS file: tabs_js at line number: 2
+Item: tracker in JS file: welcome_actionscript0 at line number: 1
+Item: editTodoForm in JS file: showTodos_actionscript11 at line number: 32
+Item: addNewListForm in JS file: showTodos_actionscript11 at line number: 37
+Item: rssAllowed in JS file: showTodos_actionscript11 at line number: 38
+Item: editListForm in JS file: showTodos_actionscript11 at line number: 40
+Item: shareListForm in JS file: showTodos_actionscript11 at line number: 43
+Item: showAddTodo in JS file: showTodos_actionscript11 at line number: 47
+Item: todoForm in JS file: showTodos_actionscript11 at line number: 49
+Item: createAssignedUserList in JS file: showTodos_actionscript11 at line number: 82
+Item: id in JS file: showTodos_actionscript11 at line number: 85
+Item: reply in JS file: showTodos_actionscript11 at line number: 86
+Item: renderTable in JS file: showTodos_actionscript11 at line number: 102
+Item: replyShareTodoListUsers in JS file: showTodos_actionscript12 at line number: 106
+Item: direct in JS file: showTodos_actionscript12 at line number: 111
+Item: deleteTodoListUserLink in JS file: showTodos_actionscript12 at line number: 115
+Item: addTodoListUser in JS file: showTodos_actionscript12 at line number: 120
+Item: replyAddTodoListUser in JS file: showTodos_actionscript12 at line number: 130
+Item: deleteTodoListUser in JS file: showTodos_actionscript12 at line number: 141
+Item: reloadingMenu in JS file: showTodos_actionscript13 at line number: 3
+Item: Calendar in JS file: showTodos_actionscript15 at line number: 2
+Item: reloadingTable in JS file: showTodos_actionscript16 at line number: 3
+Item: param_default in JS file: calendar-setup_js at line number: 63
+Item: onSelect in JS file: calendar-setup_js at line number: 105
+Item: p in JS file: calendar-setup_js at line number: 109
+Item: inputField in JS file: calendar-setup_js at line number: 110
+Item: displayArea in JS file: calendar-setup_js at line number: 114
+Item: onClose in JS file: calendar-setup_js at line number: 164
+Item: multiple in JS file: calendar-setup_js at line number: 175
+Item: _TT in JS file: calendar-en_js at line number: 81
+Item: test in JS file: calendar_js at line number: 93
+Item: r in JS file: calendar_js at line number: 108
+Item: addClass in JS file: calendar_js at line number: 150
+Item: getElement in JS file: calendar_js at line number: 156
+Item: getTargetElement in JS file: calendar_js at line number: 163
+Item: _add_evs in JS file: calendar_js at line number: 222
+Item: findMonth in JS file: calendar_js at line number: 234
+Item: findYear in JS file: calendar_js at line number: 243
+Item: yr in JS file: calendar_js at line number: 305
+Item: yc in JS file: calendar_js at line number: 314
+Item: s in JS file: calendar_js at line number: 315
+Item: cd in JS file: calendar_js at line number: 316
+Item: tableMouseDown in JS file: calendar_js at line number: 461
+Item: dayMouseDblClick in JS file: calendar_js at line number: 533
+Item: calendar in JS file: calendar_js at line number: 549
+Item: create in JS file: calendar_js at line number: 720
+Item: div in JS file: calendar_js at line number: 744
+Item: title in JS file: calendar_js at line number: 774
+Item: cursor in JS file: calendar_js at line number: 777
+Item: _nav_py in JS file: calendar_js at line number: 785
+Item: _nav_pm in JS file: calendar_js at line number: 788
+Item: _nav_now in JS file: calendar_js at line number: 791
+Item: _nav_nm in JS file: calendar_js at line number: 794
+Item: _nav_ny in JS file: calendar_js at line number: 797
+Item: row in JS file: calendar_js at line number: 815
+Item: _displayWeekdays in JS file: calendar_js at line number: 816
+Item: tbody in JS file: calendar_js at line number: 819
+Item: part in JS file: calendar_js at line number: 862
+Item: onUpdateTime in JS file: calendar_js at line number: 900
+Item: tooltips in JS file: calendar_js at line number: 936
+Item: _init in JS file: calendar_js at line number: 1081
+********** LONG MESSAGE **********
+Number of occurance: 78
+Item: Long chain in JS file: calendar_js at line number: 1545
+Item: Long chain in JS file: calendar_js at line number: 1544
+Item: Long chain in JS file: calendar_js at line number: 1432
+Item: Long chain in JS file: calendar_js at line number: 1408
+Item: Long chain in JS file: calendar_js at line number: 1404
+Item: Long chain in JS file: calendar_js at line number: 1355
+Item: Long chain in JS file: calendar_js at line number: 1334
+Item: Long chain in JS file: calendar_js at line number: 1189
+Item: Long chain in JS file: calendar_js at line number: 1086
+Item: Long chain in JS file: calendar_js at line number: 777
+Item: Long chain in JS file: calendar_js at line number: 569
+Item: Long chain in JS file: calendar_js at line number: 549
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 160
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 153
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 142
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 122
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 121
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 101
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 97
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 77
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 75
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 74
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 68
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 66
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 63
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 57
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 53
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 39
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 37
+Item: Long chain in JS file: showTodos_actionscript12 at line number: 27
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 75
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 73
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 72
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 71
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 66
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 60
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 59
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 52
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 49
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 43
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 41
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 40
+Item: Long chain in JS file: tabs_js at line number: 49
+Item: Long chain in JS file: tabs_js at line number: 61
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 27
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 28
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 29
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 30
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 32
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 33
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 34
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 35
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 37
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 38
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 77
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 95
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 103
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 114
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 121
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 131
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 137
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 144
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 145
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 146
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 147
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 148
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 149
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 160
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 161
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 201
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 202
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 203
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 204
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 205
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 206
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 250
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 262
+Item: Long chain in JS file: showTodos_actionscript11 at line number: 269
+********** LONG METHOD/FUNCTION **********
+Number of occurance: 12
+Item:  in JS file: calendar_js at line number: 1727
+Item:  in JS file: calendar_js at line number: 1584
+Item:  in JS file: calendar_js at line number: 1462
+Item:  in JS file: calendar_js at line number: 1373
+Item:  in JS file: calendar_js at line number: 1081
+Item:  in JS file: calendar_js at line number: 963
+Item:  in JS file: calendar_js at line number: 846
+Item:  in JS file: calendar_js at line number: 720
+Item:  in JS file: calendar_js at line number: 578
+Item:  in JS file: calendar_js at line number: 381
+Item:  in JS file: calendar_js at line number: 18
+Item:  in JS file: calendar-setup_js at line number: 62
+********** LONG PARAMETER LIST **********
+Number of occurance: 2
+Item: commonAddTodo in JS file: showTodos_actionscript11 at line number: 169
+Item: setCookie in JS file: tabs_js at line number: 77
+********** NESTED CALLBACK **********
+Number of occurance: 0
+********** REFUSED BEQUEST **********
+Number of occurance: 2
+Item: params in JS file: calendar-setup_js at line number: 125
+Item: eventName in JS file: calendar-setup_js at line number: 153
+********** SWITCH STATEMENT **********
+Number of occurance: 7
+Item: switch in JS file: calendar_js at line number: 1597
+Item: switch in JS file: calendar_js at line number: 1423
+Item: switch in JS file: calendar_js at line number: 1415
+Item: switch in JS file: calendar_js at line number: 1020
+Item: switch in JS file: calendar_js at line number: 987
+Item: switch in JS file: calendar_js at line number: 971
+Item: switch in JS file: calendar_js at line number: 626
+********** UNREACHABLE CODE **********
+Number of occurance: 0
+

@@ -1,0 +1,263 @@
+showTodos_actionscript12_exec_counter[0]++;
+showTodos_actionscript12_exec_counter[2]++;
+var menuDate;
+function renderMenu() {
+  showTodos_actionscript12_exec_counter[4]++;
+  showTodos_actionscript12_exec_counter[6]++;
+  todos.getCurrentTodoLists(menuDate, replyCurrentTodoLists);
+  showTodos_actionscript12_exec_counter[7]++;
+  menuDate = new Date();
+  showTodos_actionscript12_exec_counter[8]++;
+  Effect.Appear("todoListsMenuBody");
+  showTodos_actionscript12_exec_counter[9]++;
+  tracker('/ajax/renderMenu');
+  showTodos_actionscript12_exec_counter[5]++;
+}
+showTodos_actionscript12_exec_counter[10]++;
+var replyCurrentTodoLists = function(data) {
+  showTodos_actionscript12_exec_counter[12]++;
+  if (data != null) 
+  {
+    showTodos_actionscript12_exec_counter[14]++;
+    dwr.util.removeAllRows("todoListsMenuBody");
+    showTodos_actionscript12_exec_counter[15]++;
+    dwr.util.addRows("todoListsMenuBody", data, [selectTodoListLink]);
+  }
+  showTodos_actionscript12_exec_counter[13]++;
+};
+function selectTodoListLink(data) {
+  showTodos_actionscript12_exec_counter[16]++;
+  showTodos_actionscript12_exec_counter[17]++;
+  return "<a href=\"javascript:renderTableListId('" + data.listId + "')\">" + data.description + "</a>";
+}
+function showAddTodoList() {
+  showTodos_actionscript12_exec_counter[18]++;
+  showTodos_actionscript12_exec_counter[20]++;
+  hideTodosLayers();
+  showTodos_actionscript12_exec_counter[21]++;
+  $("addNewListDiv").style.display = "inline";
+  showTodos_actionscript12_exec_counter[22]++;
+  document.forms.addNewListForm.name.focus();
+  showTodos_actionscript12_exec_counter[19]++;
+}
+function cancelAddTodoList() {
+  showTodos_actionscript12_exec_counter[23]++;
+  showTodos_actionscript12_exec_counter[25]++;
+  $("addNewListDiv").style.display = 'none';
+  showTodos_actionscript12_exec_counter[24]++;
+}
+function addTodoList(name) {
+  showTodos_actionscript12_exec_counter[26]++;
+  showTodos_actionscript12_exec_counter[28]++;
+  var name = document.forms.addNewListForm.name.value;
+  showTodos_actionscript12_exec_counter[30]++;
+  var rssAllowed = 0;
+  if (document.forms.addNewListForm.rssAllowed.checked) 
+  {
+    showTodos_actionscript12_exec_counter[32]++;
+    rssAllowed = 1;
+  }
+  showTodos_actionscript12_exec_counter[33]++;
+  $("addNewListDiv").style.display = 'none';
+  showTodos_actionscript12_exec_counter[34]++;
+  dwr.engine.beginBatch();
+  showTodos_actionscript12_exec_counter[35]++;
+  todo_lists.addTodoList(name, rssAllowed);
+  showTodos_actionscript12_exec_counter[36]++;
+  todos.forceGetCurrentTodoLists(replyCurrentTodoLists);
+  showTodos_actionscript12_exec_counter[37]++;
+  dwr.engine.endBatch();
+  showTodos_actionscript12_exec_counter[38]++;
+  tracker('/ajax/addTodoList');
+  showTodos_actionscript12_exec_counter[27]++;
+}
+function showEditTodoList() {
+  showTodos_actionscript12_exec_counter[39]++;
+  showTodos_actionscript12_exec_counter[41]++;
+  hideTodosLayers();
+  showTodos_actionscript12_exec_counter[42]++;
+  var listId = document.forms.todoForm.listId.value;
+  if (listId != null && listId != "null" && listId != "") 
+  {
+    showTodos_actionscript12_exec_counter[44]++;
+    $("editListDiv").style.display = "inline";
+    showTodos_actionscript12_exec_counter[45]++;
+    todo_lists.getTodoList(listId, replyEditTodoList);
+    showTodos_actionscript12_exec_counter[46]++;
+    document.forms.editListForm.name.focus();
+    showTodos_actionscript12_exec_counter[47]++;
+    tracker('/ajax/showEditTodoList');
+  }
+  showTodos_actionscript12_exec_counter[40]++;
+}
+showTodos_actionscript12_exec_counter[48]++;
+var replyEditTodoList = function(list) {
+  showTodos_actionscript12_exec_counter[50]++;
+  showTodos_actionscript12_exec_counter[52]++;
+  document.forms.editListForm.name.value = list.name;
+  showTodos_actionscript12_exec_counter[53]++;
+  var rssAllowed = list.rssAllowed;
+  if (rssAllowed == 1) 
+  {
+    showTodos_actionscript12_exec_counter[55]++;
+    document.forms.editListForm.rssAllowed.checked = true;
+  } else {
+    showTodos_actionscript12_exec_counter[56]++;
+    document.forms.editListForm.rssAllowed.checked = false;
+  }
+  showTodos_actionscript12_exec_counter[51]++;
+};
+function editTodoList() {
+  showTodos_actionscript12_exec_counter[57]++;
+  showTodos_actionscript12_exec_counter[59]++;
+  var listId = document.forms.todoForm.listId.value;
+  showTodos_actionscript12_exec_counter[61]++;
+  var name = document.forms.editListForm.name.value;
+  showTodos_actionscript12_exec_counter[63]++;
+  var rssAllowed = 0;
+  if (document.forms.editListForm.rssAllowed.checked) 
+  {
+    showTodos_actionscript12_exec_counter[65]++;
+    rssAllowed = 1;
+  }
+  showTodos_actionscript12_exec_counter[66]++;
+  $("editListDiv").style.display = 'none';
+  showTodos_actionscript12_exec_counter[67]++;
+  dwr.engine.beginBatch();
+  showTodos_actionscript12_exec_counter[68]++;
+  todo_lists.editTodoList(listId, name, rssAllowed);
+  showTodos_actionscript12_exec_counter[69]++;
+  todos.forceGetCurrentTodoLists(replyCurrentTodoLists);
+  showTodos_actionscript12_exec_counter[70]++;
+  renderTable();
+  showTodos_actionscript12_exec_counter[71]++;
+  dwr.engine.endBatch();
+  showTodos_actionscript12_exec_counter[72]++;
+  tracker('/ajax/editTodoList');
+  showTodos_actionscript12_exec_counter[58]++;
+}
+function cancelEditTodoList() {
+  showTodos_actionscript12_exec_counter[73]++;
+  showTodos_actionscript12_exec_counter[75]++;
+  $("editListDiv").style.display = 'none';
+  showTodos_actionscript12_exec_counter[74]++;
+}
+function showShareTodoList() {
+  showTodos_actionscript12_exec_counter[76]++;
+  showTodos_actionscript12_exec_counter[78]++;
+  hideTodosLayers();
+  showTodos_actionscript12_exec_counter[79]++;
+  var listId = document.forms.todoForm.listId.value;
+  if (listId != null && listId != "null" && listId != "") 
+  {
+    showTodos_actionscript12_exec_counter[81]++;
+    $("shareListDiv").style.display = "inline";
+    showTodos_actionscript12_exec_counter[82]++;
+    todo_lists.getTodoListUsers(listId, replyShareTodoListUsers);
+    showTodos_actionscript12_exec_counter[83]++;
+    document.forms.shareListForm.login.focus();
+    showTodos_actionscript12_exec_counter[84]++;
+    tracker('/ajax/showShareTodoList');
+  }
+  showTodos_actionscript12_exec_counter[77]++;
+}
+showTodos_actionscript12_exec_counter[85]++;
+var replyShareTodoListUsers = function(data) {
+  showTodos_actionscript12_exec_counter[87]++;
+  showTodos_actionscript12_exec_counter[89]++;
+  dwr.util.removeAllRows("usersTableBody");
+  showTodos_actionscript12_exec_counter[90]++;
+  dwr.util.addRows("usersTableBody", data, [direct, deleteTodoListUserLink]);
+  showTodos_actionscript12_exec_counter[88]++;
+};
+function direct(data) {
+  showTodos_actionscript12_exec_counter[91]++;
+  showTodos_actionscript12_exec_counter[92]++;
+  return data;
+}
+function deleteTodoListUserLink(data) {
+  showTodos_actionscript12_exec_counter[93]++;
+  showTodos_actionscript12_exec_counter[94]++;
+  return "<a href=\"javascript:deleteTodoListUser('" + data + "')\">Remove</a>";
+}
+function addTodoListUser() {
+  showTodos_actionscript12_exec_counter[95]++;
+  showTodos_actionscript12_exec_counter[97]++;
+  var listId = document.forms.todoForm.listId.value;
+  showTodos_actionscript12_exec_counter[99]++;
+  var login = document.forms.shareListForm.login.value;
+  showTodos_actionscript12_exec_counter[101]++;
+  dwr.engine.beginBatch();
+  showTodos_actionscript12_exec_counter[102]++;
+  todo_lists.addTodoListUser(listId, login, replyAddTodoListUser);
+  showTodos_actionscript12_exec_counter[103]++;
+  todo_lists.getTodoListUsers(listId, replyShareTodoListUsers);
+  showTodos_actionscript12_exec_counter[104]++;
+  dwr.engine.endBatch();
+  showTodos_actionscript12_exec_counter[105]++;
+  tracker('/ajax/addTodoListUser');
+  showTodos_actionscript12_exec_counter[96]++;
+}
+showTodos_actionscript12_exec_counter[106]++;
+var replyAddTodoListUser = function(data) {
+  showTodos_actionscript12_exec_counter[108]++;
+  if (data != null && typeof data == 'object') 
+  {
+    showTodos_actionscript12_exec_counter[110]++;
+    alert(dwr.util.toDescriptiveString(data, 2));
+  } else {
+    if (data == "ObjectRetrievalFailureException") 
+    {
+      showTodos_actionscript12_exec_counter[111]++;
+      alert("Requested user does not exist.");
+    }
+  }
+  showTodos_actionscript12_exec_counter[109]++;
+};
+function deleteTodoListUser(login) {
+  showTodos_actionscript12_exec_counter[112]++;
+  showTodos_actionscript12_exec_counter[114]++;
+  var listId = document.forms.todoForm.listId.value;
+  showTodos_actionscript12_exec_counter[116]++;
+  dwr.engine.beginBatch();
+  showTodos_actionscript12_exec_counter[117]++;
+  todo_lists.deleteTodoListUser(listId, login);
+  showTodos_actionscript12_exec_counter[118]++;
+  todo_lists.getTodoListUsers(listId, replyShareTodoListUsers);
+  showTodos_actionscript12_exec_counter[119]++;
+  dwr.engine.endBatch();
+  showTodos_actionscript12_exec_counter[120]++;
+  tracker('/ajax/deleteTodoListUser');
+  showTodos_actionscript12_exec_counter[113]++;
+}
+function deleteTodoList(listId) {
+  showTodos_actionscript12_exec_counter[121]++;
+  showTodos_actionscript12_exec_counter[123]++;
+  hideTodosLayers();
+  showTodos_actionscript12_exec_counter[124]++;
+  var listId = document.forms.todoForm.listId.value;
+  if (listId != null && listId != "null" && listId != "") 
+  {
+    showTodos_actionscript12_exec_counter[126]++;
+    var sure = confirm("Are you sure you want to delete this Todo List?");
+    if (sure) 
+    {
+      showTodos_actionscript12_exec_counter[128]++;
+      dwr.engine.beginBatch();
+      showTodos_actionscript12_exec_counter[129]++;
+      todo_lists.deleteTodoList(listId);
+      showTodos_actionscript12_exec_counter[130]++;
+      todos.forceGetCurrentTodoLists(replyCurrentTodoLists);
+      showTodos_actionscript12_exec_counter[131]++;
+      document.forms.todoForm.listId.value = null;
+      showTodos_actionscript12_exec_counter[132]++;
+      dwr.util.setValue('todosTable', "<div class='message'>Todo List successfully deleted.</div>");
+      showTodos_actionscript12_exec_counter[133]++;
+      dwr.engine.endBatch();
+      showTodos_actionscript12_exec_counter[134]++;
+      tracker('/ajax/deleteTodoList');
+    }
+  }
+  showTodos_actionscript12_exec_counter[122]++;
+}
+showTodos_actionscript12_exec_counter[1]++;

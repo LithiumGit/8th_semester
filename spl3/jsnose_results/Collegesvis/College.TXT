@@ -1,0 +1,72 @@
+***************************************
+********** CODE SMELL REPORT **********
+***************************************
+********** CLOSURE SMELL **********
+Number of occurance: 1
+Item: Long scope chain at function:  in JS file: collegevis_js at line number: 344
+********** COUPLING JS/HTML **********
+Total number of JavaScript in HTML tags: 0
+Occurance of CSS in JavaScript
+Number of occurance: 0
+********** EMPTY CATCH **********
+Number of occurance: 0
+********** EXCESSIVE GLOBAL VARIABLES **********
+Number of global variables: 17
+List of  global variables: [jQuery151036509833973587136, jQuery151034169542306353773, jQuery15103826987000186144, jQuery15104972875080540464, jQuery15108219373850141551, jQuery15107501295975956763, j, jQuery15105967481305078038, jQuery151021774378768195346, i, jQuery15105315075811235725, alignValue, jQuery1510766630025414577, jQuery151020413456172614164, jQuery15104931171952815442, jQuery151015020341956889516, jQuery15108397069922641907]
+********** LARGE OBJECT **********
+Number of occurance: 0
+********** LAZY OBJECT **********
+Number of occurance: 32
+Item: c in JS file: collegevis_js at line number: 360
+Item: ready in JS file: collegevis_js at line number: 359
+Item: b in JS file: collegevis_js at line number: 344
+Item: a in JS file: collegevis_js at line number: 343
+Item: update in JS file: collegevis_js at line number: 341
+Item: with_updates in JS file: collegevis_js at line number: 325
+Item: with_sort in JS file: collegevis_js at line number: 314
+Item: with_data_source in JS file: collegevis_js at line number: 302
+Item: text in JS file: collegevis_js at line number: 148
+Item: college in JS file: collegevis_js at line number: 146
+Item: txt in JS file: collegevis_js at line number: 108
+Item: bind in JS file: collegevis_js at line number: 67
+Item: $sliders in JS file: collegevis_js at line number: 64
+Item: css in JS file: collegevis_js at line number: 60
+Item: each in JS file: collegevis_js at line number: 59
+Item: id_cache in JS file: collegevis_js at line number: 54
+Item: getJSON in JS file: collegevis_js at line number: 16
+Item: $data in JS file: collegevis_js at line number: 10
+Item: Collegevis in JS file: collegevis_js at line number: 4
+Item: collegevis_js_exec_counter in JS file: collegevis_js at line number: 1
+Item: hovered in JS file: collegevis_js at line number: 152
+Item: scale_cost in JS file: collegevis_js at line number: 163
+Item: scale_rep in JS file: collegevis_js at line number: 167
+Item: scale_finaid in JS file: collegevis_js at line number: 171
+Item: scale_job in JS file: collegevis_js at line number: 175
+Item: scale_type in JS file: collegevis_js at line number: 179
+Item: scale_location_size in JS file: collegevis_js at line number: 191
+Item: sel_for_value in JS file: collegevis_js at line number: 209
+Item: draw_graph in JS file: collegevis_js at line number: 250
+Item: draw_table in JS file: collegevis_js at line number: 263
+Item: compare_values in JS file: collegevis_js at line number: 286
+Item: is_sorted in JS file: collegevis_js at line number: 293
+********** LONG MESSAGE **********
+Number of occurance: 0
+********** LONG METHOD/FUNCTION **********
+Number of occurance: 2
+Item:  in JS file: collegevis_js at line number: 4
+Item:  in JS file: collegevis_js at line number: 1
+********** LONG PARAMETER LIST **********
+Number of occurance: 0
+********** NESTED CALLBACK **********
+Number of occurance: 1
+Item: Long scope chain at function:  in JS file: collegevis_js at line number: 344
+********** REFUSED BEQUEST **********
+Number of occurance: 0
+********** SWITCH STATEMENT **********
+Number of occurance: 0
+********** UNREACHABLE CODE **********
+Number of occurance: 0
+
+- [Thread 1 Crawler 1 (initial)] List of collegevis_js is: [50, 50, 50, 50, 50, 50, 0, 50, 50, 50, 0, 50, 50, 50, 50, 50, 50, 50, 0, 50, 0, 50, 0, 50, 0, 50, 300, 300, 300, 50, 50, 12, 12, 12, 50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0, 50, 50, 50, 50, 50, 0, 50, 0, 50, 0, 3100, 3100, 3100, 0, 3100, 0, 3100, 0, 3100, 0, 18600, 0, 18600, 0, 18600, 0, 18600, 18600, 18600, 3100, 0, 3100, 3100, 0, 0, 0, 3100, 3100, 3100, 3100, 3100, 3100, 3100, 3100, 3100, 3100, 0, 2642, 3100, 3100, 3100, 0, 2922, 3100, 6200, 650, 0, 650, 6200, 62, 62, 0, 3100, 3100, 3100, 3100, 3100, 3100, 3100, 3100, 3100, 0, 18600, 3100, 62, 62, 62, 62, 62, 0, 3100, 62, 62, 62, 0, 3100, 3100, 3100, 3100, 3100, 3100, 3100, 3100, 3100, 3100, 62, 62, 1290, 1290, 124, 124, 62, 0, 5, 57, 62, 62, 5, 57, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 50, 50, 50, 50, 0]
+- [Thread 1 Crawler 1 (initial)] List of collegevis_js # lines ececuted: 137 # tolal lines: 175 - code coverage: 78.28571428571428%
+- [Thread 1 Crawler 1 (initial)]Time: 5 min, 47 sec - code coverage: 78.28571428571428%

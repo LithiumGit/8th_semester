@@ -1,0 +1,6 @@
+welcome_actionscript0_exec_counter[0]++;
+function tracker(ajaxCall) {
+  welcome_actionscript0_exec_counter[2]++;
+  welcome_actionscript0_exec_counter[3]++;
+}
+welcome_actionscript0_exec_counter[1]++;

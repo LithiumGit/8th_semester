@@ -1,0 +1,212 @@
+the_ui_js_exec_counter[0]++;
+function toggle(which, state) {
+  the_ui_js_exec_counter[2]++;
+  switch (which) {
+    case "play":
+      {
+        if (arguments.length == 1) {
+          the_ui_js_exec_counter[3]++;
+          state = !playing;
+        }
+        the_ui_js_exec_counter[4]++;
+        playing = state;
+        if (playing) 
+        {
+          if (flower) {
+            the_ui_js_exec_counter[5]++;
+            startFlowerMoment();
+          }
+          the_ui_js_exec_counter[6]++;
+          $("#control a.tool").removeClass("selected");
+          the_ui_js_exec_counter[7]++;
+          $("#tog_play").text("pause");
+        } else {
+          the_ui_js_exec_counter[8]++;
+          playing = false;
+          the_ui_js_exec_counter[9]++;
+          zoomVel = panVel = 0;
+          the_ui_js_exec_counter[10]++;
+          mouseBranch = null;
+          the_ui_js_exec_counter[11]++;
+          $("#tog_play").text("play");
+          the_ui_js_exec_counter[12]++;
+          $("#tool_" + paintTool).addClass("selected");
+        }
+        the_ui_js_exec_counter[13]++;
+        break;
+      }
+    case "about":
+      {
+        if (arguments.length > 1) 
+        {
+          the_ui_js_exec_counter[14]++;
+          aboutOn = state;
+        } else {
+          the_ui_js_exec_counter[15]++;
+          aboutOn = !aboutOn;
+          the_ui_js_exec_counter[16]++;
+          state = aboutOn;
+        }
+        the_ui_js_exec_counter[17]++;
+        var about = $("#about");
+        the_ui_js_exec_counter[19]++;
+        1;
+        if (aboutOn) 
+        {
+          the_ui_js_exec_counter[20]++;
+          about.css({left: window.innerWidth / 2 - (about.width() + 28) / 2, top: window.innerHeight / 2 - (about.height() + 28) / 2});
+          the_ui_js_exec_counter[21]++;
+          $("<div id=\"aboutclear\"></div>").insertBefore(about).one("mousedownw", function() {
+  the_ui_js_exec_counter[22]++;
+  the_ui_js_exec_counter[24]++;
+  toggle("about", false);
+  the_ui_js_exec_counter[25]++;
+  play();
+  the_ui_js_exec_counter[23]++;
+});
+          the_ui_js_exec_counter[26]++;
+          about.fadeIn(200);
+        } else {
+          the_ui_js_exec_counter[27]++;
+          $("#aboutclear").remove();
+          the_ui_js_exec_counter[28]++;
+          about.fadeOut(200);
+        }
+        the_ui_js_exec_counter[29]++;
+        break;
+      }
+    case "mutate":
+      {
+        if (arguments.length > 1) 
+        {
+          the_ui_js_exec_counter[30]++;
+          mutate = state;
+        } else {
+          the_ui_js_exec_counter[31]++;
+          mutate = !mutate;
+          the_ui_js_exec_counter[32]++;
+          state = mutate;
+        }
+        the_ui_js_exec_counter[33]++;
+        break;
+      }
+    case "flower":
+      {
+        if (arguments.length > 1) 
+        {
+          the_ui_js_exec_counter[34]++;
+          flower = state;
+        } else {
+          the_ui_js_exec_counter[35]++;
+          flower = !flower;
+          the_ui_js_exec_counter[36]++;
+          state = flower;
+        }
+        if (flower) 
+        {
+          if (playing) {
+            the_ui_js_exec_counter[37]++;
+            startFlowerMoment();
+          }
+        } else {
+          the_ui_js_exec_counter[38]++;
+          endFlowerMoment();
+        }
+        the_ui_js_exec_counter[39]++;
+        break;
+      }
+  }
+  if (state) {
+    the_ui_js_exec_counter[40]++;
+    $("#tog_" + which).addClass("selected");
+  } else {
+    the_ui_js_exec_counter[41]++;
+    $("#tog_" + which).removeClass("selected");
+  }
+  the_ui_js_exec_counter[42]++;
+  return false;
+}
+function play() {
+  the_ui_js_exec_counter[43]++;
+  the_ui_js_exec_counter[45]++;
+  toggle("play", true);
+  the_ui_js_exec_counter[44]++;
+}
+function pause() {
+  the_ui_js_exec_counter[46]++;
+  the_ui_js_exec_counter[48]++;
+  toggle("play", false);
+  the_ui_js_exec_counter[47]++;
+}
+function set_tool(tool) {
+  the_ui_js_exec_counter[49]++;
+  the_ui_js_exec_counter[50]++;
+  playing = false;
+  the_ui_js_exec_counter[51]++;
+  paintTool = tool;
+  the_ui_js_exec_counter[52]++;
+  $("#control a.tool").removeClass("selected");
+  the_ui_js_exec_counter[53]++;
+  $("#tool_" + paintTool).addClass("selected");
+  the_ui_js_exec_counter[54]++;
+  return false;
+}
+function set_paint_style(style) {
+  the_ui_js_exec_counter[55]++;
+  the_ui_js_exec_counter[56]++;
+  playing = false;
+  the_ui_js_exec_counter[57]++;
+  paintStyle = style;
+  the_ui_js_exec_counter[58]++;
+  return false;
+}
+function reset() {
+  the_ui_js_exec_counter[59]++;
+  the_ui_js_exec_counter[60]++;
+  pause();
+  the_ui_js_exec_counter[61]++;
+  initRoot();
+  the_ui_js_exec_counter[62]++;
+  fadeBg(0, 0, 0, 1000);
+  the_ui_js_exec_counter[63]++;
+  return false;
+}
+function fadeBg(r, g, b, dur) {
+  the_ui_js_exec_counter[64]++;
+  if (fadeBgFading) {
+    the_ui_js_exec_counter[66]++;
+    clearInterval(fadeBgTimerId);
+  }
+  the_ui_js_exec_counter[67]++;
+  fadeBgFrom = clone(bgColor);
+  the_ui_js_exec_counter[68]++;
+  fadeBgStart = (new Date()).getTime();
+  the_ui_js_exec_counter[69]++;
+  fadeBgTo = [r, g, b];
+  the_ui_js_exec_counter[70]++;
+  fadeBgTimerId = setInterval(function() {
+  the_ui_js_exec_counter[71]++;
+  the_ui_js_exec_counter[73]++;
+  var time = (new Date()).getTime() - fadeBgStart;
+  if (time < dur) 
+  {
+    for (var i = 3; --i >= 0; ) 
+      {
+        the_ui_js_exec_counter[75]++;
+        bgColor[i] = quadOut(time, fadeBgFrom[i], fadeBgTo[i] - fadeBgFrom[i], dur);
+      }
+  } else {
+    the_ui_js_exec_counter[76]++;
+    clearInterval(fadeBgTimerId);
+    the_ui_js_exec_counter[77]++;
+    bgColor = fadeBgTo;
+  }
+  the_ui_js_exec_counter[78]++;
+  $(document.body).css("background-color", "rgb(" + Math.floor(bgColor[0]) + "," + Math.floor(bgColor[1]) + "," + Math.floor(bgColor[2]) + ")");
+  the_ui_js_exec_counter[72]++;
+}, 13);
+  the_ui_js_exec_counter[65]++;
+}
+the_ui_js_exec_counter[79]++;
+var fadeBgTimerId, fadeBgFading, fadeBgFrom, fadeBgTo, fadeBgStart;
+the_ui_js_exec_counter[1]++;

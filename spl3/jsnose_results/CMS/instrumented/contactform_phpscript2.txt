@@ -1,0 +1,148 @@
+contactform_phpscript2_exec_counter[0]++;
+function createRequestObject() {
+  contactform_phpscript2_exec_counter[2]++;
+  contactform_phpscript2_exec_counter[3]++;
+  var ro;
+  contactform_phpscript2_exec_counter[5]++;
+  var browser = navigator.appName;
+  if (browser == "Microsoft Internet Explorer") 
+  {
+    contactform_phpscript2_exec_counter[7]++;
+    ro = new ActiveXObject("Microsoft.XMLHTTP");
+  } else {
+    contactform_phpscript2_exec_counter[8]++;
+    ro = new XMLHttpRequest();
+  }
+  contactform_phpscript2_exec_counter[9]++;
+  return ro;
+}
+contactform_phpscript2_exec_counter[10]++;
+var http = createRequestObject();
+function sendemail() {
+  contactform_phpscript2_exec_counter[12]++;
+  contactform_phpscript2_exec_counter[14]++;
+  var message_textbox = document.getElementById('msg');
+  contactform_phpscript2_exec_counter[16]++;
+  var checkbox_respond_asap = document.getElementById('ContactFormOptions_CheckBox_0');
+  contactform_phpscript2_exec_counter[18]++;
+  var checkbox_include_in_mailing_list = document.getElementById('ContactFormOptions_CheckBox_1');
+  contactform_phpscript2_exec_counter[20]++;
+  var checkbox_respond_asap_label = checkbox_respond_asap.id + '_Label';
+  contactform_phpscript2_exec_counter[22]++;
+  var checkbox_include_in_mailing_list_label = checkbox_include_in_mailing_list.id + '_Label';
+  contactform_phpscript2_exec_counter[24]++;
+  message_textbox.value += '\n\n; ' + document.getElementById(checkbox_respond_asap_label).innerHTML + ': ' + checkbox_respond_asap.checked + '\n; ' + document.getElementById(checkbox_include_in_mailing_list_label).innerHTML + ': ' + checkbox_include_in_mailing_list.checked;
+  contactform_phpscript2_exec_counter[25]++;
+  var msg = document.contactform.msg.value;
+  contactform_phpscript2_exec_counter[27]++;
+  var name = document.contactform.name.value;
+  contactform_phpscript2_exec_counter[29]++;
+  var email = document.contactform.email.value;
+  contactform_phpscript2_exec_counter[31]++;
+  var subject = document.contactform.subject.value;
+  contactform_phpscript2_exec_counter[33]++;
+  setTimeout(function() {
+  contactform_phpscript2_exec_counter[34]++;
+  contactform_phpscript2_exec_counter[36]++;
+  http.open('get', 'TinySite.XML/Admin/Modules/ContactForm.php?msg=' + msg + '&name=' + name + '&subject=' + subject + '&email=' + email + '&action=send');
+  contactform_phpscript2_exec_counter[37]++;
+  http.onreadystatechange = handleResponse;
+  contactform_phpscript2_exec_counter[38]++;
+  http.send(null);
+  contactform_phpscript2_exec_counter[35]++;
+}, 100);
+  contactform_phpscript2_exec_counter[13]++;
+}
+function handleResponse() {
+  contactform_phpscript2_exec_counter[39]++;
+  if (http.readyState == 4) 
+  {
+    contactform_phpscript2_exec_counter[41]++;
+    var response = http.responseText;
+    contactform_phpscript2_exec_counter[43]++;
+    var update = new Array();
+    if (response.indexOf('|' != -1)) 
+    {
+      contactform_phpscript2_exec_counter[45]++;
+      update = response.split('|');
+      contactform_phpscript2_exec_counter[46]++;
+      document.getElementById(update[0]).innerHTML = update[1];
+    }
+    contactform_phpscript2_exec_counter[47]++;
+    hideLoadingPanel();
+  } else {
+    contactform_phpscript2_exec_counter[48]++;
+    displayLoadingPanel();
+  }
+  contactform_phpscript2_exec_counter[40]++;
+}
+contactform_phpscript2_exec_counter[49]++;
+var loadingPanelOverlay = parent.document.getElementById('ajaxLoadingPanelModalOverlay');
+contactform_phpscript2_exec_counter[51]++;
+var loadingPanelMessage = parent.document.getElementById('ajaxLoadingPanelLoadingMessage');
+contactform_phpscript2_exec_counter[53]++;
+var loadingPanelTrialMessage = parent.document.getElementById('ajaxLoadingPanelTrialMessage');
+function displayLoadingPanel() {
+  contactform_phpscript2_exec_counter[55]++;
+  contactform_phpscript2_exec_counter[57]++;
+  loadingPanelOverlay.style.display = 'block';
+  contactform_phpscript2_exec_counter[58]++;
+  loadingPanelMessage.style.display = 'block';
+  if (loadingPanelTrialMessage != null) 
+  {
+    contactform_phpscript2_exec_counter[59]++;
+    loadingPanelTrialMessage.style.display = 'block';
+  }
+  contactform_phpscript2_exec_counter[56]++;
+}
+function hideLoadingPanel() {
+  contactform_phpscript2_exec_counter[60]++;
+  contactform_phpscript2_exec_counter[62]++;
+  loadingPanelOverlay.style.display = 'none';
+  contactform_phpscript2_exec_counter[63]++;
+  loadingPanelMessage.style.display = 'none';
+  if (loadingPanelTrialMessage != null) 
+  {
+    contactform_phpscript2_exec_counter[64]++;
+    loadingPanelTrialMessage.style.display = 'none';
+  }
+  contactform_phpscript2_exec_counter[61]++;
+}
+function getThemeName() {
+  contactform_phpscript2_exec_counter[65]++;
+  contactform_phpscript2_exec_counter[67]++;
+  var themename = parent.document.getElementsByTagName('body')[0].className;
+  contactform_phpscript2_exec_counter[69]++;
+  var layoutname = parent.document.getElementsByTagName('body')[0].getAttribute('rel');
+  contactform_phpscript2_exec_counter[71]++;
+  var themestylesheet = document.createElement('link');
+  contactform_phpscript2_exec_counter[73]++;
+  var formstylesurl = 'TinySite.XML/Admin/Layouts/' + layoutname + '/Themes/' + themename + '/Forms.css';
+  contactform_phpscript2_exec_counter[75]++;
+  var head = document.getElementsByTagName('head')[0];
+  contactform_phpscript2_exec_counter[77]++;
+  var body = document.getElementsByTagName('body')[0];
+  contactform_phpscript2_exec_counter[79]++;
+  themestylesheet.setAttribute('type', 'text/css');
+  contactform_phpscript2_exec_counter[80]++;
+  themestylesheet.setAttribute('rel', 'stylesheet');
+  contactform_phpscript2_exec_counter[81]++;
+  themestylesheet.setAttribute('href', formstylesurl);
+  contactform_phpscript2_exec_counter[82]++;
+  head.appendChild(themestylesheet);
+  contactform_phpscript2_exec_counter[83]++;
+  body.className = themename;
+  contactform_phpscript2_exec_counter[66]++;
+}
+contactform_phpscript2_exec_counter[84]++;
+window.onload = function() {
+  contactform_phpscript2_exec_counter[85]++;
+  contactform_phpscript2_exec_counter[87]++;
+  getThemeName();
+  contactform_phpscript2_exec_counter[88]++;
+  renderCheckBoxList('ContactFormOptions.xml', 'ContactFormOptions');
+  contactform_phpscript2_exec_counter[89]++;
+  setTimeout('replaceButtons()', 1000);
+  contactform_phpscript2_exec_counter[86]++;
+};
+contactform_phpscript2_exec_counter[1]++;

@@ -1,0 +1,115 @@
+Vec2_js_exec_counter[0]++;
+function Vec2(_x, _y) {
+  Vec2_js_exec_counter[2]++;
+  Vec2_js_exec_counter[4]++;
+  this.x = _x;
+  Vec2_js_exec_counter[5]++;
+  this.y = _y;
+  Vec2_js_exec_counter[3]++;
+}
+Vec2_js_exec_counter[6]++;
+Vec2.prototype = {set: function(_x, _y) {
+  Vec2_js_exec_counter[7]++;
+  Vec2_js_exec_counter[9]++;
+  this.x = _x;
+  Vec2_js_exec_counter[10]++;
+  this.y = _y;
+  Vec2_js_exec_counter[8]++;
+}, add: function(v) {
+  Vec2_js_exec_counter[11]++;
+  Vec2_js_exec_counter[13]++;
+  this.x += v.x;
+  Vec2_js_exec_counter[14]++;
+  this.y += v.y;
+  Vec2_js_exec_counter[12]++;
+}, add2: function(_x, _y) {
+  Vec2_js_exec_counter[15]++;
+  Vec2_js_exec_counter[17]++;
+  this.x += _x;
+  Vec2_js_exec_counter[18]++;
+  this.y += _y === undefined ? _x : _y;
+  Vec2_js_exec_counter[16]++;
+}, mul2: function(_x, _y) {
+  Vec2_js_exec_counter[19]++;
+  Vec2_js_exec_counter[21]++;
+  this.x *= _x;
+  Vec2_js_exec_counter[22]++;
+  this.y *= _y === undefined ? _x : _y;
+  Vec2_js_exec_counter[20]++;
+}, transform: function(origin, mv, sc, rot) {
+  Vec2_js_exec_counter[23]++;
+  Vec2_js_exec_counter[25]++;
+  var xo = (this.x - origin.x + mv.x) * sc;
+  Vec2_js_exec_counter[27]++;
+  var yo = (this.y - origin.y + mv.y) * sc;
+  if (rot) 
+  {
+    Vec2_js_exec_counter[29]++;
+    this.x = origin.x + (xo * Math.cos(rot) - yo * Math.sin(rot));
+    Vec2_js_exec_counter[30]++;
+    this.y = origin.y + (xo * Math.sin(rot) + yo * Math.cos(rot));
+  } else {
+    Vec2_js_exec_counter[31]++;
+    this.x = origin.x + xo;
+    Vec2_js_exec_counter[32]++;
+    this.y = origin.y + yo;
+  }
+  Vec2_js_exec_counter[24]++;
+}, normalize: function() {
+  Vec2_js_exec_counter[33]++;
+  Vec2_js_exec_counter[35]++;
+  var m = Math.sqrt(this.x * this.x + this.y * this.y);
+  if (m != 0) 
+  {
+    Vec2_js_exec_counter[37]++;
+    this.x /= m;
+    Vec2_js_exec_counter[38]++;
+    this.y /= m;
+  }
+  Vec2_js_exec_counter[34]++;
+}, equals: function(v) {
+  Vec2_js_exec_counter[39]++;
+  Vec2_js_exec_counter[40]++;
+  return x == v.x && y == v.y;
+}};
+Vec2_js_exec_counter[41]++;
+Vec2.dist = function(v1, v2) {
+  Vec2_js_exec_counter[42]++;
+  Vec2_js_exec_counter[43]++;
+  return Math.sqrt(Vec2.distSq(v1, v2));
+};
+Vec2_js_exec_counter[44]++;
+Vec2.distSq = function(v1, v2) {
+  Vec2_js_exec_counter[45]++;
+  Vec2_js_exec_counter[46]++;
+  return distSq(v1.x, v1.y, v2.x, v2.y);
+};
+Vec2_js_exec_counter[47]++;
+Vec2.mag = function(v) {
+  Vec2_js_exec_counter[48]++;
+  Vec2_js_exec_counter[49]++;
+  return Math.sqrt(v.x * v.x + v.y * v.y);
+};
+Vec2_js_exec_counter[50]++;
+Vec2.angle = function(v) {
+  Vec2_js_exec_counter[51]++;
+  Vec2_js_exec_counter[52]++;
+  return Math.atan2(v.y, v.x);
+};
+Vec2_js_exec_counter[53]++;
+Vec2.copy = function(v) {
+  Vec2_js_exec_counter[54]++;
+  Vec2_js_exec_counter[55]++;
+  return new Vec2(v.x, v.y);
+};
+Vec2_js_exec_counter[56]++;
+Vec2.fromAngOff = function(x, y, angle) {
+  Vec2_js_exec_counter[57]++;
+  Vec2_js_exec_counter[58]++;
+  var c = Math.cos(angle);
+  Vec2_js_exec_counter[60]++;
+  var s = Math.sin(angle);
+  Vec2_js_exec_counter[62]++;
+  return new Vec2(x * c - y * s, x * s + y * c);
+};
+Vec2_js_exec_counter[1]++;

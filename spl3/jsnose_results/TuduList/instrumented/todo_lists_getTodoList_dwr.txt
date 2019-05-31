@@ -1,0 +1,5 @@
+todo_lists_getTodoList_dwr_exec_counter[0]++;
+throw 'allowScriptTagRemoting is false.';
+todo_lists_getTodoList_dwr_exec_counter[2]++;
+dwr.engine._remoteHandleCallback('2', '0', {description: null, listId: "003ddf903e66cac0013e736ab0ce0001", name: "sdsd", rssAllowed: false});
+todo_lists_getTodoList_dwr_exec_counter[1]++;

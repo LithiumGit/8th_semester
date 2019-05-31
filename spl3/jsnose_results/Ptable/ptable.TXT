@@ -1,0 +1,52 @@
+***************************************
+********** CODE SMELL REPORT **********
+***************************************
+********** CLOSURE SMELL **********
+Number of occurance: 1
+Item: this in closure in JS file: script_js at line number: 82
+********** COUPLING JS/HTML **********
+Total number of JavaScript in HTML tags: 0
+Occurance of CSS in JavaScript
+Number of occurance: 2
+Item: CSS in JavaScript in JS file: script_js at line number: 39
+Item: CSS in JavaScript in JS file: script_js at line number: 4
+********** EMPTY CATCH **********
+Number of occurance: 0
+********** EXCESSIVE GLOBAL VARIABLES **********
+Number of global variables: 6  
+List of  global variables: [all_tds, shutter_x, info_x, getAJAX, i, id]
+********** LARGE OBJECT **********
+Number of occurance: 2
+Item: all_tds in JS file: script_js at line number: 86
+Item: getAJAX in JS file: script_js at line number: 24
+********** LAZY OBJECT **********
+Number of occurance: 10
+Item: onmouseover in JS file: script_js at line number: 86
+Item: getHTTPObject in JS file: script_js at line number: 101
+Item: onmouseout in JS file: script_js at line number: 87
+Item: onclick in JS file: script_js at line number: 79
+Item: getAJAX in JS file: script_js at line number: 24
+Item: onreadystatechange in JS file: script_js at line number: 18
+Item: shutter_x in JS file: script_js at line number: 7
+Item: display in JS file: script_js at line number: 4
+Item: detailed in JS file: script_js at line number: 1
+********** LONG MESSAGE **********
+Number of occurance: 0
+********** LONG METHOD/FUNCTION **********
+Number of occurance: 0
+********** LONG PARAMETER LIST **********
+Number of occurance: 0
+********** NESTED CALLBACK **********
+Number of occurance: 0
+********** REFUSED BEQUEST **********
+Number of occurance: 0
+********** SWITCH STATEMENT **********
+Number of occurance: 0
+********** UNREACHABLE CODE **********
+Number of occurance: 0
+
+- [Thread 1 Crawler 1 (initial)] List of script1 is: [42, 42, 42]
+- [Thread 1 Crawler 1 (initial)] List of script1 # lines ececuted: 3 # tolal lines: 3 - code coverage: 100.0%
+- [Thread 1 Crawler 1 (initial)] List of script_js is: [42, 42, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 144, 144, 36, 36, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 42, 42, 42, 4956, 36, 36, 36, 36, 4956, 72, 72, 72, 4956, 0, 0, 0, 42, 42, 42, 0, 42, 0, 42]
+- [Thread 1 Crawler 1 (initial)] List of script_js # lines ececuted: 42 # tolal lines: 60 - code coverage: 70.0%
+- [Thread 1 Crawler 1 (initial)]Time: 9 min, 36 sec - code coverage: 71.42857142857143%

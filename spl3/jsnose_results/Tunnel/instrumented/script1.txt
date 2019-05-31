@@ -1,0 +1,459 @@
+script1_exec_counter[0]++;
+function secureGame() {
+  script1_exec_counter[2]++;
+  script1_exec_counter[4]++;
+  var that = this;
+  script1_exec_counter[6]++;
+  var alive = true;
+  function playerKill() {
+    script1_exec_counter[8]++;
+    script1_exec_counter[9]++;
+    alive = false;
+    script1_exec_counter[10]++;
+    return true;
+  }
+  function lifeCheck() {
+    script1_exec_counter[11]++;
+    script1_exec_counter[12]++;
+    return alive;
+  }
+  script1_exec_counter[13]++;
+  this.killPlayer = function() {
+  script1_exec_counter[14]++;
+  script1_exec_counter[15]++;
+  playerKill();
+  script1_exec_counter[16]++;
+  return true;
+};
+  script1_exec_counter[17]++;
+  this.checkLife = function() {
+  script1_exec_counter[18]++;
+  script1_exec_counter[19]++;
+  return lifeCheck();
+};
+  script1_exec_counter[20]++;
+  var score = 0;
+  function scoreGet() {
+    script1_exec_counter[22]++;
+    script1_exec_counter[23]++;
+    return score;
+  }
+  function scoreInc() {
+    script1_exec_counter[24]++;
+    if (alive) 
+    {
+      script1_exec_counter[25]++;
+      score++;
+    }
+    script1_exec_counter[26]++;
+    return true;
+  }
+  script1_exec_counter[27]++;
+  this.getScore = function() {
+  script1_exec_counter[28]++;
+  script1_exec_counter[29]++;
+  return scoreGet();
+};
+  script1_exec_counter[30]++;
+  this.incScore = function() {
+  script1_exec_counter[31]++;
+  script1_exec_counter[32]++;
+  scoreInc();
+  script1_exec_counter[33]++;
+  return true;
+};
+  script1_exec_counter[34]++;
+  var tunnel_width = 320;
+  function tunnelShrink() {
+    script1_exec_counter[36]++;
+    script1_exec_counter[37]++;
+    tunnel_width -= 20;
+    script1_exec_counter[38]++;
+    return true;
+  }
+  function tunnelWidth() {
+    script1_exec_counter[39]++;
+    script1_exec_counter[40]++;
+    return tunnel_width;
+  }
+  script1_exec_counter[41]++;
+  this.shrinkTunnel = function() {
+  script1_exec_counter[42]++;
+  script1_exec_counter[43]++;
+  tunnelShrink();
+  script1_exec_counter[44]++;
+  return true;
+};
+  script1_exec_counter[45]++;
+  this.widthTunnel = function() {
+  script1_exec_counter[46]++;
+  script1_exec_counter[47]++;
+  return tunnelWidth();
+};
+  script1_exec_counter[3]++;
+}
+script1_exec_counter[48]++;
+var bg_val = 0;
+script1_exec_counter[50]++;
+var rail_left = 0;
+script1_exec_counter[52]++;
+var rail_right = 500;
+script1_exec_counter[54]++;
+var ship_x = 234;
+script1_exec_counter[56]++;
+var pos_x = 234;
+script1_exec_counter[58]++;
+var c_s = 0;
+script1_exec_counter[60]++;
+var c_r = 0;
+script1_exec_counter[62]++;
+var c_w = 0;
+script1_exec_counter[64]++;
+var t_state = 0;
+script1_exec_counter[66]++;
+left_wall = new Array(20);
+script1_exec_counter[67]++;
+right_wall = new Array(20);
+function initTunnel() {
+  script1_exec_counter[68]++;
+  script1_exec_counter[70]++;
+  tunnelGame = new secureGame();
+  if ('object' == typeof console) 
+  {
+    script1_exec_counter[71]++;
+    console.warn("No cheating!");
+  }
+  script1_exec_counter[72]++;
+  rail_left = document.getElementById('tunnel').offsetLeft;
+  script1_exec_counter[73]++;
+  rail_right += rail_left;
+  script1_exec_counter[74]++;
+  y = 0;
+  for (y = 0; y < 20; y++) 
+    {
+      script1_exec_counter[75]++;
+      left_wall[y] = 80;
+      script1_exec_counter[76]++;
+      right_wall[y] = 400;
+    }
+  script1_exec_counter[77]++;
+  $('img.left_wall').each(function(i) {
+  script1_exec_counter[78]++;
+  script1_exec_counter[80]++;
+  y = i * 25;
+  script1_exec_counter[81]++;
+  $(this).css('top', '' + y + 'px');
+  script1_exec_counter[82]++;
+  $(this).css('display', 'block');
+  script1_exec_counter[79]++;
+});
+  script1_exec_counter[83]++;
+  $("img.right_wall").each(function(i) {
+  script1_exec_counter[84]++;
+  script1_exec_counter[86]++;
+  y = i * 25;
+  script1_exec_counter[87]++;
+  $(this).css('top', '' + y + 'px');
+  script1_exec_counter[88]++;
+  $(this).css('display', 'block');
+  script1_exec_counter[85]++;
+});
+  script1_exec_counter[89]++;
+  $('div#score_table').click(function() {
+  script1_exec_counter[90]++;
+  script1_exec_counter[92]++;
+  $('table').remove('#high_scores');
+  script1_exec_counter[93]++;
+  $('div#score_table').css('display', 'none');
+  script1_exec_counter[94]++;
+  restartTunnel();
+  script1_exec_counter[95]++;
+  updateTunnel();
+  script1_exec_counter[91]++;
+});
+  script1_exec_counter[69]++;
+}
+function restartTunnel() {
+  script1_exec_counter[96]++;
+  script1_exec_counter[98]++;
+  tunnelGame = new secureGame();
+  if ('object' == typeof console) 
+  {
+    script1_exec_counter[99]++;
+    console.warn("No cheating!");
+  }
+  script1_exec_counter[100]++;
+  ship_x = 234;
+  script1_exec_counter[101]++;
+  c_s = 0;
+  script1_exec_counter[102]++;
+  c_r = 0;
+  script1_exec_counter[103]++;
+  c_w = 0;
+  script1_exec_counter[104]++;
+  $('span#score').text('' + 0);
+  script1_exec_counter[105]++;
+  $('img#ship').css('left', ship_x + 'px');
+  script1_exec_counter[106]++;
+  y = 0;
+  for (y = 0; y < 20; y++) 
+    {
+      script1_exec_counter[107]++;
+      left_wall[y] = 80;
+      script1_exec_counter[108]++;
+      right_wall[y] = 400;
+    }
+  script1_exec_counter[109]++;
+  $('img#ship').fadeIn('slow');
+  script1_exec_counter[110]++;
+  $('img.left_wall').each(function(i) {
+  script1_exec_counter[111]++;
+  script1_exec_counter[113]++;
+  y = i * 25;
+  script1_exec_counter[114]++;
+  $(this).css('top', '' + y + 'px');
+  script1_exec_counter[115]++;
+  $(this).css('display', 'block');
+  script1_exec_counter[112]++;
+});
+  script1_exec_counter[116]++;
+  $("img.right_wall").each(function(i) {
+  script1_exec_counter[117]++;
+  script1_exec_counter[119]++;
+  y = i * 25;
+  script1_exec_counter[120]++;
+  $(this).css('top', '' + y + 'px');
+  script1_exec_counter[121]++;
+  $(this).css('display', 'block');
+  script1_exec_counter[118]++;
+});
+  script1_exec_counter[97]++;
+}
+function updateTunnel() {
+  script1_exec_counter[122]++;
+  script1_exec_counter[124]++;
+  bg_val = bg_val + 2;
+  if (bg_val > 20) {
+    script1_exec_counter[125]++;
+    bg_val = 0;
+  }
+  script1_exec_counter[126]++;
+  $('div#tunnel').css('background-position', '50% ' + bg_val + 'px');
+  if (ship_x + 32 < 500) 
+  {
+    if (ship_x + 46 < pos_x) {
+      script1_exec_counter[127]++;
+      ship_x += 4;
+    } else if (ship_x + 16 < pos_x) {
+      script1_exec_counter[128]++;
+      ship_x += 2;
+    }
+  }
+  if (ship_x > 0) 
+  {
+    if (ship_x - 14 > pos_x) {
+      script1_exec_counter[129]++;
+      ship_x -= 4;
+    } else if (ship_x + 16 > pos_x) {
+      script1_exec_counter[130]++;
+      ship_x -= 2;
+    }
+  }
+  script1_exec_counter[131]++;
+  $('img#ship').css('left', ship_x + 'px');
+  script1_exec_counter[132]++;
+  c_r++;
+  if (c_r > 60) 
+  {
+    script1_exec_counter[133]++;
+    c_r = 0;
+    script1_exec_counter[134]++;
+    t_state = Math.floor(Math.random() * 2);
+  }
+  if (left_wall[0] < 10) 
+  {
+    script1_exec_counter[135]++;
+    t_state = 1;
+  } else if (right_wall[0] > 470) 
+  {
+    script1_exec_counter[136]++;
+    t_state = 0;
+  }
+  script1_exec_counter[137]++;
+  y = 0;
+  for (y = 20; y > 0; y--) 
+    {
+      script1_exec_counter[138]++;
+      left_wall[y] = left_wall[y - 1];
+      script1_exec_counter[139]++;
+      right_wall[y] = right_wall[y - 1];
+    }
+  if (t_state == 0) 
+  {
+    script1_exec_counter[140]++;
+    left_wall[0] -= 3;
+  }
+  if (t_state == 1) 
+  {
+    script1_exec_counter[141]++;
+    left_wall[0] += 3;
+  }
+  script1_exec_counter[142]++;
+  right_wall[0] = left_wall[0] + tunnelGame.widthTunnel();
+  script1_exec_counter[143]++;
+  $('img.left_wall').each(function(i) {
+  script1_exec_counter[144]++;
+  script1_exec_counter[146]++;
+  $(this).css('left', '' + left_wall[i] + 'px');
+  script1_exec_counter[145]++;
+});
+  script1_exec_counter[147]++;
+  $("img.right_wall").each(function(i) {
+  script1_exec_counter[148]++;
+  script1_exec_counter[150]++;
+  $(this).css('left', '' + right_wall[i] + 'px');
+  script1_exec_counter[149]++;
+});
+  if (tunnelGame.widthTunnel() >= 120) 
+  {
+    script1_exec_counter[151]++;
+    c_w++;
+    if (c_w > 100) 
+    {
+      script1_exec_counter[152]++;
+      c_w = 0;
+      script1_exec_counter[153]++;
+      tunnelGame.shrinkTunnel();
+      script1_exec_counter[154]++;
+      left_wall[0] += 10;
+    }
+  }
+  script1_exec_counter[155]++;
+  c_s++;
+  if (c_s > 20) 
+  {
+    script1_exec_counter[156]++;
+    c_s = 0;
+    script1_exec_counter[157]++;
+    tunnelGame.incScore();
+    script1_exec_counter[158]++;
+    $('span#score').text('' + tunnelGame.getScore());
+  }
+  if (ship_x <= left_wall[18] + 20 || ship_x + 32 >= right_wall[18]) 
+  {
+    script1_exec_counter[159]++;
+    tunnelGame.killPlayer();
+  }
+  if (tunnelGame.checkLife()) 
+  {
+    script1_exec_counter[160]++;
+    setTimeout('updateTunnel()', 10);
+  } else {
+    script1_exec_counter[161]++;
+    $('img#ship').fadeOut('slow');
+    script1_exec_counter[162]++;
+    $('img.left_wall').css('display', 'none');
+    script1_exec_counter[163]++;
+    $('img.right_wall').css('display', 'none');
+    script1_exec_counter[164]++;
+    $.ajax({type: "POST", url: "high-scores.php", data: "score=" + tunnelGame.getScore(), success: function(msg) {
+  script1_exec_counter[165]++;
+  if ('1' == msg) {
+    script1_exec_counter[167]++;
+    scoreUpdate();
+  } else {
+    script1_exec_counter[168]++;
+    showHighScores();
+  }
+  script1_exec_counter[166]++;
+}});
+  }
+  script1_exec_counter[123]++;
+}
+function scoreUpdate() {
+  script1_exec_counter[169]++;
+  script1_exec_counter[171]++;
+  $('form#high_score').submit(function() {
+  script1_exec_counter[172]++;
+  script1_exec_counter[173]++;
+  var player_name = $('input#player_name').val();
+  script1_exec_counter[175]++;
+  var xyz = $('input#ts').val();
+  if (player_name.length > 0) 
+  {
+    script1_exec_counter[177]++;
+    $(this).css('display', 'none');
+    script1_exec_counter[178]++;
+    $.ajax({type: "POST", url: "high-scores.php", data: "name=" + player_name + "&highscore=" + tunnelGame.getScore() + "&ts=" + xyz, success: function(msg) {
+  script1_exec_counter[179]++;
+  if ('0' == msg) {
+    script1_exec_counter[181]++;
+    alert('File write error!');
+  } else if ('2' == msg) {
+    script1_exec_counter[182]++;
+    alert('Exclusive write failure!');
+  }
+  script1_exec_counter[183]++;
+  $('input#player_name').val('');
+  script1_exec_counter[184]++;
+  $('span#score').text('0');
+  script1_exec_counter[185]++;
+  $('table').remove('#high_scores');
+  script1_exec_counter[186]++;
+  showHighScores();
+  script1_exec_counter[180]++;
+}});
+  } else {
+    script1_exec_counter[187]++;
+    alert("Please enter a name!");
+  }
+  script1_exec_counter[188]++;
+  return false;
+});
+  script1_exec_counter[189]++;
+  $('form#high_score').css('display', 'block');
+  script1_exec_counter[170]++;
+}
+function showHighScores() {
+  script1_exec_counter[190]++;
+  script1_exec_counter[192]++;
+  var html = $.ajax({url: "high-scores.php", async: false}).responseText;
+  script1_exec_counter[194]++;
+  $('div#score_table').prepend(html);
+  script1_exec_counter[195]++;
+  $('div#score_table').css('display', 'block');
+  script1_exec_counter[191]++;
+}
+script1_exec_counter[196]++;
+$(document).ready(function() {
+  script1_exec_counter[197]++;
+  script1_exec_counter[199]++;
+  $.get('token.php', function(txt) {
+  script1_exec_counter[200]++;
+  script1_exec_counter[202]++;
+  $('fieldset#high_score_field').append('<input type="hidden" id="ts" name="ts" value="' + txt + '">');
+  script1_exec_counter[201]++;
+});
+  script1_exec_counter[203]++;
+  $('p#welcome').css('display', 'block');
+  script1_exec_counter[204]++;
+  $('p#welcome').click(function() {
+  script1_exec_counter[205]++;
+  script1_exec_counter[207]++;
+  $('p#welcome').css('display', 'none');
+  script1_exec_counter[208]++;
+  initTunnel();
+  script1_exec_counter[209]++;
+  updateTunnel();
+  script1_exec_counter[206]++;
+});
+  script1_exec_counter[198]++;
+});
+script1_exec_counter[210]++;
+$(document).mousemove(function(e) {
+  script1_exec_counter[211]++;
+  script1_exec_counter[213]++;
+  pos_x = e.pageX - rail_left;
+  script1_exec_counter[212]++;
+});
+script1_exec_counter[1]++;

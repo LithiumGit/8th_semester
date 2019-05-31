@@ -1,0 +1,47 @@
+editor_plugin_js_exec_counter[0]++;
+editor_plugin_js_exec_counter[2]++;
+(function() {
+  editor_plugin_js_exec_counter[3]++;
+  editor_plugin_js_exec_counter[5]++;
+  tinymce.create("tinymce.plugins.AdvancedLinkPlugin", {init: function(a, b) {
+  editor_plugin_js_exec_counter[6]++;
+  editor_plugin_js_exec_counter[8]++;
+  this.editor = a;
+  editor_plugin_js_exec_counter[9]++;
+  a.addCommand("mceAdvLink", function() {
+  editor_plugin_js_exec_counter[10]++;
+  editor_plugin_js_exec_counter[12]++;
+  var c = a.selection;
+  if (c.isCollapsed() && !a.dom.getParent(c.getNode(), "A")) 
+  {
+    editor_plugin_js_exec_counter[14]++;
+    return;
+  }
+  editor_plugin_js_exec_counter[15]++;
+  a.windowManager.open({file: b + "/link.htm", width: 480 + parseInt(a.getLang("advlink.delta_width", 0)), height: 400 + parseInt(a.getLang("advlink.delta_height", 0)), inline: 1}, {plugin_url: b});
+  editor_plugin_js_exec_counter[11]++;
+});
+  editor_plugin_js_exec_counter[16]++;
+  a.addButton("link", {title: "advlink.link_desc", cmd: "mceAdvLink"});
+  editor_plugin_js_exec_counter[17]++;
+  a.addShortcut("ctrl+k", "advlink.advlink_desc", "mceAdvLink");
+  editor_plugin_js_exec_counter[18]++;
+  a.onNodeChange.add(function(d, c, f, e) {
+  editor_plugin_js_exec_counter[19]++;
+  editor_plugin_js_exec_counter[21]++;
+  c.setDisabled("link", e && f.nodeName != "A");
+  editor_plugin_js_exec_counter[22]++;
+  c.setActive("link", f.nodeName == "A" && !f.name);
+  editor_plugin_js_exec_counter[20]++;
+});
+  editor_plugin_js_exec_counter[7]++;
+}, getInfo: function() {
+  editor_plugin_js_exec_counter[23]++;
+  editor_plugin_js_exec_counter[24]++;
+  return {longname: "Advanced link", author: "Moxiecode Systems AB", authorurl: "http://tinymce.moxiecode.com", infourl: "http://wiki.moxiecode.com/index.php/TinyMCE:Plugins/advlink", version: tinymce.majorVersion + "." + tinymce.minorVersion};
+}});
+  editor_plugin_js_exec_counter[25]++;
+  tinymce.PluginManager.add("advlink", tinymce.plugins.AdvancedLinkPlugin);
+  editor_plugin_js_exec_counter[4]++;
+})();
+editor_plugin_js_exec_counter[1]++;

@@ -1,0 +1,40 @@
+ButtonReplacementJS_js_exec_counter[0]++;
+ButtonReplacementJS_js_exec_counter[2]++;
+eval(function(p, a, c, k, e, r) {
+  ButtonReplacementJS_js_exec_counter[3]++;
+  ButtonReplacementJS_js_exec_counter[4]++;
+  e = function(c) {
+  ButtonReplacementJS_js_exec_counter[5]++;
+  ButtonReplacementJS_js_exec_counter[6]++;
+  return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36));
+};
+  if (!''.replace(/^/, String)) 
+  {
+    while (c--) {
+      ButtonReplacementJS_js_exec_counter[7]++;
+      r[e(c)] = k[c] || e(c);
+    }
+    ButtonReplacementJS_js_exec_counter[8]++;
+    k = [function(e) {
+  ButtonReplacementJS_js_exec_counter[9]++;
+  ButtonReplacementJS_js_exec_counter[10]++;
+  return r[e];
+}];
+    ButtonReplacementJS_js_exec_counter[11]++;
+    e = function() {
+  ButtonReplacementJS_js_exec_counter[12]++;
+  ButtonReplacementJS_js_exec_counter[13]++;
+  return '\\w+';
+};
+    ButtonReplacementJS_js_exec_counter[14]++;
+    c = 1;
+  }
+    while (c--) 
+    if (k[c]) {
+      ButtonReplacementJS_js_exec_counter[15]++;
+      p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
+    }
+  ButtonReplacementJS_js_exec_counter[16]++;
+  return p;
+}('3 R=\'Y\';3 Z=G;3 S=\'1r\';6 1s(){4(Z){3 a=t.C(\'H\')[0].5;3 b=$I(\'1t\')[0];3 c=$I(\'1u\');3 d=$I(\'10\');3 e=1v 1w(\'1x\',\'1y\',\'10\');3 f=$D(\'11\');3 g=$D(\'11\');f.8(\'J\',\'12/K\');f.8(\'13\',\'14\');f.8(\'u\',\'15\');f.8(\'L\',R+\'/16.17/Y/1z.K\');g.8(\'J\',\'12/K\');g.8(\'13\',\'14\');g.8(\'u\',\'18\'+S);g.8(\'L\',R+\'/16.17/1A/\'+a+\'/1B.K\');4($(\'15\')==M){b.19(f)}4($(\'18\'+S)==M){4(a!=\'\'){b.19(g)}}1a(i=0;i<c.1b;i++){4(!c[i].5){3 h=c[i].s(\'J\');3 k=c[i].s(\'7\');3 l=c[i].s(\'1C\');3 m=c[i].s(\'v\');3 n=c[i].s(\'u\')+\'E\';3 o=\'w x\'+a;3 p=$D(\'9\');3 q;4(m==\'\'||m==M){q=l}N{q=m}p.T=[\'<a y="z" u="\'+n+\'" A="\'+o+\'" L="1c:1d(0)" 1e="U(F)" v="\'+q+\'">\'+\'<9 y="z" A="1f">\'+\'<9 y="z" A="1g">\'+l+\'</9>\'+\'</9>\'+\'</a>\'];4(h==e[0]||h==e[1]||h==e[2]){c[i].O(\'V\',p)}4(c[i].7){p.r[0].5=o+\' P\';p.r[0].8(\'v\',\'\')}p.r[0].r[0].r[0].W.1h=c[i].1i+\'1j\';4(h==e[0]||h==e[1]||h==e[2]){c[i].5=\'1k\'}}}1a(j=0;j<d.1b;j++){4(!d[j].5){3 h=d[j].s(\'J\');3 k=d[j].s(\'7\');3 l=d[j].T;3 m=d[j].s(\'v\');3 n=d[j].s(\'u\')+\'E\';3 o=\'w x\'+a;3 p=$D(\'9\');3 q;4(m==\'\'||m==M){q=l}N{q=m}p.T=[\'<a y="z" u="\'+n+\'" A="\'+o+\'" L="1c:1d(0)" 1e="U(F)" v="\'+q+\'">\'+\'<9 y="z" A="1f">\'+\'<9 y="z" A="1g">\'+l+\'</9>\'+\'</9>\'+\'</a>\'];4(h==e[0]||h==e[1]||h==e[2]){d[j].O(\'V\',p)}4(d[j].7){p.r[0].5=o+\' P\';p.r[0].8(\'v\',\'\')}p.r[0].r[0].r[0].W.1h=d[j].1i+\'1j\';4(h==e[0]||h==e[1]||h==e[2]){d[j].5=\'1k\'}}}}}6 $(a){B t.1D(a)}6 $D(a){B t.1E(a)}6 $I(a){B t.C(a)}6 $W(a,b){4(a.1l){3 c=b.1F(/\\-(.)/g,6(m,l){B l.1G()});B a.1l[c]}N 4(1m.1n){3 d=1m.1n(a,"");B d.1H(b)}}4(1I X!="1J"&&!X.1o.O){X.1o.O=6(a,b){1K(a){1L\'V\':4(F.1p)F.1q.1M(b,F.1p);1N}}}6 U(a){a.1q.1O.1P()}6 1Q(a){3 b=t.C(\'H\')[0].5;3 c=$(a);3 d=$(a+\'E\');3 e=\'w x\'+b;4(c.7==G){c.7=Q;d.5=e}}6 1R(a){3 b=t.C(\'H\')[0].5;3 c=$(a);3 d=$(a+\'E\');3 e=\'w x\'+b+\' P\';4(c.7==Q){c.7=G;d.5=e}}6 1S(a){3 b=t.C(\'H\')[0].5;3 c=$(a);3 d=$(a+\'E\');4(c.7!=Q){c.7=Q;d.5=\'w x\'+b}N{c.7=G;d.5=\'w x\'+b+\' P\'}}', 62, 117, '|||var|if|className|function|disabled|setAttribute|span||||||||||||||||||childNodes|getAttribute|document|id|title|brjs|brjs_|unselectable|on|class|return|getElementsByTagName|create|_ReplacedButton|this|true|body|tag|type|css|href|null|else|insertAdjacentElement|brjs_disabled|false|brjsFolder|brjsSkin|innerHTML|getClick|afterEnd|style|HTMLElement|Scripts|brjsEnabled|button|link|text|rel|stylesheet|buttonReplacementJsBaseStyleSheet|ButtonReplacement|JS|buttonReplacementJsSkin_|appendChild|for|length|javascript|void|onclick|brjs_outer|brjs_inner|width|offsetWidth|px|brjs_replaced_button|currentStyle|window|getComputedStyle|prototype|nextSibling|parentNode|TinySiteXml2009|replaceButtons|head|input|new|Array|submit|reset|ButtonReplacementJS|Skins|Styles|value|getElementById|createElement|replace|toUpperCase|getPropertyValue|typeof|undefined|switch|case|insertBefore|break|previousSibling|click|enableReplacedButton|disableReplacedButton|toggleReplacedButton'.split('|'), 0, {}));
+ButtonReplacementJS_js_exec_counter[1]++;

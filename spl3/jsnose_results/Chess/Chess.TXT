@@ -1,0 +1,62 @@
+***************************************
+********** CODE SMELL REPORT **********
+***************************************
+********** CLOSURE SMELL **********
+Number of occurance: 0
+********** COUPLING JS/HTML **********
+Total number of JavaScript in HTML tags: 4
+BUTTON onclick="Gb(); return false;"
+BUTTON onclick="window.location.href='index.php'"
+BUTTON onclick="Rf(8-P); return false;"
+BUTTON onclick="about(); return false;"
+Occurance of CSS in JavaScript
+Number of occurance: 3
+Item: CSS in JavaScript in JS file: fancy_chess_6k_js at line number: 10
+Item: CSS in JavaScript in JS file: fancy_chess_6k_js at line number: 8
+Item: CSS in JavaScript in JS file: fancy_chess_6k_js at line number: 7
+********** EMPTY CATCH **********
+Number of occurance: 0
+********** EXCESSIVE GLOBAL VARIABLES **********
+Number of global variables: 39
+List of  global variables: [kY, E, G, A, M, N, I, J, K, P, event, BE, R, Y, Al, s0, MV, d, b, Bt, KL, a, Rh, m, j, bY, pY, h, i, Btime, w, s, Ds, q, Ic, z, PY, y, x]
+********** LARGE OBJECT **********
+Number of occurance: 3
+Item: R in JS file: chess_6k_js at line number: -1
+Item: A in JS file: chess_6k_js at line number: 34
+Item: d in JS file: chess_6k_js at line number: 29
+********** LAZY OBJECT **********
+Number of occurance: 9
+Item: Ds in JS file: chess_6k_js at line number: -1
+Item: cp in JS file: chess_6k_js at line number: 34
+Item: Gb in JS file: chess_6k_js at line number: 172
+Item: Rf in JS file: chess_6k_js at line number: 168
+Item: Sh in JS file: chess_6k_js at line number: 162
+Item: i in JS file: chess_6k_js at line number: 160
+Item: FF in JS file: chess_6k_js at line number: 156
+Item: fy in JS file: chess_6k_js at line number: 90
+Item: about in JS file: fancy_chess_6k_js at line number: 6
+********** LONG MESSAGE **********
+Number of occurance: 4
+Item: Long chain in JS file: chess_6k_js at line number: 170
+Item: Long chain in JS file: chess_6k_js at line number: 167
+Item: Long chain in JS file: chess_6k_js at line number: 160
+Item: Long chain in JS file: chess_6k_js at line number: 156
+********** LONG METHOD/FUNCTION **********
+Number of occurance: 0
+********** LONG PARAMETER LIST **********
+Number of occurance: 2
+Item: Sf in JS file: chess_6k_js at line number: 62
+Item: Z in JS file: chess_6k_js at line number: 35
+********** NESTED CALLBACK **********
+Number of occurance: 0
+********** REFUSED BEQUEST **********
+Number of occurance: 0
+********** SWITCH STATEMENT **********
+Number of occurance: 0
+********** UNREACHABLE CODE **********
+Number of occurance: 0
+
+- [Thread 1 Crawler 1 (initial)] List of fancy_chess_6k_js is: [139, 139, 1, 1, 0, 1]
+- [Thread 1 Crawler 1 (initial)] List of fancy_chess_6k_js # lines ececuted: 5 # tolal lines: 6 - code coverage: 83.33333333333334%
+- [Thread 1 Crawler 1 (initial)] List of chess_6k_js is: [139, 139, 139, 139, 139, 139, 139, 139, 139, 139, 139, 139, 1112, 1112, 695, 2224, 139, 139, 139, 139, 139, 139, 139, 139, 16680, 16680, 16680, 16680, 139, 139, 139, 139, 139, 139, 139, 139, 139, 43, 43, 0, 0, 43, 43, 40, 0, 0, 0, 0, 0, 43, 0, 2, 2, 2, 0, 2, 2, 38, 38, 0, 1, 1, 1, 1, 0, 41, 36, 0, 0, 0, 43, 43, 43, 43, 2, 2, 0, 2, 2, 2, 2, 2, 2, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 142, 142, 142, 0, 142, 142, 142, 142, 142, 11218, 4544, 11218, 11218, 11218, 8378, 8378, 43, 43, 0, 688, 688, 688, 344, 344, 344, 344, 1032, 1032, 193, 0, 0, 215, 1032, 1032, 1032, 1053, 1053, 21, 344, 344, 323, 323, 0, 688, 0, 43, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3725, 3709, 3725, 0, 0, 0, 0, 0, 0, 0, 16, 16, 16, 16, 0, 16, 16, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 140, 140, 140, 8960, 1, 1, 2, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8994, 8994, 8978, 8994, 139, 1112, 11120, 8896, 1112, 139, 139, 139]
+- [Thread 1 Crawler 1 (initial)] List of chess_6k_js # lines ececuted: 158 # tolal lines: 250 - code coverage: 63.2%

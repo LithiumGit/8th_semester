@@ -1,0 +1,17 @@
+script3_exec_counter[0]++;
+script3_exec_counter[2]++;
+var _gaq = [["_setAccount", "UUA-4304575-3"], ["_trackPageview"], ["_trackPageLoadTime"]];
+script3_exec_counter[4]++;
+(function(e, a) {
+  script3_exec_counter[5]++;
+  script3_exec_counter[7]++;
+  var c = e.createElement(a), b = e.getElementsByTagName(a)[0];
+  script3_exec_counter[9]++;
+  c.async = 1;
+  script3_exec_counter[10]++;
+  c.src = ("https:" == location.protocol ? "//ssl" : "//www") + ".google-analytics.com/ga.js";
+  script3_exec_counter[11]++;
+  b.parentNode.insertBefore(c, b);
+  script3_exec_counter[6]++;
+}(document, "script"));
+script3_exec_counter[1]++;

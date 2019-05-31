@@ -1,0 +1,232 @@
+***************************************
+********** CODE SMELL REPORT **********
+***************************************
+********** CLOSURE SMELL **********
+Number of occurance: 0
+********** COUPLING JS/HTML **********
+Total number of JavaScript in HTML tags: 10
+A class="q" onclick="ShowHelp('Update Message', event, 'en');"
+A class="q" onclick="javascript:ss_playpause();"
+A class="q" onclick="javascript:ss_next();"
+A onclick="toggle('allComments', 'contractComments', this);"
+A class="q" onclick="javascript:ss_toggleSmaller();"
+A class="q" onclick="javascript:ss_prev();"
+A onclick="HideHelp();"
+DIV class="aThumb" onmouseover="javascript: LightenIt(this);"
+DIV class="aThumb" onmouseout="javascript: DarkenIt(this);"
+A onclick="javascript:doReply('0');"
+Occurance of CSS in JavaScript
+Number of occurance: 89
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 145
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 144
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 143
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 142
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 140
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 138
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 137
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 136
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 134
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 133
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 132
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 130
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 128
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 126
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 125
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 124
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 123
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 116
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 115
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 111
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 110
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 90
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 89
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 80
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 79
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 78
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 77
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 75
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 74
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 43
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 42
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 39
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 38
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 37
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 36
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 35
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 32
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 31
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 18
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 17
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 16
+Item: CSS in JavaScript in JS file: admin_js at line number: 62
+Item: CSS in JavaScript in JS file: admin_js at line number: 56
+Item: CSS in JavaScript in JS file: admin_js at line number: 50
+Item: CSS in JavaScript in JS file: phorm_js at line number: 227
+Item: CSS in JavaScript in JS file: phorm_js at line number: 226
+Item: CSS in JavaScript in JS file: phorm_js at line number: 225
+Item: CSS in JavaScript in JS file: phorm_js at line number: 197
+Item: CSS in JavaScript in JS file: phorm_js at line number: 194
+Item: CSS in JavaScript in JS file: phorm_js at line number: 193
+Item: CSS in JavaScript in JS file: phorm_js at line number: 187
+Item: CSS in JavaScript in JS file: phorm_js at line number: 181
+Item: CSS in JavaScript in JS file: phorm_js at line number: 175
+Item: CSS in JavaScript in JS file: phorm_js at line number: 20
+Item: CSS in JavaScript in JS file: phorm_js at line number: 21
+Item: CSS in JavaScript in JS file: phorm_js at line number: 41
+Item: CSS in JavaScript in JS file: phorm_js at line number: 42
+Item: CSS in JavaScript in JS file: phorm_js at line number: 43
+Item: CSS in JavaScript in JS file: phorm_js at line number: 44
+Item: CSS in JavaScript in JS file: phorm_js at line number: 49
+Item: CSS in JavaScript in JS file: phorm_js at line number: 50
+Item: CSS in JavaScript in JS file: phorm_js at line number: 51
+Item: CSS in JavaScript in JS file: phorm_js at line number: 52
+Item: CSS in JavaScript in JS file: phorm_js at line number: 83
+Item: CSS in JavaScript in JS file: phorm_js at line number: 84
+Item: CSS in JavaScript in JS file: admin_js at line number: 68
+Item: CSS in JavaScript in JS file: admin_js at line number: 69
+Item: CSS in JavaScript in JS file: admin_js at line number: 72
+Item: CSS in JavaScript in JS file: admin_js at line number: 103
+Item: CSS in JavaScript in JS file: admin_js at line number: 106
+Item: CSS in JavaScript in JS file: admin_js at line number: 108
+Item: CSS in JavaScript in JS file: admin_js at line number: 189
+Item: CSS in JavaScript in JS file: admin_js at line number: 239
+Item: CSS in JavaScript in JS file: admin_js at line number: 262
+Item: CSS in JavaScript in JS file: admin_js at line number: 313
+Item: CSS in JavaScript in JS file: admin_js at line number: 325
+Item: CSS in JavaScript in JS file: admin_js at line number: 331
+Item: CSS in JavaScript in JS file: admin_js at line number: 337
+Item: CSS in JavaScript in JS file: admin_js at line number: 338
+Item: CSS in JavaScript in JS file: admin_js at line number: 342
+Item: CSS in JavaScript in JS file: help_js at line number: 39
+Item: CSS in JavaScript in JS file: help_js at line number: 43
+Item: CSS in JavaScript in JS file: help_js at line number: 68
+Item: CSS in JavaScript in JS file: help_js at line number: 69
+Item: CSS in JavaScript in JS file: help_js at line number: 70
+Item: CSS in JavaScript in JS file: help_js at line number: 112
+Item: CSS in JavaScript in JS file: help_js at line number: 114
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 8
+Item: CSS in JavaScript in JS file: skeleton_js at line number: 15
+********** EMPTY CATCH **********
+Number of occurance: 16
+Item: empty catch in JS file: admin_js at line number: 109
+Item: empty catch in JS file: admin_js at line number: 63
+Item: empty catch in JS file: admin_js at line number: 57
+Item: empty catch in JS file: admin_js at line number: 51
+Item: empty catch in JS file: phorm_js at line number: 125
+Item: empty catch in JS file: phorm_js at line number: 136
+Item: empty catch in JS file: phorm_js at line number: 143
+Item: empty catch in JS file: phorm_js at line number: 162
+Item: empty catch in JS file: phorm_js at line number: 166
+Item: empty catch in JS file: phorm_js at line number: 176
+Item: empty catch in JS file: phorm_js at line number: 182
+Item: empty catch in JS file: phorm_js at line number: 188
+Item: empty catch in JS file: admin_js at line number: 8
+Item: empty catch in JS file: admin_js at line number: 11
+Item: empty catch in JS file: admin_js at line number: 25
+Item: empty catch in JS file: admin_js at line number: 28
+********** EXCESSIVE GLOBAL VARIABLES **********
+Number of global variables: 30
+List of  global variables: [isAjaxing, ss_awaits, wasX, wasSklH, MAX_ADD_BOX, ss_desc, ss_smaller, AjaxVal, blured, ss_src, ss_ttl, wasY, ss_pid, _AIDIN_MAIL, dBord, DarkenVal, shiftDown, ss_date, ss_loaded, nowTime, ss_play, i, dont_help, wasSklL, md5, wasSklT, ss_cur, stickToMouse, wasSklW, theRatio]
+********** LARGE OBJECT **********
+Number of occurance: 0
+********** LAZY OBJECT **********
+Number of occurance: 73
+Item: onfocus in JS file: script1 at line number: -1
+Item: ReleaseMouse in JS file: skeleton_js at line number: 26
+Item: MouseDownTheSkeleton in JS file: skeleton_js at line number: 21
+Item: SaveRatio in JS file: skeleton_js at line number: 7
+Item: GetHelpMsg in JS file: help_js at line number: 138
+Item: GetItHelpMsg in JS file: help_js at line number: 127
+Item: isIE in JS file: help_js at line number: 118
+Item: inRule in JS file: help_js at line number: 114
+Item: SwitchSelectIE in JS file: help_js at line number: 105
+Item: dgp in JS file: help_js at line number: 39
+Item: HideHelp in JS file: help_js at line number: 38
+Item: DontHideHelp in JS file: help_js at line number: 33
+Item: captureKeyup in JS file: help_js at line number: 26
+Item: captureKeydown in JS file: help_js at line number: 17
+Item: captureMousedown in JS file: help_js at line number: 9
+Item: AddAddBox in JS file: admin_js at line number: 420
+Item: updateSelCount in JS file: admin_js at line number: 395
+Item: CheckDeleteThisDrafts in JS file: admin_js at line number: 391
+Item: CheckActionDrafts in JS file: admin_js at line number: 378
+Item: CheckDateDrafts in JS file: admin_js at line number: 364
+Item: minutes in JS file: admin_js at line number: 359
+Item: hours in JS file: admin_js at line number: 357
+Item: updateTimeDiffer in JS file: admin_js at line number: 347
+Item: src_smaller in JS file: phorm_js at line number: 287
+Item: ss_playpause in JS file: phorm_js at line number: 280
+Item: ss_loaddone in JS file: phorm_js at line number: 276
+Item: preimg in JS file: phorm_js at line number: 270
+Item: ss_prev in JS file: phorm_js at line number: 236
+Item: ss_next in JS file: phorm_js at line number: 231
+Item: checkWV in JS file: phorm_js at line number: 201
+Item: confirmDelete in JS file: phorm_js at line number: 169
+Item: prepareBody in JS file: phorm_js at line number: 159
+Item: onreadystatechange in JS file: phorm_js at line number: 143
+Item: makeRequest in JS file: phorm_js at line number: 128
+Item: rand in JS file: phorm_js at line number: 75
+Item: dg in JS file: phorm_js at line number: 15
+Item: phorm_js_exec_counter in JS file: phorm_js at line number: 1
+Item: setOpac in JS file: phorm_js at line number: 19
+Item: cur in JS file: phorm_js at line number: 20
+Item: MozOpacity in JS file: phorm_js at line number: 21
+Item: filters in JS file: phorm_js at line number: 24
+Item: LightenIt in JS file: phorm_js at line number: 27
+Item: DarkenIt in JS file: phorm_js at line number: 31
+Item: cookieVal in JS file: phorm_js at line number: 57
+Item: thiscook in JS file: phorm_js at line number: 59
+Item: setCookie in JS file: phorm_js at line number: 65
+Item: reToggleInfo in JS file: phorm_js at line number: 71
+Item: ss_run in JS file: phorm_js at line number: 299
+Item: ss_slideshow in JS file: phorm_js at line number: 307
+Item: checkChangePass in JS file: admin_js at line number: 76
+Item: checkInstallPass in JS file: admin_js at line number: 90
+Item: checkHasPass in JS file: admin_js at line number: 114
+Item: checkDate in JS file: admin_js at line number: 130
+Item: CheckAddPhoto in JS file: admin_js at line number: 162
+Item: ConfirmDelPhotoID in JS file: admin_js at line number: 172
+Item: ConfirmDelPhoto in JS file: admin_js at line number: 176
+Item: ConfirmRestore in JS file: admin_js at line number: 180
+Item: ConfirmSave in JS file: admin_js at line number: 184
+Item: hidelinkline in JS file: admin_js at line number: 192
+Item: linkAddBelow in JS file: admin_js at line number: 196
+Item: childNodes in JS file: admin_js at line number: 206
+Item: allTable in JS file: admin_js at line number: 207
+Item: lastTr in JS file: admin_js at line number: 212
+Item: i in JS file: admin_js at line number: 235
+Item: removeThisNode in JS file: admin_js at line number: 267
+Item: node in JS file: admin_js at line number: 270
+Item: allModes in JS file: admin_js at line number: 285
+Item: changePrev in JS file: admin_js at line number: 316
+Item: ToggleAdvPref in JS file: admin_js at line number: 335
+Item: pref in JS file: admin_js at line number: 337
+Item: display in JS file: admin_js at line number: 338
+********** LONG MESSAGE **********
+Number of occurance: 1
+Item: Long chain in JS file: phorm_js at line number: 24
+********** LONG METHOD/FUNCTION **********
+Number of occurance: 1
+Item: GetHelpMsg in JS file: help_js at line number: 138
+********** LONG PARAMETER LIST **********
+Number of occurance: 0
+********** NESTED CALLBACK **********
+Number of occurance: 0
+********** REFUSED BEQUEST **********
+Number of occurance: 0
+********** SWITCH STATEMENT **********
+Number of occurance: 1
+Item: switch in JS file: help_js at line number: 141
+********** UNREACHABLE CODE **********
+Number of occurance: 0
+
+
+- [Thread 1 Crawler 1 (initial)] List of script1 is: [49, 49, 49, 0]
+- [Thread 1 Crawler 1 (initial)] List of script1 # lines ececuted: 3 # tolal lines: 4 - code coverage: 75.0%
+- [Thread 1 Crawler 1 (initial)] List of phorm_js is: [63, 63, 63, 0, 63, 0, 63, 0, 63, 0, 63, 0, 63, 0, 63, 0, 63, 0, 63, 0, 63, 0, 63, 0, 63, 0, 12, 12, 24, 24, 0, 0, 24, 24, 24, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 5, 5, 5, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [Thread 1 Crawler 1 (initial)] List of phorm_js # lines ececuted: 79 # tolal lines: 227 - code coverage: 34.801762114537446%
+- [Thread 1 Crawler 1 (initial)] List of help_js is: []
+- [Thread 1 Crawler 1 (initial)] List of help_js # lines ececuted: 0 # tolal lines: 0 - code coverage: NaN%
+- [Thread 1 Crawler 1 (initial)] List of skeleton_js is: []
+- [Thread 1 Crawler 1 (initial)] List of skeleton_js # lines ececuted: 0 # tolal lines: 0 - code coverage: NaN%
+- [Thread 1 Crawler 1 (initial)]Time: 10 min, 4 sec - code coverage: 35.4978354978355%

@@ -1,0 +1,14 @@
+fancy_chess_6k_js_exec_counter[0]++;
+function about() {
+  fancy_chess_6k_js_exec_counter[2]++;
+  if (document.getElementById('tableAbout').style.display == 'block') 
+  {
+    fancy_chess_6k_js_exec_counter[4]++;
+    document.getElementById('tableAbout').style.display = 'none';
+  } else {
+    fancy_chess_6k_js_exec_counter[5]++;
+    document.getElementById('tableAbout').style.display = 'block';
+  }
+  fancy_chess_6k_js_exec_counter[3]++;
+}
+fancy_chess_6k_js_exec_counter[1]++;

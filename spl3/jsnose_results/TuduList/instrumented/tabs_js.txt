@@ -1,0 +1,153 @@
+tabs_js_exec_counter[0]++;
+if (!document.getElementById) 
+{
+  document.getElementById = function() {
+  tabs_js_exec_counter[2]++;
+  tabs_js_exec_counter[3]++;
+  return null;
+};
+}
+function initMenu() {
+  tabs_js_exec_counter[4]++;
+  tabs_js_exec_counter[6]++;
+  var uls = document.getElementsByTagName("ul");
+  for (i = 0; i < uls.length; i++) 
+    {
+      if (uls[i].className == "menuList") 
+      {
+        tabs_js_exec_counter[8]++;
+        decorateMenu(uls[i]);
+      }
+    }
+  tabs_js_exec_counter[5]++;
+}
+function decorateMenu(menu) {
+  tabs_js_exec_counter[9]++;
+  tabs_js_exec_counter[11]++;
+  var items = menu.getElementsByTagName("li");
+  for (var i = 0; i < items.length; i++) 
+    {
+      tabs_js_exec_counter[13]++;
+      items[i].firstChild.myIndex = i;
+      if (items[i].firstChild.onclick) 
+      {
+        tabs_js_exec_counter[14]++;
+        items[i].firstChild.onclick = function() {
+  tabs_js_exec_counter[15]++;
+  tabs_js_exec_counter[17]++;
+  eval(items[this.myIndex].firstChild.getAttribute("onclick"));
+  tabs_js_exec_counter[18]++;
+  setCookie("menuSelected", this.myIndex);
+  tabs_js_exec_counter[16]++;
+};
+      } else {
+        tabs_js_exec_counter[19]++;
+        items[i].firstChild.onclick = function() {
+  tabs_js_exec_counter[20]++;
+  tabs_js_exec_counter[22]++;
+  setCookie("menuSelected", this.myIndex);
+  tabs_js_exec_counter[21]++;
+};
+      }
+    }
+  tabs_js_exec_counter[23]++;
+  activateMenu(items);
+  tabs_js_exec_counter[10]++;
+}
+function activateMenu(items) {
+  tabs_js_exec_counter[24]++;
+  tabs_js_exec_counter[26]++;
+  var activeMenu;
+  tabs_js_exec_counter[28]++;
+  var found = 0;
+  for (var i = 0; i < items.length; i++) 
+    {
+      tabs_js_exec_counter[30]++;
+      var url = items[i].firstChild.getAttribute("href");
+      tabs_js_exec_counter[32]++;
+      var current = document.location.toString();
+      if (current.indexOf(url) != -1) 
+      {
+        tabs_js_exec_counter[34]++;
+        found++;
+      }
+    }
+  if (found > 1) 
+  {
+    tabs_js_exec_counter[35]++;
+    var menuSelected = getCookie("menuSelected");
+    if (items[menuSelected].parentNode.className == "submenu") 
+    {
+      tabs_js_exec_counter[37]++;
+      items[menuSelected].firstChild.className = "selected";
+      tabs_js_exec_counter[38]++;
+      items[menuSelected].parentNode.parentNode.className = "selected";
+    } else {
+      tabs_js_exec_counter[39]++;
+      items[menuSelected].className += "selected";
+    }
+  } else {
+    for (var i = 0; i < items.length; i++) 
+      {
+        tabs_js_exec_counter[40]++;
+        var url = items[i].firstChild.getAttribute("href");
+        tabs_js_exec_counter[42]++;
+        var current = document.location.toString();
+        if (current.indexOf(url) != -1) 
+        {
+          if (items[i].parentNode.className == "submenu") 
+          {
+            tabs_js_exec_counter[44]++;
+            items[i].firstChild.className = "selected";
+            tabs_js_exec_counter[45]++;
+            items[i].parentNode.parentNode.className = "selected";
+          } else {
+            tabs_js_exec_counter[46]++;
+            items[i].className += "selected";
+          }
+        }
+      }
+  }
+  tabs_js_exec_counter[25]++;
+}
+tabs_js_exec_counter[47]++;
+window.onload = initMenu;
+function setCookie(name, value, expires, path, domain, secure) {
+  tabs_js_exec_counter[48]++;
+  tabs_js_exec_counter[50]++;
+  document.cookie = name + "=" + escape(value) + ((expires) ? "; expires=" + expires.toGMTString() : "") + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + ((secure) ? "; secure" : "");
+  tabs_js_exec_counter[49]++;
+}
+function getCookie(name) {
+  tabs_js_exec_counter[51]++;
+  tabs_js_exec_counter[52]++;
+  var prefix = name + "=";
+  tabs_js_exec_counter[54]++;
+  var start = document.cookie.indexOf(prefix);
+  if (start == -1) 
+  {
+    tabs_js_exec_counter[56]++;
+    return null;
+  }
+  tabs_js_exec_counter[57]++;
+  var end = document.cookie.indexOf(";", start + prefix.length);
+  if (end == -1) 
+  {
+    tabs_js_exec_counter[59]++;
+    end = document.cookie.length;
+  }
+  tabs_js_exec_counter[60]++;
+  var value = document.cookie.substring(start + prefix.length, end);
+  tabs_js_exec_counter[62]++;
+  return unescape(value);
+}
+function deleteCookie(name, path, domain) {
+  tabs_js_exec_counter[63]++;
+  if (getCookie(name)) 
+  {
+    tabs_js_exec_counter[65]++;
+    document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain=" + domain : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+  }
+  tabs_js_exec_counter[64]++;
+}
+tabs_js_exec_counter[1]++;

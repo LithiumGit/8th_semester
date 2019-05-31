@@ -1,0 +1,9 @@
+myInfo_actionscript6_exec_counter[0]++;
+myInfo_actionscript6_exec_counter[2]++;
+var focusControl = document.forms["userForm"].elements["firstName"];
+if (focusControl.type != "hidden" && !focusControl.disabled) 
+{
+  myInfo_actionscript6_exec_counter[4]++;
+  focusControl.focus();
+}
+myInfo_actionscript6_exec_counter[1]++;

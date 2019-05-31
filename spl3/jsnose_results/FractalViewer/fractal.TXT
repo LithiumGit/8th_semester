@@ -1,0 +1,224 @@
+***************************************
+********** CODE SMELL REPORT **********
+***************************************
+********** CLOSURE SMELL **********
+Number of occurance: 0
+********** COUPLING JS/HTML **********
+Total number of JavaScript in HTML tags: 5
+A onclick="reset();"
+A class="toggle" onclick="toggle('about');"
+A class="toggle" onclick="toggle('flower');"
+A class="toggle" onclick="toggle('mutate');"
+A class="play" onclick="toggle('play');"
+Occurance of CSS in JavaScript
+Number of occurance: 11
+Item: CSS in JavaScript in JS file: the_ui_js at line number: 109
+Item: CSS in JavaScript in JS file: Branch_js at line number: 272
+Item: CSS in JavaScript in JS file: Branch_js at line number: 271
+Item: CSS in JavaScript in JS file: Branch_js at line number: 230
+Item: CSS in JavaScript in JS file: Branch_js at line number: 226
+Item: CSS in JavaScript in JS file: Branch_js at line number: 23
+Item: CSS in JavaScript in JS file: the_meat_js at line number: 174
+Item: CSS in JavaScript in JS file: the_meat_js at line number: 127
+Item: CSS in JavaScript in JS file: the_meat_js at line number: 126
+Item: CSS in JavaScript in JS file: the_meat_js at line number: 93
+Item: CSS in JavaScript in JS file: the_meat_js at line number: 86
+********** EMPTY CATCH **********
+Number of occurance: 0
+********** EXCESSIVE GLOBAL VARIABLES **********
+Number of global variables: 40
+List of  global variables: [fadeBgStart, cullBounds, mouse, ERASE, panVel, aboutOn, root, mouseBranch, PAINT, maxBranches, STROKE, bgColor, playing, fadeBgFrom, maxLength, flowerMomentId, viewBounds, branches, flower, constructor, fadeBgFading, fadeBgTimerId, minLengthToSpawn, g, FLOWER, fadeBgTo, SPIKE, origin, canvas, NONE, i, console, paintStyle, paintTool, flowerMoment, container, zoomVel, paintRadius, viewBoundsMax, mutate]
+********** LARGE OBJECT **********
+Number of occurance: 7
+Item: canvas in JS file: the_ui_js at line number: -1
+Item: branches in JS file: the_meat_js at line number: 170
+Item: container in JS file: the_meat_js at line number: 126
+Item: root in JS file: the_meat_js at line number: 85
+Item: parent in JS file: Leaf_js at line number: 91
+Item: g in JS file: Brush_js at line number: 12
+********** LAZY OBJECT **********
+Number of occurance: 117
+Item: constructor in JS file: the_ui_js at line number: -1
+Item: reset in JS file: the_ui_js at line number: 116
+Item: set_paint_style in JS file: the_ui_js at line number: 109
+Item: set_tool in JS file: the_ui_js at line number: 98
+Item: pause in JS file: the_ui_js at line number: 92
+Item: play in JS file: the_ui_js at line number: 88
+Item: arguments in JS file: the_ui_js at line number: 52
+Item: about in JS file: the_ui_js at line number: 43
+Item: one in JS file: the_ui_js at line number: 39
+Item: css in JS file: the_ui_js at line number: 35
+Item: draw_spike in JS file: Branch_js at line number: 374
+Item: uNrm in JS file: Branch_js at line number: 356
+Item: iu in JS file: Branch_js at line number: 350
+Item: fu in JS file: Branch_js at line number: 347
+Item: rule in JS file: Branch_js at line number: 294
+Item: getMutatedRule in JS file: Branch_js at line number: 285
+Item: multiTwig in JS file: Branch_js at line number: 260
+Item: genops in JS file: Branch_js at line number: 236
+Item: nu in JS file: Branch_js at line number: 228
+Item: updateBounds in JS file: Branch_js at line number: 216
+Item: nrm in JS file: Branch_js at line number: 212
+Item: i in JS file: Branch_js at line number: 201
+Item: updateNormals in JS file: Branch_js at line number: 197
+Item: rotvel in JS file: Leaf_js at line number: 7
+Item: vel in JS file: Leaf_js at line number: 6
+Item: noFill in JS file: Brush_js at line number: 161
+Item: noStroke in JS file: Brush_js at line number: 158
+Item: fill in JS file: Brush_js at line number: 153
+Item: stroke in JS file: Brush_js at line number: 149
+Item: lineWidth in JS file: Brush_js at line number: 145
+Item: pop in JS file: Brush_js at line number: 139
+Item: push in JS file: Brush_js at line number: 135
+Item: erase in JS file: Brush_js at line number: 129
+Item: gfx in JS file: Brush_js at line number: 107
+Item: endPath in JS file: Brush_js at line number: 73
+Item: beginPath in JS file: Brush_js at line number: 68
+Item: millis in JS file: Brush_js at line number: 62
+Item: console in JS file: Brush_js at line number: 13
+Item: buildBrush in JS file: Brush_js at line number: 10
+Item: Brush in JS file: Brush_js at line number: 1
+Item: r1 in JS file: Rect2_js at line number: 63
+Item: intersects in JS file: Rect2_js at line number: 61
+Item: rect in JS file: Rect2_js at line number: 35
+Item: containsRect in JS file: Rect2_js at line number: 33
+Item: contains in JS file: Rect2_js at line number: 28
+Item: draw in JS file: Rect2_js at line number: 14
+Item: updateExtent in JS file: Rect2_js at line number: 10
+Item: temp in JS file: the_bones_js at line number: 150
+Item: clone in JS file: the_bones_js at line number: 145
+Item: y in JS file: the_bones_js at line number: 114
+Item: roty in JS file: the_bones_js at line number: 60
+Item: rotx in JS file: the_bones_js at line number: 56
+Item: rand2 in JS file: the_bones_js at line number: 25
+Item: rand in JS file: the_bones_js at line number: 21
+Item: randInt2 in JS file: the_bones_js at line number: 17
+Item: randInt in JS file: the_bones_js at line number: 13
+Item: v in JS file: the_bones_js at line number: 7
+Item: the_bones_js_exec_counter in JS file: the_bones_js at line number: 1
+Item: a in JS file: the_bones_js at line number: 3
+Item: Array in JS file: the_bones_js at line number: 158
+Item: normalize in JS file: Vec2_js at line number: 45
+Item: equals in JS file: Vec2_js at line number: 54
+Item: mag in JS file: Vec2_js at line number: 67
+Item: angle in JS file: Vec2_js at line number: 71
+Item: copy in JS file: Vec2_js at line number: 75
+Item: Vec2_js_exec_counter in JS file: Vec2_js at line number: 77
+Item: min in JS file: Rect2_js at line number: 3
+Item: undefined in JS file: Rect2_js at line number: 4
+Item: extent in JS file: Rect2_js at line number: 6
+Item: center in JS file: Rect2_js at line number: 7
+Item: hyp in JS file: Rect2_js at line number: 8
+Item: bez in JS file: Leaf_js at line number: 11
+Item: l2 in JS file: Leaf_js at line number: 14
+Item: len in JS file: Leaf_js at line number: 16
+Item: update in JS file: Leaf_js at line number: 27
+Item: pos in JS file: Leaf_js at line number: 36
+Item: prune in JS file: Leaf_js at line number: 88
+Item: mouse in JS file: the_meat_js at line number: 5
+Item: viewBoundsMax in JS file: the_meat_js at line number: 9
+Item: origin in JS file: the_meat_js at line number: 63
+Item: hash in JS file: the_meat_js at line number: 73
+Item: initRoot in JS file: the_meat_js at line number: 81
+Item: root in JS file: the_meat_js at line number: 85
+Item: sizeToWindow in JS file: the_meat_js at line number: 109
+Item: cullBounds in JS file: the_meat_js at line number: 118
+Item: container in JS file: the_meat_js at line number: 126
+Item: justDraw in JS file: the_meat_js at line number: 134
+Item: closest in JS file: the_meat_js at line number: 155
+Item: move in JS file: the_meat_js at line number: 166
+Item: startFlowerMoment in JS file: the_meat_js at line number: 191
+Item: endFlowerMoment in JS file: the_meat_js at line number: 203
+Item: onMouseMove in JS file: the_meat_js at line number: 223
+Item: onKeyDown in JS file: the_meat_js at line number: 272
+Item: addBranch in JS file: the_meat_js at line number: 305
+Item: removeBranch in JS file: the_meat_js at line number: 309
+Item: removeBranchByIndex in JS file: the_meat_js at line number: 313
+Item: clearBranches in JS file: the_meat_js at line number: 319
+Item: cullOffscreen in JS file: the_meat_js at line number: 328
+Item: br in JS file: the_meat_js at line number: 332
+Item: findIntersection in JS file: the_meat_js at line number: 340
+Item: bounds in JS file: the_meat_js at line number: 342
+Item: sortMouseDist in JS file: the_meat_js at line number: 373
+Item: cv2 in JS file: Branch_js at line number: 47
+Item: style in JS file: Branch_js at line number: 56
+Item: bake in JS file: Branch_js at line number: 74
+Item: tr in JS file: Branch_js at line number: 81
+Item: leaf in JS file: Branch_js at line number: 82
+Item: sub in JS file: Branch_js at line number: 101
+Item: leaves in JS file: Branch_js at line number: 107
+Item: pushCv in JS file: Branch_js at line number: 122
+Item: cv in JS file: Branch_js at line number: 124
+Item: popCv in JS file: Branch_js at line number: 127
+Item: addSub in JS file: Branch_js at line number: 133
+Item: removeSub in JS file: Branch_js at line number: 139
+Item: addLeaf in JS file: Branch_js at line number: 147
+Item: removeLeaf in JS file: Branch_js at line number: 153
+Item: updateBezier in JS file: Branch_js at line number: 182
+********** LONG MESSAGE **********
+Number of occurance: 4
+Item: Long chain in JS file: Branch_js at line number: 194
+Item: Long chain in JS file: Branch_js at line number: 192
+Item: Long chain in JS file: Branch_js at line number: 190
+Item: Long chain in JS file: the_meat_js at line number: 73
+********** LONG METHOD/FUNCTION **********
+Number of occurance: 5
+Item: toggle in JS file: the_ui_js at line number: 1
+Item:  in JS file: Branch_js at line number: 374
+Item:  in JS file: Branch_js at line number: 30
+Item: justDraw in JS file: the_meat_js at line number: 134
+Item: buildBrush in JS file: Brush_js at line number: 10
+********** LONG PARAMETER LIST **********
+Number of occurance: 5
+Item:  in JS file: Brush_js at line number: 97
+Item: semiBezier in JS file: the_bones_js at line number: 119
+Item: curveSegmentBez in JS file: the_bones_js at line number: 110
+Item: bezierPoint in JS file: the_bones_js at line number: 66
+Item: map in JS file: the_bones_js at line number: 7
+********** NESTED CALLBACK **********
+Number of occurance: 0
+********** REFUSED BEQUEST **********
+Number of occurance: 16
+Item: bez in JS file: Leaf_js at line number: 11
+Item: vel in JS file: Leaf_js at line number: 6
+Item: center in JS file: Rect2_js at line number: 7
+Item: extent in JS file: Rect2_js at line number: 6
+Item: undefined in JS file: Rect2_js at line number: 4
+Item: y in JS file: the_bones_js at line number: 114
+Item: curveSegmentBez in JS file: the_bones_js at line number: 110
+Item: segIntersection in JS file: the_bones_js at line number: 73
+Item: mouse in JS file: the_meat_js at line number: 5
+Item: viewBoundsMax in JS file: the_meat_js at line number: 9
+Item: origin in JS file: the_meat_js at line number: 63
+Item: root in JS file: the_meat_js at line number: 85
+Item: gen in JS file: the_meat_js at line number: 98
+Item: sizeToWindow in JS file: the_meat_js at line number: 109
+Item: cullBounds in JS file: the_meat_js at line number: 118
+Item: move in JS file: the_meat_js at line number: 166
+Item: bounds in JS file: the_meat_js at line number: 342
+Item: Vec2 in JS file: Vec2_js at line number: 1
+Item: cv2 in JS file: Branch_js at line number: 47
+********** SWITCH STATEMENT **********
+Number of occurance: 2
+Item: switch in JS file: the_ui_js at line number: 3
+Item: switch in JS file: the_meat_js at line number: 276
+********** UNREACHABLE CODE **********
+Number of occurance: 0
+
+- [Thread 1 Crawler 1 (initial)] List of the_bones_js is: [26, 26, 95188, 95188, 4238635, 4238635, 0, 0, 3367, 3367, 0, 0, 39430, 39430, 1980, 1980, 0, 0, 0, 0, 0, 4241975, 4241975, 0, 4241975, 0, 4241975, 0, 0, 37396, 37396, 37396, 37396, 5336, 5336, 0, 5336, 879791, 879791, 0, 879791, 0, 879791, 0, 879791, 0, 879791, 0, 0, 879791, 0, 879791, 0, 879791, 0, 858402, 21389, 0, 17503, 3886, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 37396, 37396, 45573, 0, 0, 45573, 0, 45573, 0, 45573, 0, 45573, 0, 45573, 0, 45573, 0, 45573, 0, 45573, 0, 45573, 0, 45573, 0, 45573, 0, 45573, 0, 45573, 141104, 108729, 32375, 0, 0, 0, 32375, 26, 839, 839, 0, 0, 0, 45836, 45836, 0, 0, 0, 45692, 45692]
+- [Thread 1 Crawler 1 (initial)] List of the_bones_js # lines ececuted: 63 # tolal lines: 120 - code coverage: 52.5%
+- [Thread 1 Crawler 1 (initial)] List of Vec2_js is: [26, 26, 441166, 441166, 441166, 441166, 26, 133068, 133068, 133068, 133068, 0, 0, 0, 0, 75000, 75000, 75000, 75000, 72393, 72393, 72393, 72393, 3753265, 3753265, 3753265, 0, 3753265, 0, 0, 0, 3753265, 3753265, 40875, 40875, 40875, 0, 40875, 40875, 0, 0, 26, 0, 0, 26, 4243070, 4243070, 26, 44304, 44304, 26, 3348, 3348, 26, 0, 0, 26, 0, 0, 0, 0, 0, 0]
+- [Thread 1 Crawler 1 (initial)] List of Vec2_js # lines ececuted: 42 # tolal lines: 63 - code coverage: 66.66666666666666%
+- [Thread 1 Crawler 1 (initial)] List of Rect2_js is: [26, 26, 40929, 40929, 40929, 40929, 40929, 40929, 40929, 40929, 26, 0, 0, 0, 40875, 40875, 3905, 3712, 3673, 3468, 0, 0, 0, 0, 44304, 44304, 44304, 44304, 44304, 72486, 72486, 72486, 72486, 72486, 72486, 72486, 26, 6314992, 6314992]
+- [Thread 1 Crawler 1 (initial)] List of Rect2_js # lines ececuted: 32 # tolal lines: 39 - code coverage: 82.05128205128204%
+- [Thread 1 Crawler 1 (initial)] List of Brush_js is: [26, 26, 26, 0, 26, 26, 26, 26, 26, 0, 26, 26, 26, 26, 26, 26, 0, 26, 0, 26, 0, 26, 0, 26, 0, 26, 27, 27, 27, 27, 26, 26, 26, 0, 26, 26, 44188, 44188, 44188, 44188, 0, 0, 26, 26, 26, 26, 26, 26, 4245162, 4245162, 26, 4241779, 4241779, 4241779, 26, 4241779, 4241779, 4241779, 0, 4241779, 26, 4241779, 4241779, 4241779, 4241779, 4241779, 26, 0, 0, 0, 0, 0, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 0, 0, 0, 0, 0, 26, 0, 0, 0, 0, 0, 26, 44188, 44188, 44188, 26, 0, 0, 0, 26, 0, 0, 0, 26, 0, 0, 0, 26, 44188, 44188, 44188, 44188, 26, 4241779, 4241779, 4241779, 4241779, 26, 4241779, 4241779, 4241779, 26, 44188, 44188, 44188, 26, 4285967, 0, 44188, 44188, 44188, 4285967, 26]
+- [Thread 1 Crawler 1 (initial)] List of Brush_js # lines ececuted: 91 # tolal lines: 137 - code coverage: 66.42335766423358%
+- [Thread 1 Crawler 1 (initial)] List of Leaf_js is: [26, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+- [Thread 1 Crawler 1 (initial)] List of Leaf_js # lines ececuted: 3 # tolal lines: 48 - code coverage: 6.25%
+- [Thread 1 Crawler 1 (initial)] List of the_meat_js is: [26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 0, 0, 26, 26, 27, 27, 27, 27, 27, 27, 27, 27, 27, 0, 27, 0, 27, 27, 27, 27, 27, 27, 44213, 44213, 44213, 44213, 44213, 4244046, 4244046, 0, 0, 44213, 44213, 0, 44213, 0, 44213, 775, 0, 72579, 775, 0, 775, 775, 775, 775, 44213, 0, 0, 0, 0, 0, 0, 27, 27, 0, 0, 0, 0, 0, 0, 294, 294, 294, 123, 123, 123, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3391, 3391, 3391, 0, 0, 0, 922, 922, 922, 922, 27, 27, 94, 27, 44213, 44213, 4247410, 0, 922, 37686, 37686, 0, 2075331, 0, 885382, 0, 3915, 33771, 44213, 44213, 4247410, 0, 4247410, 44213, 4295410, 4295410]
+- [Thread 1 Crawler 1 (initial)] List of the_meat_js # lines ececuted: 96 # tolal lines: 143 - code coverage: 67.13286713286713%
+- [Thread 1 Crawler 1 (initial)] List of Branch_js is: [26, 26, 3391, 3391, 3391, 3391, 3391, 3391, 3391, 3391, 3391, 0, 6782, 26, 3391, 3391, 3391, 3391, 3391, 0, 3391, 37686, 37686, 37686, 0, 37686, 0, 1940, 1940, 35746, 35746, 3391, 0, 0, 0, 0, 0, 0, 0, 4245339, 4245339, 4245339, 0, 4245339, 4245339, 4199981, 750335, 0, 4245339, 4245339, 4245339, 4245339, 0, 41077, 41077, 41077, 0, 0, 3364, 3364, 3364, 3364, 840, 840, 840, 840, 0, 840, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 72671, 72671, 923922, 2626424, 72671, 0, 3391, 3391, 3391, 3391, 3391, 3391, 3391, 3391, 0, 3391, 0, 3391, 3391, 30904, 3391, 3391, 3391, 3391, 41077, 37686, 37686, 41077, 3391, 3391, 3391, 41077, 3391, 3364, 3364, 0, 3364, 3364, 3364, 3364, 3364, 3364, 3364, 3364, 0, 0, 0, 0, 0, 750335, 750335, 750335, 0, 0, 421, 0, 3364, 0, 3364, 0, 3364, 0, 3364, 421, 3364, 0, 3364, 0, 3184, 180, 0, 540, 900, 0, 900, 1980, 3364, 3364, 0, 0, 0, 1016, 1016, 840, 175, 0, 1016, 1016, 3364, 3364, 3364, 0, 3364, 0, 678, 2686, 0, 2686, 3364, 3364, 3364, 0, 3364, 0, 678, 2686, 26, 4245339, 4245339, 4245339, 0, 4245339, 0, 4245339, 0, 4245339, 0, 4245339, 0, 4245339, 0, 48210581, 0, 48210581, 48210581, 4245339, 4245339, 4245339, 4245339, 43965242, 0, 43965242, 0, 43965242, 45660, 0, 45660, 0, 45660, 45660, 43965242, 0, 43965242, 4245339, 4245339, 26]
+- [Thread 1 Crawler 1 (initial)] List of Branch_js # lines ececuted: 157 # tolal lines: 224 - code coverage: 70.08928571428571%
+- [Thread 1 Crawler 1 (initial)] List of the_ui_js is: [26, 26, 94, 3, 4, 0, 2, 2, 2, 2, 2, 2, 2, 4, 26, 5, 5, 31, 0, 31, 28, 28, 0, 0, 0, 0, 28, 3, 3, 31, 26, 4, 4, 30, 26, 3, 3, 0, 27, 29, 35, 59, 94, 0, 0, 0, 1, 1, 1, 26, 26, 26, 26, 26, 26, 26, 26, 26, 26, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 55, 55, 55, 0, 165, 0, 0, 55, 26, 0]
+- [Thread 1 Crawler 1 (initial)] List of the_ui_js # lines ececuted: 66 # tolal lines: 81 - code coverage: 81.48148148148148%
+- [Thread 1 Crawler 1 (initial)]Time: 8 min, 18 sec - code coverage: 64.32748538011695%

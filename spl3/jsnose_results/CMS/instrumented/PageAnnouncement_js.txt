@@ -1,0 +1,40 @@
+PageAnnouncement_js_exec_counter[0]++;
+PageAnnouncement_js_exec_counter[2]++;
+eval(function(p, a, c, k, e, r) {
+  PageAnnouncement_js_exec_counter[3]++;
+  PageAnnouncement_js_exec_counter[4]++;
+  e = function(c) {
+  PageAnnouncement_js_exec_counter[5]++;
+  PageAnnouncement_js_exec_counter[6]++;
+  return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36));
+};
+  if (!''.replace(/^/, String)) 
+  {
+    while (c--) {
+      PageAnnouncement_js_exec_counter[7]++;
+      r[e(c)] = k[c] || e(c);
+    }
+    PageAnnouncement_js_exec_counter[8]++;
+    k = [function(e) {
+  PageAnnouncement_js_exec_counter[9]++;
+  PageAnnouncement_js_exec_counter[10]++;
+  return r[e];
+}];
+    PageAnnouncement_js_exec_counter[11]++;
+    e = function() {
+  PageAnnouncement_js_exec_counter[12]++;
+  PageAnnouncement_js_exec_counter[13]++;
+  return '\\w+';
+};
+    PageAnnouncement_js_exec_counter[14]++;
+    c = 1;
+  }
+    while (c--) 
+    if (k[c]) {
+      PageAnnouncement_js_exec_counter[15]++;
+      p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
+    }
+  PageAnnouncement_js_exec_counter[16]++;
+  return p;
+}('E P(){5(4.w(\'16\')[0].1(\'Q-6\')==\'F\'){$(\'9\').3.p=\'r\';$(\'4\').3.p=\'r\'}}E 1s(c){17();7 d=4.w(\'16\')[0];7 f=4.w(\'4\');5(d.1(\'1t\')==\'F\'){7 g=n.R(\'1u\');g.x(\'18\',\'y/19\');g.x(\'1v\',\'1w\');g.x(\'1x\',S+\'/K.T/K.19\');n.w(\'1y\')[0].U(g);7 h=n.R(\'o\');h.x(\'V\',\'9\');n.w(\'1a\')[0].U(h);$(\'9\').3.8=d.1(\'G-H-8-q\');$(\'9\').3.1z=\'1A(1b = \'+d.1(\'G-H-8-W\')+\'0)\';$(\'9\').3.1B=\'.\'+d.1(\'G-H-8-W\');$(\'9\').3.1b=\'.\'+d.1(\'G-H-8-W\');$(\'9\').3.I=n.X.1C+\'J\';5(d.1(\'G-1D\')==\'v\'){$(\'9\').3.p=\'r\'}7 i=\'P()\';7 j=\'\';5(d.1(\'Q-6\')==\'v\'){i=\'\';j=\'p: r;\'}7 k=\'\';5(d.1(\'p-Y-1E\')==\'v\'){k=\'p: r;\'}7 l=\'\';5(d.1(\'4-s-1c-L-Z\')==\'F\'){l=\'1F\'}5(d.1(\'4-s-1c-L-Z\')==\'v\'){l=\'1d\'}7 m=n.R(\'o\');m.x(\'V\',\'4\');m.x(\'1e\',\'L\');m.1G=\'4\';m.1H=\'<o 1e="L" 10="1I" 3="\'+k+\' ;z: \'+d.1(\'M-z\')+\' ;8: \'+d.1(\'M-8-q\')+\'; q: \'+d.1(\'M-1J-q\')+\';"><1f 3="1g: \'+d.1(\'M-y-1h\')+\';">\'+f[c].1(\'Y\')+\'</1f></o></o><o 10="1K" 3="z: \'+d.1(\'4-z\')+\' ; q: \'+d.1(\'4-1L-q\')+\' ;8: \'+d.1(\'4-8-q\')+\'; I: 1i%;"><o 3="1g: \'+d.1(\'4-y-1h\')+\';">\'+f[c].1M[0].1N+\'</o></o><o 3="y-1O: 1P; t: 1d; 1Q: 0; A: 1i%; 8: \'+d.1(\'6-H-8-q\')+\'; \'+j+\';"><1R V="11" 18="u" 10="11" 1S="\'+d.1(\'6-u-y\')+\'" Y="\'+d.1(\'6-u-y\')+\'" 1T="\'+i+\'" 3="N: \'+d.1(\'6-u-N-3\')+\'; A: \'+d.1(\'6-u-A\')+\'; 8: \'+d.1(\'6-u-8-q\')+\'; z: \'+d.1(\'6-u-z\')+\'; q: \'+d.1(\'6-u-1U\')+\';" /></o>\';m.3.t=l;m.3.N=d.1(\'N-3\');m.3.1V=d.1(\'1W\');m.3.A=d.1(\'A\')+\'J\';m.3.I=d.1(\'I\')+\'J\';5(d.1(\'4-s-t-12\')==\'B\'){m.3.1X=\'-\'+d.1(\'A\')/2+\'J\'}5(d.1(\'4-s-t-12\')!=\'B\'){m.3.1Y=d.1(\'4-s-t-12\')}5(d.1(\'4-s-t-13\')==\'B\'){m.3.1Z=\'-\'+d.1(\'I\')/2+\'J\'}5(d.1(\'4-s-t-13\')!=\'B\'){m.3.Z=d.1(\'4-s-t-13\')}n.w(\'1a\')[0].U(m);5(d.1(\'Q-6\')==\'F\'){$(\'11\').20();5(C.1j){n.X.1j(\'21\',E(e){7 a=(C.D)?D.O:e.O;7 b=(C.D)?27:e.1k;5(a==b){5($(\'9\')!=14){$(\'9\').3.p=\'r\';$(\'4\').3.p=\'r\'}}})}1l{n.X.22(\'23\',E(e){7 a=(C.D)?D.O:e.O;7 b=(C.D)?27:e.1k;5(a==b){5($(\'9\')!=14){$(\'9\').3.p=\'r\';$(\'4\').3.p=\'r\'}}},F)}5(d.1(\'B-6\')!=\'v\'){24(\'P()\',d.1(\'B-6\'))}}}}E 17(){25{5(C.1m){4=26 1m("28.29");4.1n=v;4.1o(S+\'/K.T/1p.1q\')}1l 5(n.15&&n.15.1r){4=n.15.1r("","",14);4.1n=v;4.1o(S+\'/K.T/1p.1q\')}}2a(e){2b(e.2c)}}', 62, 137, '|getAttribute||style|announcement|if|close|var|background|announcementModalPanel||||||||||||||document|div|display|color|none|box|position|button|false|getElementsByTagName|setAttribute|text|font|width|auto|window|event|function|true|modal|panel|height|px|PageAnnouncement|on|titlebar|border|keyCode|closeAnnouncement|allow|createElement|pageScriptsFolder|XML|appendChild|id|transparency|documentElement|title|top|class|announcementCloseButton|horizontal|vertical|null|implementation|announcementxml|parseAnnoucementFeedFile|type|css|body|opacity|always|absolute|unselectable|em|padding|offset|100|attachEvent|DOM_VK_ESCAPE|else|ActiveXObject|async|load|Announcements|xml|createDocument|loadAnnouncement|enabled|link|rel|stylesheet|href|head|filter|alpha|mozOpacity|scrollHeight|mode|bar|fixed|className|innerHTML|announcementTitle|foreground|announcementText|foreround|childNodes|nodeValue|align|center|bottom|input|value|onclick|forecolor|fontFamily|fontface|marginLeft|left|marginTop|focus|onkeydown|addEventListener|keypress|setTimeout|try|new||Microsoft|XMLDOM|catch|alert|description'.split('|'), 0, {}));
+PageAnnouncement_js_exec_counter[1]++;

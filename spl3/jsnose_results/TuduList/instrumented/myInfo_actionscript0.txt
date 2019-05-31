@@ -1,0 +1,6 @@
+myInfo_actionscript0_exec_counter[0]++;
+function tracker(ajaxCall) {
+  myInfo_actionscript0_exec_counter[2]++;
+  myInfo_actionscript0_exec_counter[3]++;
+}
+myInfo_actionscript0_exec_counter[1]++;

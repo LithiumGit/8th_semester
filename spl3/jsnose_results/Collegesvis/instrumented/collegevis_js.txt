@@ -1,0 +1,329 @@
+collegevis_js_exec_counter[0]++;
+collegevis_js_exec_counter[2]++;
+(function($) {
+  collegevis_js_exec_counter[3]++;
+  collegevis_js_exec_counter[5]++;
+  var Collegevis = function() {
+  collegevis_js_exec_counter[7]++;
+  collegevis_js_exec_counter[9]++;
+  var $data = [], $sorted_data = [];
+  collegevis_js_exec_counter[11]++;
+  $.getJSON('data/data.json', function(d) {
+  collegevis_js_exec_counter[12]++;
+  collegevis_js_exec_counter[14]++;
+  $data = d;
+  collegevis_js_exec_counter[15]++;
+  $sorted_data = $data.slice();
+  collegevis_js_exec_counter[16]++;
+  update();
+  collegevis_js_exec_counter[13]++;
+});
+  collegevis_js_exec_counter[17]++;
+  var init_slider_value = 65;
+  collegevis_js_exec_counter[19]++;
+  var $controls = $('#controls'), $graph = $('#graph'), $sliders = $('.slider'), $tabs = $("#tabs"), $views = $('#views'), $sort = $('#sort');
+  collegevis_js_exec_counter[21]++;
+  var colors = ['#66C2A5', '#FC8D62', '#8DA0CB', '#E78AC3', '#A6D854', '#FFD92F'];
+  collegevis_js_exec_counter[23]++;
+  var id_cache = {};
+  collegevis_js_exec_counter[25]++;
+  $(".control").each(function(index) {
+  collegevis_js_exec_counter[26]++;
+  collegevis_js_exec_counter[28]++;
+  $(this).append($('<div class="color"></div>').css({'background': colors[index]}));
+  collegevis_js_exec_counter[27]++;
+});
+  collegevis_js_exec_counter[29]++;
+  $sliders.slider({value: init_slider_value});
+  collegevis_js_exec_counter[30]++;
+  $sliders.bind('slide', function() {
+  collegevis_js_exec_counter[31]++;
+  collegevis_js_exec_counter[33]++;
+  update();
+  collegevis_js_exec_counter[32]++;
+});
+  collegevis_js_exec_counter[34]++;
+  $sliders.bind('change', function() {
+  collegevis_js_exec_counter[35]++;
+  collegevis_js_exec_counter[37]++;
+  udpdate();
+  collegevis_js_exec_counter[36]++;
+});
+  collegevis_js_exec_counter[38]++;
+  $("input[type=radio]").bind('click', function() {
+  collegevis_js_exec_counter[39]++;
+  collegevis_js_exec_counter[41]++;
+  update();
+  collegevis_js_exec_counter[40]++;
+});
+  collegevis_js_exec_counter[42]++;
+  $("input[type=checkbox]").bind('click', function() {
+  collegevis_js_exec_counter[43]++;
+  collegevis_js_exec_counter[45]++;
+  update();
+  collegevis_js_exec_counter[44]++;
+});
+  collegevis_js_exec_counter[46]++;
+  $tabs.tabs();
+  collegevis_js_exec_counter[47]++;
+  $views.height($controls.outerHeight());
+  collegevis_js_exec_counter[48]++;
+  $tabs.find(".ui-tabs-panel").height($controls.outerHeight() - 80);
+  collegevis_js_exec_counter[49]++;
+  $graph.height($controls.outerHeight() - 80);
+  collegevis_js_exec_counter[50]++;
+  var gh = $graph.height(), gw = $graph.width(), padding = 20, max_value = 800;
+  collegevis_js_exec_counter[52]++;
+  var paper = Raphael("graph", gw, gh);
+  collegevis_js_exec_counter[54]++;
+  var txt = {font: '10px Helvetica, Arial', fill: "#000"};
+  function draw_bar(college, index) {
+    collegevis_js_exec_counter[56]++;
+    collegevis_js_exec_counter[58]++;
+    var values = college.values;
+    collegevis_js_exec_counter[60]++;
+    var bh = Math.floor(gh / $data.length);
+    collegevis_js_exec_counter[62]++;
+    var last_width = 130;
+    collegevis_js_exec_counter[64]++;
+    var i;
+    for (i = 0; i < values.length; i++) 
+      {
+        collegevis_js_exec_counter[66]++;
+        var scale = gw / max_value, width = (values[i] * scale);
+        collegevis_js_exec_counter[68]++;
+        var y = index * bh;
+        collegevis_js_exec_counter[70]++;
+        var bar = paper.rect(last_width, y, width, bh);
+        collegevis_js_exec_counter[72]++;
+        last_width += width;
+        collegevis_js_exec_counter[73]++;
+        bar.attr('fill', colors[i]);
+        collegevis_js_exec_counter[74]++;
+        bar.attr("stroke", 'none');
+      }
+    collegevis_js_exec_counter[75]++;
+    var text = paper.text(0, index * bh + 3, college.name.substring(0, 25));
+    collegevis_js_exec_counter[77]++;
+    text.attr({'text-anchor': 'start'});
+    collegevis_js_exec_counter[78]++;
+    text.attr(txt);
+    collegevis_js_exec_counter[57]++;
+  }
+  function hovered(index) {
+    collegevis_js_exec_counter[79]++;
+    collegevis_js_exec_counter[81]++;
+    $("#hover").html(data[index].name);
+    collegevis_js_exec_counter[80]++;
+  }
+  function scale_cost(value) {
+    collegevis_js_exec_counter[82]++;
+    collegevis_js_exec_counter[83]++;
+    return (value * ($("#cost").slider('value') / 100)) / 200;
+  }
+  function scale_rep(value) {
+    collegevis_js_exec_counter[84]++;
+    collegevis_js_exec_counter[85]++;
+    return value * ($("#reputation").slider('value') / 10);
+  }
+  function scale_finaid(value) {
+    collegevis_js_exec_counter[86]++;
+    collegevis_js_exec_counter[87]++;
+    return value * ($("#finaid").slider('value') / 10);
+  }
+  function scale_job(value) {
+    collegevis_js_exec_counter[88]++;
+    collegevis_js_exec_counter[89]++;
+    return value * ($("#jobs").slider('value') / 10);
+  }
+  function scale_type(value) {
+    collegevis_js_exec_counter[90]++;
+    collegevis_js_exec_counter[91]++;
+    var v = 0, id = sel_for_value(value);
+    if ($(id).is(':checked')) 
+    {
+      collegevis_js_exec_counter[93]++;
+      v = $("#type").slider('value');
+    }
+    collegevis_js_exec_counter[94]++;
+    return v;
+  }
+  function scale_location_size(value) {
+    collegevis_js_exec_counter[95]++;
+    collegevis_js_exec_counter[96]++;
+    var v = 0, id = sel_for_value(value);
+    if ($(id).is(':checked')) 
+    {
+      collegevis_js_exec_counter[98]++;
+      v = $("#location").slider('value');
+    }
+    collegevis_js_exec_counter[99]++;
+    return v;
+  }
+  function sel_for_value(value) {
+    collegevis_js_exec_counter[100]++;
+    if (id_cache[value] === undefined) 
+    {
+      collegevis_js_exec_counter[101]++;
+      var id = value.toLowerCase().replace(/ /g, "_");
+      collegevis_js_exec_counter[103]++;
+      id_cache[value] = "#" + id;
+    }
+    collegevis_js_exec_counter[104]++;
+    return id_cache[value];
+  }
+  function update_data(d) {
+    collegevis_js_exec_counter[105]++;
+    collegevis_js_exec_counter[106]++;
+    var i = 0, j = 0;
+    for (i = 0; i < d.length; i++) 
+      {
+        collegevis_js_exec_counter[108]++;
+        d[i].value = 0;
+        collegevis_js_exec_counter[109]++;
+        d[i].values = [];
+        collegevis_js_exec_counter[110]++;
+        d[i].values[0] = scale_cost(parseInt(d[i].annual_tuition, 10));
+        collegevis_js_exec_counter[111]++;
+        d[i].values[1] = scale_rep(parseInt(d[i].reputation, 10));
+        collegevis_js_exec_counter[112]++;
+        d[i].values[2] = scale_finaid(parseInt(d[i].financial_aid, 10));
+        collegevis_js_exec_counter[113]++;
+        d[i].values[3] = scale_job(parseInt(d[i].job_prospects, 10));
+        collegevis_js_exec_counter[114]++;
+        d[i].values[4] = scale_type(d[i].type);
+        collegevis_js_exec_counter[115]++;
+        d[i].values[5] = scale_location_size(d[i].location_size);
+        collegevis_js_exec_counter[116]++;
+        var sum = 0;
+        for (j = 0; j <= 5; j++) 
+          {
+            collegevis_js_exec_counter[118]++;
+            sum += d[i].values[j];
+          }
+        collegevis_js_exec_counter[119]++;
+        d[i].value = sum;
+      }
+    collegevis_js_exec_counter[120]++;
+    return d;
+  }
+  function draw_graph(d) {
+    collegevis_js_exec_counter[121]++;
+    collegevis_js_exec_counter[123]++;
+    paper.clear();
+    collegevis_js_exec_counter[124]++;
+    var i = 0;
+    for (i = 0; i < d.length; i++) 
+      {
+        collegevis_js_exec_counter[126]++;
+        draw_bar(d[i], i);
+      }
+    collegevis_js_exec_counter[122]++;
+  }
+  function draw_table(data) {
+    collegevis_js_exec_counter[127]++;
+    collegevis_js_exec_counter[129]++;
+    var i, html = "";
+    for (i = 0; i < data.length; i++) 
+      {
+        collegevis_js_exec_counter[131]++;
+        html += "<tr>";
+        collegevis_js_exec_counter[132]++;
+        html += "<td>" + data[i].name + "</td>";
+        collegevis_js_exec_counter[133]++;
+        html += "<td>" + data[i].annual_tuition + "</td>";
+        collegevis_js_exec_counter[134]++;
+        html += "<td>" + data[i].reputation + "</td>";
+        collegevis_js_exec_counter[135]++;
+        html += "<td>" + data[i].job_prospects + "</td>";
+        collegevis_js_exec_counter[136]++;
+        html += "<td>" + data[i].financial_aid + "</td>";
+        collegevis_js_exec_counter[137]++;
+        html += "<td>" + data[i].type + "</td>";
+        collegevis_js_exec_counter[138]++;
+        html += "<td>" + data[i].location_size + "</td>";
+        collegevis_js_exec_counter[139]++;
+        html += "<td>" + data[i].value + "</td>";
+        collegevis_js_exec_counter[140]++;
+        html += "</tr>";
+      }
+    collegevis_js_exec_counter[141]++;
+    $("#raw_data").find("tr:gt(0)").remove();
+    collegevis_js_exec_counter[142]++;
+    $("#raw_data").append(html);
+    collegevis_js_exec_counter[128]++;
+  }
+  function compare_values(a, b) {
+    collegevis_js_exec_counter[143]++;
+    collegevis_js_exec_counter[144]++;
+    return b.value - a.value;
+  }
+  function is_sorted() {
+    collegevis_js_exec_counter[145]++;
+    collegevis_js_exec_counter[146]++;
+    return $sort.is(':checked');
+  }
+  function with_data_source(callback) {
+    collegevis_js_exec_counter[147]++;
+    if (is_sorted()) 
+    {
+      collegevis_js_exec_counter[149]++;
+      return callback($sorted_data);
+    } else {
+      collegevis_js_exec_counter[150]++;
+      return callback($data);
+    }
+    collegevis_js_exec_counter[148]++;
+  }
+  function with_sort(_data, callback) {
+    collegevis_js_exec_counter[151]++;
+    if (is_sorted()) 
+    {
+      collegevis_js_exec_counter[153]++;
+      callback(_data.sort(compare_values));
+    } else {
+      collegevis_js_exec_counter[154]++;
+      callback(_data);
+    }
+    collegevis_js_exec_counter[152]++;
+  }
+  function with_updates(_data, callback) {
+    collegevis_js_exec_counter[155]++;
+    collegevis_js_exec_counter[156]++;
+    return callback(update_data(_data));
+  }
+  function update() {
+    collegevis_js_exec_counter[157]++;
+    collegevis_js_exec_counter[159]++;
+    with_data_source(function(a) {
+  collegevis_js_exec_counter[160]++;
+  collegevis_js_exec_counter[162]++;
+  with_updates(a, function(b) {
+  collegevis_js_exec_counter[163]++;
+  collegevis_js_exec_counter[165]++;
+  with_sort(b, function(c) {
+  collegevis_js_exec_counter[166]++;
+  collegevis_js_exec_counter[168]++;
+  draw_table(c);
+  collegevis_js_exec_counter[169]++;
+  draw_graph(c);
+  collegevis_js_exec_counter[167]++;
+});
+  collegevis_js_exec_counter[164]++;
+});
+  collegevis_js_exec_counter[161]++;
+});
+    collegevis_js_exec_counter[158]++;
+  }
+  collegevis_js_exec_counter[8]++;
+};
+  collegevis_js_exec_counter[170]++;
+  $(document).ready(function() {
+  collegevis_js_exec_counter[171]++;
+  collegevis_js_exec_counter[173]++;
+  var c = new Collegevis({});
+  collegevis_js_exec_counter[172]++;
+});
+  collegevis_js_exec_counter[4]++;
+})(jQuery);
+collegevis_js_exec_counter[1]++;

@@ -1,0 +1,262 @@
+Brush_js_exec_counter[0]++;
+function Brush(canvas) {
+  Brush_js_exec_counter[2]++;
+  if (typeof canvas == "string") {
+    Brush_js_exec_counter[3]++;
+    canvas = document.getElementById(canvas);
+  }
+  Brush_js_exec_counter[4]++;
+  return buildBrush(canvas);
+}
+function buildBrush(canvas) {
+  Brush_js_exec_counter[5]++;
+  Brush_js_exec_counter[6]++;
+  g = {};
+  Brush_js_exec_counter[7]++;
+  console.log(">>>Brish set!");
+  Brush_js_exec_counter[8]++;
+  var gfx = canvas.getContext("2d");
+  Brush_js_exec_counter[10]++;
+  g.canvas = canvas;
+  Brush_js_exec_counter[11]++;
+  g.gfx = gfx;
+  Brush_js_exec_counter[12]++;
+  g.frameRate = 30;
+  Brush_js_exec_counter[13]++;
+  g.frameCount = 0;
+  Brush_js_exec_counter[14]++;
+  g.draw = undefined;
+  Brush_js_exec_counter[15]++;
+  var doFill = true;
+  Brush_js_exec_counter[17]++;
+  var doStroke = true;
+  Brush_js_exec_counter[19]++;
+  var loopId = 0;
+  Brush_js_exec_counter[21]++;
+  var loopStarted = false;
+  Brush_js_exec_counter[23]++;
+  var startMillis = (new Date()).getTime();
+  Brush_js_exec_counter[25]++;
+  g.size = function(_w, _h) {
+  Brush_js_exec_counter[26]++;
+  Brush_js_exec_counter[28]++;
+  g.canvas.width = g.width = _w;
+  Brush_js_exec_counter[29]++;
+  g.canvas.height = g.height = _h;
+  Brush_js_exec_counter[27]++;
+};
+  Brush_js_exec_counter[30]++;
+  g.loopOn = function(drawFunk) {
+  Brush_js_exec_counter[31]++;
+  if (loopStarted) {
+    Brush_js_exec_counter[33]++;
+    clearInterval(loopId);
+  }
+  Brush_js_exec_counter[34]++;
+  g.draw = drawFunk;
+  Brush_js_exec_counter[35]++;
+  loopId = setInterval(function() {
+  Brush_js_exec_counter[36]++;
+  try {
+    Brush_js_exec_counter[38]++;
+    g.draw();
+    Brush_js_exec_counter[39]++;
+    g.frameCount++;
+  }  catch (e) {
+  Brush_js_exec_counter[40]++;
+  clearInterval(loopId);
+  Brush_js_exec_counter[41]++;
+  throw e;
+}
+  Brush_js_exec_counter[37]++;
+}, 1000 / g.frameRate);
+  Brush_js_exec_counter[42]++;
+  loopStarted = true;
+  Brush_js_exec_counter[32]++;
+};
+  Brush_js_exec_counter[43]++;
+  g.setFrameRate = function(fps) {
+  Brush_js_exec_counter[44]++;
+  Brush_js_exec_counter[46]++;
+  g.frameRate = fps;
+  Brush_js_exec_counter[45]++;
+};
+  Brush_js_exec_counter[47]++;
+  g.millis = function() {
+  Brush_js_exec_counter[48]++;
+  Brush_js_exec_counter[49]++;
+  return (new Date()).getTime() - startMillis;
+};
+  Brush_js_exec_counter[50]++;
+  g.beginPath = function() {
+  Brush_js_exec_counter[51]++;
+  Brush_js_exec_counter[53]++;
+  gfx.beginPath();
+  Brush_js_exec_counter[52]++;
+};
+  Brush_js_exec_counter[54]++;
+  g.endPath = function() {
+  Brush_js_exec_counter[55]++;
+  if (doFill) {
+    Brush_js_exec_counter[57]++;
+    gfx.fill();
+  }
+  if (doStroke) {
+    Brush_js_exec_counter[58]++;
+    gfx.stroke();
+  }
+  Brush_js_exec_counter[59]++;
+  gfx.closePath();
+  Brush_js_exec_counter[56]++;
+};
+  Brush_js_exec_counter[60]++;
+  g.moveTo = function(x, y) {
+  Brush_js_exec_counter[61]++;
+  Brush_js_exec_counter[63]++;
+  gfx.moveTo(x, y);
+  Brush_js_exec_counter[64]++;
+  g.lastx = x;
+  Brush_js_exec_counter[65]++;
+  g.lasty = y;
+  Brush_js_exec_counter[62]++;
+};
+  Brush_js_exec_counter[66]++;
+  g.lineTo = function(x, y) {
+  Brush_js_exec_counter[67]++;
+  Brush_js_exec_counter[69]++;
+  gfx.lineTo(x, y);
+  Brush_js_exec_counter[70]++;
+  g.lastx = x;
+  Brush_js_exec_counter[71]++;
+  g.lasty = y;
+  Brush_js_exec_counter[68]++;
+};
+  Brush_js_exec_counter[72]++;
+  g.bezierTo = function(t, x1, y1, x2, y2, x3, y3) {
+  Brush_js_exec_counter[73]++;
+  if (t == 1.0) 
+  {
+    Brush_js_exec_counter[75]++;
+    gfx.bezierCurveTo(x1, y1, x2, y2, x3, y3);
+    Brush_js_exec_counter[76]++;
+    g.lastx = x3;
+    Brush_js_exec_counter[77]++;
+    g.lasty = y3;
+  } else {
+    Brush_js_exec_counter[78]++;
+    var semi = semiBezier(t, g.lastx, g.lasty, x1, y1, x2, y2, x3, y3);
+    Brush_js_exec_counter[80]++;
+    gfx.bezierCurveTo.apply(gfx, semi);
+    Brush_js_exec_counter[81]++;
+    g.lastx = semi[4];
+    Brush_js_exec_counter[82]++;
+    g.lasty = semi[5];
+  }
+  Brush_js_exec_counter[74]++;
+};
+  Brush_js_exec_counter[83]++;
+  g.circle = function(x, y, radius) {
+  Brush_js_exec_counter[84]++;
+  Brush_js_exec_counter[86]++;
+  g.beginPath();
+  Brush_js_exec_counter[87]++;
+  gfx.arc(x, y, radius, 0, Math.PI * 2, false);
+  Brush_js_exec_counter[88]++;
+  g.endPath();
+  Brush_js_exec_counter[85]++;
+};
+  Brush_js_exec_counter[89]++;
+  g.rect = function(x, y, w, h) {
+  Brush_js_exec_counter[90]++;
+  Brush_js_exec_counter[92]++;
+  g.beginPath();
+  Brush_js_exec_counter[93]++;
+  gfx.rect(x, y, width, height);
+  Brush_js_exec_counter[94]++;
+  g.endPath();
+  Brush_js_exec_counter[91]++;
+};
+  Brush_js_exec_counter[95]++;
+  g.erase = function() {
+  Brush_js_exec_counter[96]++;
+  Brush_js_exec_counter[98]++;
+  gfx.clearRect(0, 0, g.width, g.height);
+  Brush_js_exec_counter[97]++;
+};
+  Brush_js_exec_counter[99]++;
+  g.push = function() {
+  Brush_js_exec_counter[100]++;
+  Brush_js_exec_counter[102]++;
+  gfx.save();
+  Brush_js_exec_counter[101]++;
+};
+  Brush_js_exec_counter[103]++;
+  g.pop = function() {
+  Brush_js_exec_counter[104]++;
+  Brush_js_exec_counter[106]++;
+  gfx.restore();
+  Brush_js_exec_counter[105]++;
+};
+  Brush_js_exec_counter[107]++;
+  g.lineWidth = function(w) {
+  Brush_js_exec_counter[108]++;
+  Brush_js_exec_counter[110]++;
+  gfx.lineWidth = w;
+  Brush_js_exec_counter[109]++;
+};
+  Brush_js_exec_counter[111]++;
+  g.stroke = function() {
+  Brush_js_exec_counter[112]++;
+  Brush_js_exec_counter[114]++;
+  doStroke = true;
+  Brush_js_exec_counter[115]++;
+  gfx.strokeStyle = g.color.apply(this, arguments) + "";
+  Brush_js_exec_counter[113]++;
+};
+  Brush_js_exec_counter[116]++;
+  g.fill = function() {
+  Brush_js_exec_counter[117]++;
+  Brush_js_exec_counter[119]++;
+  doFill = true;
+  Brush_js_exec_counter[120]++;
+  gfx.fillStyle = g.color.apply(this, arguments) + "";
+  Brush_js_exec_counter[118]++;
+};
+  Brush_js_exec_counter[121]++;
+  g.noStroke = function() {
+  Brush_js_exec_counter[122]++;
+  Brush_js_exec_counter[124]++;
+  doStroke = false;
+  Brush_js_exec_counter[123]++;
+};
+  Brush_js_exec_counter[125]++;
+  g.noFill = function() {
+  Brush_js_exec_counter[126]++;
+  Brush_js_exec_counter[128]++;
+  doFill = false;
+  Brush_js_exec_counter[127]++;
+};
+  Brush_js_exec_counter[129]++;
+  g.color = function(_r, _g, _b, _a) {
+  Brush_js_exec_counter[130]++;
+  if (arguments.length == 2) {
+    Brush_js_exec_counter[131]++;
+    _a = _g;
+  } else if (arguments.length < 4) {
+    Brush_js_exec_counter[132]++;
+    _a = 255;
+  }
+  if (arguments.length < 3) 
+  {
+    Brush_js_exec_counter[133]++;
+    _g = _r;
+    Brush_js_exec_counter[134]++;
+    _b = _r;
+  }
+  Brush_js_exec_counter[135]++;
+  return "rgba(" + _r + "," + _g + "," + _b + "," + (_a / 255) + ")";
+};
+  Brush_js_exec_counter[136]++;
+  return g;
+}
+Brush_js_exec_counter[1]++;
