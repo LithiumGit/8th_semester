@@ -1,0 +1,99 @@
+#link:https://dzone.com/articles/smells-in-java-code-do-you-recognize-them
+    1.Constant Interface
+    2.Global Variable Class
+    3.Global Function Class
+    4.Publicly Exposed Fields
+    5.Orphan Abstract
+    6.Forgotten Interface
+    7.Lonely Class
+    8.Abstract Leaf
+    9.Tagged Class
+
+#https://github.com/tushartushar/DesigniteJava
+
+>>Detects 17 design smells
+    Imperative Abstraction
+    Multifaceted Abstraction
+    Unnecessary Abstraction
+    Unutilized Abstraction
+    Deficient Encapsulation
+    Unexploited Encapsulation
+    Broken Modularization
+    Cyclic-Dependent Modularization
+    Insufficient Modularization
+    Hub-like Modularization
+    Broken Hierarchy
+    Cyclic Hierarchy
+    Deep Hierarchy
+    Missing Hierarchy
+    Multipath Hierarchy
+    Rebellious Hierarchy
+    Wide Hierarchy
+>>Detects 10 implementation smells
+    Abstract Function Call From Constructor
+    Complex Conditional
+    Complex Method
+    Empty catch clause
+    Long Identifier
+    Long Method
+    Long Parameter List
+    Long Statement
+    Magic Number
+    Missing default
+
+#link:https://github.com/arturbosch/jquality
+
+ >>
+    BrainMethod
+    ClassDataShouldBePrivate
+    CommentSmell/Javadoc
+    ComplexCondition
+    ComplexMethod
+    Cycle
+    DataClass
+    Deadcode
+    FeatureEnvy
+    GodClass
+    LargeClass
+    LongMethod
+    LongParameterList
+    MessageChain
+    MiddleMan
+    NestedBlockDepth
+    RefusedParentBequest
+    ShotgunSurgery
+    StateChecking
+    TraditionBreaker
+
+# for android link: https://github.com/fpalomba/aDoctor
+>>
+    Debuggable Release;
+    Slow Loop;
+    Data Transmission Without Compression;
+    Inefficient Data Format and Parser;
+    Inefficient Data Structure;
+    Inefficient SQL Query;
+    Internal Getter and Setter;
+    Leaking Thread;
+    Leaking Inner Class;
+    No Low Memory Resolver;
+    Unclosed Closable;
+    Durable Wakelock;
+    Member Ignoring Method;
+    Public Data;
+    Rigid Alarm Manager.
+
+
+#from slide F:\Google Drive\5th_semister\DP(SE 506)\slides\Refactoring-and-Code-Smell.pptx
+>>
+Duplicated code
+Primitive Obsession
+Lazy Class
+Alternative Class with Different Interface 
+Speculative Generality
+Oddball Solution
+Feature Envy
+Refused Bequest
+Black Sheep
+Train Wreck
+Inappropriate Naming

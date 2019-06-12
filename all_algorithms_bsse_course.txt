@@ -1,0 +1,48 @@
+1st semester
+    1.Bayes’ Theorem
+2nd semester
+    1.Linear and Binary Searching
+    2.Insertion Sort
+    3.Selection Sort
+    4.Bubble Sort
+    5.Quick Sort
+    6.Merge Sort
+    7.Radix Sort
+    8.Factorial and Tower of Hanoi Problem;
+    9.Prefix, Infix and Postfix Expressions, their Transformation and Evaluation Algorithms
+    10.Heaps, Heap Sort, Huffman Encoding Technique
+    11.B Tree and B+ Tree    
+    12.BFS and DFS
+    13.Shortest Path Problems
+    14.Minimum Spanning Tree
+    15.Minimum Spanning Tree Algorithms
+    16.and Topological Sorting
+    17.Greedy Algorithms
+    18.Divide and Conquer Strategy
+    19.Dynamic Programming 
+    20.Backtracking
+3rd semester
+    1.Greedy Algorithms
+    2.Fractional Knapsack Problem
+    3.Activity Selection Problem
+    4.Huffman Encoding
+    5.Task Scheduling Problem
+    6.Coin Changing Problem
+    7.Kruskal’s and Prim’s 
+    8.Minimum Spanning Tree Algorithms; 
+    9.Divide and Conquer Algorithms 
+    10.Quick Sort
+    11.Merge Sort
+    12.Matrix Chain Multiplication
+    13.LCS
+    14.Viterbi Algorithm
+    15.Bitonic Euclidean Traveling Salesperson Problem and Runtime Analysis
+    16.Shortest Path Problems - 
+        Breadth First Search,
+        Depth First Search, 
+        Flow Networks, 
+        Single Source and All Pair Shortest Path Algorithms;
+    17.Simplex Algorithm
+    18.Kleene’s Theorem
+4rth semester
+            

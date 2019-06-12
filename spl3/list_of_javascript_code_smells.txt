@@ -11,7 +11,6 @@
 11.Refused bequest
 12.Switch statement
 13.Unused code
-
 14.Convoluted Code Smell
 15.Copy Paste Code Smell
 16.Switch Statement Smell
