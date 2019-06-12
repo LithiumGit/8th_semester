@@ -45,4 +45,5 @@
     17.Simplex Algorithm
     18.Kleene’s Theorem
 4rth semester
-            
+            1.Page replacement algorithms
+            2.RSA and Diffie-Hellman
