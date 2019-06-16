@@ -47,3 +47,8 @@
 4rth semester
             1.Page replacement algorithms
             2.RSA and Diffie-Hellman
+5th semester
+    1.Decision tree, 
+    2.Bayes theory, 
+    3.Randomize tree
+    4.
