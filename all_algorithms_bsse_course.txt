@@ -52,3 +52,15 @@
     2.Bayes theory, 
     3.Randomize tree
     4.
+6th semester
+    1.Uninformed Search strategies: BFS, DFS, DLS, ID-DFS
+    2.Greedy Best-first search, A* search
+    3.AND-OR search trees
+    4.Belief state-space search
+    5.Adversarial Search
+        1.The minimax algorithm, Alpha-Beta pruning
+    6.Markov Chains and Hidden Markov Models
+        1.Transition and Sensor models, Building and HMM
+        2.Most Likely explanations (Viterbi algorithm)
+        3.Naive Bayes classifier
+        
