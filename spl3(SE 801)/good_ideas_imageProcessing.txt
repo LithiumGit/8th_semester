@@ -1,0 +1,10 @@
+Final Project for Autumn 2016-2017 
+    28:Skin disease detection using image processing
+
+Final Project for Spring 2012-2013 
+    1.Mobile OMR System for Recognition of Filled Bubbles
+
+    
+
+
+
