@@ -1,0 +1,5 @@
+1 September presentation outline: if your project is research based than you have to describe detailed *Methodology and *Algorithm 
+If your project is feature based than you have to show the *SRS (maybe a class diagram or dfd that fully describes the system that will do)
+If it's both you have to do a bit of both
+Partial Implementation showing is optional
+Source: Ahmedul Kabir sir

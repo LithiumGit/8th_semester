@@ -1,0 +1,12 @@
+1.database+interface = system 
+2.activity te parallel er ekta jamella ase
+3.account recovery ta thik kora
+4.plagiarism checking kiso hoinai
+5.data flow te plagiarism checking hoinai
+6.ER theke data table gulo te plagiarism check
+7.ekadik actor e same event hole ki hobe
+8.dfd diagram gulo eksathe korbo kina
+9.database class er responsibility khatai silo na and
+ crc diagrame eijonno tola hoinai tolte hobe
+10.git hub e upload korte hobe
+11. swim lane nam deya thik ase kina
