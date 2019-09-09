@@ -1,0 +1,45 @@
+--------- typescript projects--------
+1. https://github.com/davidkpiano/xstate/tree/master/src
+2.https://github.com/jaredpalmer/formik
+3.https://github.com/angular/angular/tree/master/packages/router
+4.https://github.com/angular/angular/tree/master/packages/forms
+5.https://github.com/angular/angular/tree/master/packages/http
+6.https://github.com/angular/angular/tree/master/packages/service-worker/src
+7.https://github.com/fulls1z3/ngx-auth
+8.https://github.com/fulls1z3/ngx-auth
+
+
+9.https://github.com/fabien0102/connect4react
+10.https://github.com/jolestar/gomoku-wasm
+11.https://github.com/sindresorhus/caprine
+12.https://github.com/ShareIt-project/ShareIt
+13.https://github.com/jimbuck/pully
+14.https://github.com/webDva/Baka-Youtube-to-MP3-Converter
+15.https://github.com/alexstrive/dodger
+16.https://github.com/henshmi/Tetris.ts/tree/master/src
+17.https://github.com/akabekobeko/examples-electron/tree/master/audio-player/src
+18.https://github.com/eranshmil/video-player/tree/master/projects/main
+19.
+
+------javascript projects---------
+1.https://github.com/vuejs/vue/tree/dev/src/compiler  - vue js compiler
+2.https://github.com/facebook/react/tree/master/packages/react-dom/src -react-dom
+3.https://github.com/ReactTraining/react-router
+4.https://github.com/kettanaito/react-advanced-form/tree/master/src
+5.https://github.com/mbasso/react-http-request
+6.https://github.com/maxjf1/react-service-worker
+7.https://github.com/nicklayb/react-auth-guard
+8.https://github.com/auth0/auth0.js
+
+
+9.https://github.com/bryanbraun/connect-four
+10.https://github.com/Muzishell/gomoku
+11.https://github.com/totaljs/messenger
+12.https://github.com/dapplabs/shareit
+13.https://github.com/eashish93/youtube-downloader-app
+14.https://github.com/jamesgeorge007/Youtube-Mate
+15.https://github.com/emilhaugberg/mario-dodger
+16.https://github.com/mdietger/JS-Tetris
+17.https://github.com/Aveek-Saha/MusicPlayer
+18.https://github.com/nokisnojok/electron-player
+19.

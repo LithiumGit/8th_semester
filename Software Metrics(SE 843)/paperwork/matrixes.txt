@@ -1,0 +1,29 @@
+matrix to identify:LOC,Comment, number of base class/prototype
+Number Of Declared Instance Methods,Number of Declared Instance Variables,Number Of Local Methods, Number of Lines of code, Number of Lines of comments,
+Number of statements,Average Cyclomatic, Ration Comment To Code
+
+
+javascript project matrix:
+    1.connect-four
+        -AC:21/2+(16+62)/10+14 //total complexity
+        -NOC:3+85+64
+        -RCC(NOC/(NOS+NOC):
+        -NOS:39+208+45+17
+    2.Gomoku
+        -AC:(150/17)[ai.js]+12/2[chat.js]+154/17[game.js]+15/3[gameplay.js]+5/2[misc.js]+15/4[borad.js]
+        -NOC:2+20+1
+        -RCC(NOC/(NOS+NOC):
+        -NOS:168/2[ai] +(415/8)[game]+121/3+18
+    3.
+typescript project matrix:
+    1.connect-four
+        -AC:4+0+14+0+0+(23+8)/2+0+0
+        -NOC:4
+        -RCC(NOC/(NOS+NOC):
+        -NOS:15+14+35+3+2+393+55+4+18
+    2.Gomoku
+        -AC:(3+4)/2[index.ts]+(5+5+5+13)/4[vm.ts]+(42+21+21+11+18+3)[bigBenAI.ts]+(8+8+5+5)[constants.ts]+(4+5+5+3+3+4+5+5+12+11+5+5+7+7+10+10)[GomokuEngine.ts]
+            (8+4+3+3+4+3)[GomokuGUI.ts]+(3+6+3)[gui.ts] //total complexity
+        -NOC:93+4
+        -RCC(NOC/(NOS+NOC):
+        -NOS:867+183
