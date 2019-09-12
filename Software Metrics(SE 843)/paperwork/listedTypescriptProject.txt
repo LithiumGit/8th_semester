@@ -12,7 +12,7 @@
 9.https://github.com/fabien0102/connect4react
 10.https://github.com/jolestar/gomoku-wasm
 11.https://github.com/sindresorhus/caprine
-12.https://github.com/ShareIt-project/ShareIt
+12.https://github.com/dapplabs/shareit
 13.https://github.com/jimbuck/pully
 14.https://github.com/webDva/Baka-Youtube-to-MP3-Converter
 15.https://github.com/alexstrive/dodger
@@ -35,7 +35,7 @@
 9.https://github.com/bryanbraun/connect-four
 10.https://github.com/Muzishell/gomoku
 11.https://github.com/totaljs/messenger
-12.https://github.com/dapplabs/shareit
+12.https://github.com/ShareIt-project/ShareIt
 13.https://github.com/eashish93/youtube-downloader-app
 14.https://github.com/jamesgeorge007/Youtube-Mate
 15.https://github.com/emilhaugberg/mario-dodger
@@ -43,3 +43,12 @@
 17.https://github.com/Aveek-Saha/MusicPlayer
 18.https://github.com/nokisnojok/electron-player
 19.
+
+
+
+for footnote-
+Data processing: ts-config
+Data Collection: Electron Js
+Conclusion: large
+
+to refactor: VSCode
